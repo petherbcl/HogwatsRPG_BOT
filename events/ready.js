@@ -117,7 +117,7 @@ module.exports = {
                 { room: 'sala-aula-trato-criaturas-mágicas', label: '🚶 Aula Trato da Criaturas Mágicas' },
                 { room: 'aula-voo', label: '🚶 Aula de Voo' },
                 { room: 'lago-negro', label: '🚶 Lago Negro' },
-                { room: 'floresta-proibida', label: '🚶 Floresta Proibida' },
+                // { room: 'floresta-proibida', label: '🚶 Floresta Proibida' },
                 { room: 'cabana-guarda-caças', label: '🚪 Cabana do Guarda Caças' },                
             ],
             'estufas': [
