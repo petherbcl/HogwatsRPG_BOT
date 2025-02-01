@@ -12,7 +12,7 @@ module.exports = {
         const userInv = JSON.parse(file)
 
         if(userInv.gringots) {
-            return interaction.reply({ content: `Você já levantou seus galeões, ${member.user.username}`, ephemeral: true });
+            return interaction.reply({ content: `Você já levantou seus galeões`, ephemeral: true });
         }else{
             const dice = RollDice.rollDice('1D6').total;
             const galeoes = dice * 100;
@@ -20,7 +20,7 @@ module.exports = {
             userInv.inventario.galeoes = {name: 'Galeões', amount: galeoes};
             fs.writeFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, JSON.stringify(userInv));
 
-            return interaction.reply({ content: `Você lançou o dado e obteve ${dice}, multiplicando por 100 você obteve ${galeoes} galeões, ${member.user.username}`, ephemeral: true });
+            return interaction.reply({ content: `Você lançou o dado e obteve ${dice}, multiplicando por 100 você obteve ${galeoes} galeões`, ephemeral: true });
         }
     }
 }

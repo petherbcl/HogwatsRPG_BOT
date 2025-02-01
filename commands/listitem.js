@@ -16,7 +16,7 @@ module.exports = {
         const file = fs.readFileSync(`./RPGData//item_list.json`, 'utf8');
         const item_list = JSON.parse(file)
 
-        const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Itens').setDescription(Object.entries(item_list).map(([key, value]) => `* **${key}** - ${value.name} | *${value.description}*`).join('\n'));
+        const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Itens').setDescription(Object.entries(item_list).map(([key, item]) => `* **${key}** - ${item.name} | *${item.description}*`).join('\n'));
         await interaction.reply({ embeds: [embed], ephemeral: true });
     },
 };

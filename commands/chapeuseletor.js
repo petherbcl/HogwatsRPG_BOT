@@ -12,7 +12,7 @@ module.exports = {
 
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
-        const user = interaction.user;
+        // const user = interaction.user;
         const channel = interaction.channel;
 
         const file = fs.readFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, 'utf8');
@@ -59,7 +59,7 @@ module.exports = {
     
             if (role) {
                 await member.roles.add(role);
-                const embed = new EmbedBuilder().setImage(img).setDescription(`<:sortinghat:1333596295708803094> Parabéns **${user.username}**! Você foi selecionado para a casa **${selectedHouse}**!`);
+                const embed = new EmbedBuilder().setImage(img).setDescription(`<:sortinghat:1333596295708803094> Parabéns **${member.nickname || member.user.globalName || member.user.username}**! Você foi selecionado para a casa **${selectedHouse}**!`);
                 await interaction.editReply({ content: '', embeds: [embed], ephemeral: false });
 
                 userInv.casa = selectedHouse;

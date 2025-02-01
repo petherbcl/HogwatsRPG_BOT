@@ -16,7 +16,7 @@ module.exports = {
         }
 
         if(userInv.inventario.varinha) {
-            return interaction.reply({ content: `Você já comprou sua varinha, ${member.user.username}`, ephemeral: true });
+            return interaction.reply({ content: `Você já comprou sua varinha`, ephemeral: true });
         }else{
             userInv.inventario.varinha = {name: 'Varinha', amount: 1};
             userInv.inventario.galeoes.amount -= 1;
