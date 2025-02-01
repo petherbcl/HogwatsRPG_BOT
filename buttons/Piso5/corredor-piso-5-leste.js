@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require("discord.js");
-const room = 'corredor-piso-5-este'
+const room = 'corredor-piso-5-leste'
 const enterRoom = require('../enterRoom.js')
 module.exports = {
 	customID: room,

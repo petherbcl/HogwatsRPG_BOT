@@ -18,18 +18,19 @@ module.exports = {
 
 
         for (let category of client.structure) {
-            const canalCat = guild.channels.cache.find( c=> c.name === category.name && c.type === 4);
-            if (canalCat) {
-                await canalCat.delete();
-                console.log(`Categoria ${category.name} excluída com sucesso.`);
-            }
-
+            
             for (const channel of category.channels) {
                 const canal = guild.channels.cache.find( c=> c.name === channel.name && c.type === channel.type);
                 if (canal) {
                     await canal.delete();
                     console.log(`Canal ${channel.name} excluído com sucesso.`);
                 }
+            }
+
+            const canalCat = guild.channels.cache.find( c=> c.name === category.name && c.type === 4);
+            if (canalCat) {
+                await canalCat.delete();
+                console.log(`Categoria ${category.name} excluída com sucesso.`);
             }
         }
 
