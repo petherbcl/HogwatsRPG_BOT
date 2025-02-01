@@ -20,7 +20,7 @@ module.exports = {
             ervas_fungos_magicos: {name:'Mil Ervas e Fungos Mágicos de Fílida Spore', price: 1},
             pocoes_avancadas: {name:'Bebidas e Poções Mágicas de Arsênio Jigger', price: 1},
             animais_fantasticos: {name: 'Animais Fantásticos e Onde Habitam de Newt Scamander', price: 1},
-            forças_das_trevas: {name: 'As Forças das Trevas: Um Guia de Autoproteção de Quintino Trimble', price:1}
+            forcas_das_trevas: {name: 'As Forças das Trevas: Um Guia de Autoproteção de Quintino Trimble', price:1}
         }
 
         let listCompras = []
