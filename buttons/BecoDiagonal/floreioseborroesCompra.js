@@ -14,13 +14,13 @@ module.exports = {
 
         const livroList = {
             livro_padrao_feiticos: {name:'O Livro Padrão de Feitiços (1ª série) de Miranda Goshawk', price: 1},
-            historia_magia: {name:'História da Magia de Batilda Bagshot', price: 1},
-            teoria_magia: {name:'Teoria da Magia de Adalberto Waffling', price: 1},
-            transfiguracao_iniciantes: {name:'Guia de Transfiguração para Iniciantes de Emerico Switch', price: 1},
-            ervas_fungos_magicos: {name:'Mil Ervas e Fungos Mágicos de Fílida Spore', price: 1},
-            pocoes_avancadas: {name:'Bebidas e Poções Mágicas de Arsênio Jigger', price: 1},
-            animais_fantasticos: {name: 'Animais Fantásticos e Onde Habitam de Newt Scamander', price: 1},
-            forcas_das_trevas: {name: 'As Forças das Trevas: Um Guia de Autoproteção de Quintino Trimble', price:1}
+            livro_historia_magia: {name:'História da Magia de Batilda Bagshot', price: 1},
+            livro_teoria_magia: {name:'Teoria da Magia de Adalberto Waffling', price: 1},
+            livro_transfiguracao_iniciantes: {name:'Guia de Transfiguração para Iniciantes de Emerico Switch', price: 1},
+            livro_ervas_fungos_magicos: {name:'Mil Ervas e Fungos Mágicos de Fílida Spore', price: 1},
+            livro_pocoes_avancadas: {name:'Bebidas e Poções Mágicas de Arsênio Jigger', price: 1},
+            livro_animais_fantasticos: {name: 'Animais Fantásticos e Onde Habitam de Newt Scamander', price: 1},
+            livro_forcas_das_trevas: {name: 'As Forças das Trevas: Um Guia de Autoproteção de Quintino Trimble', price:1}
         }
 
         let listCompras = []

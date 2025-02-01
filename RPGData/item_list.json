@@ -3,5 +3,90 @@
         "name": "Galeões",
         "description": "Moeda de ouro",
         "value": 1
+    },
+    "frasco_vazio":{
+        "name": "Frasco Vazio",
+        "description": "Frasco Vazio",
+        "value": 1
+    },
+    "caldeirao_estanho_2":{
+        "name": "Caldeirão de Estanho - 2",
+        "description": "Caldeirão (estanho, tamanho padrão 2)",
+        "value": 1
+    },
+    "livro_padrao_feiticos":{
+        "name": "O Livro Padrão de Feitiços (1ª série) de Miranda Goshawk",
+        "description": "Livro de Feitiços - O Livro Padrão de Feitiços (1ª série) de Miranda Goshawk",
+        "value": 1
+    },
+    "livro_historia_magia":{
+        "name": "História da Magia de Batilda Bagshot",
+        "description": "Livro de História da Magia de Batilda Bagshot",
+        "value": 1
+    },
+    "livro_teoria_magia":{
+        "name": "Teoria da Magia de Adalberto Waffling",
+        "description": "Livro de Teoria da Magia de Adalberto Waffling",
+        "value": 1
+    },
+    "livro_transfiguracao_iniciantes":{
+        "name": "Guia de Transfiguração para Iniciantes de Emerico Switch",
+        "description": "Livro de Transfiguração para Iniciantes de Emerico Switch",
+        "value": 1
+    },
+    "livro_ervas_fungos_magicos":{
+        "name": "Mil Ervas e Fungos Mágicos de Fílida Spore",
+        "description": "Livro de Mil Ervas e Fungos Mágicos de Fílida Spore",
+        "value": 1
+    },
+    "livro_pocoes_avancadas":{
+        "name": "Bebidas e Poções Mágicas de Arsênio Jigger",
+        "description": "Livro de Bebidas e Poções Mágicas de Arsênio Jigger",
+        "value": 1
+    },
+    "livro_animais_fantasticos":{
+        "name": "Animais Fantásticos e Onde Habitam de Newt Scamander",
+        "description": "Livro de Animais Fantásticos e Onde Habitam de Newt Scamander",
+        "value": 1
+    },
+    "livro_forcas_das_trevas":{
+        "name": "As Forças das Trevas: Um Guia de Autoproteção de Quintino Trimble",
+        "description": "Livro de As Forças das Trevas: Um Guia de Autoproteção de Quintino Trimble",
+        "value": 1
+    },
+    "vestes_comum_trabalho":{
+        "name": "Conjuntos de vestes comuns de trabalho - pretas",
+        "description": "Conjuntos de vestes comuns de trabalho (pretas)",
+        "value": 1
+    },
+    "chapeu_pontudo_simples":{
+        "name": "Chapéu pontudo simples - preto",
+        "description": "Chapéu pontudo simples (preto)",
+        "value": 1
+    },
+    "luvas_protetoras":{
+        "name": "Par de Luvas protetoras - couro de dragão ou similar",
+        "description": "Par de Luvas protetoras (couro de dragão ou similar)",
+        "value": 1
+    },
+    "capa_inverno":{
+        "name": "Capa de inverno - preta, com fechos prateados",
+        "description": "Capa de inverno (preta, com fechos prateados)",
+        "value": 1
+    },
+    "varinha":{
+        "name": "Varinha",
+        "description": "Varinha",
+        "value": 1
+    },
+    "balanca_latao":{
+        "name": "Balança de Latão",
+        "description": "Balança de Latão",
+        "value": 1
+    },
+    "telescopio":{
+        "name": "Telescópio",
+        "description": "Telescópio",
+        "value": 1
     }
 }
