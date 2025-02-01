@@ -18,7 +18,7 @@ module.exports = {
         }
 
         if(userInv.inventario[item]) {
-            return interaction.reply({ content: `Você já comprou seu caldeirão`, ephemeral: true });
+            return interaction.reply({ content: `Você já comprou **${item_list[item].name}**`, ephemeral: true });
         }else{
             userInv.inventario[item] = {
                 amount: 1,

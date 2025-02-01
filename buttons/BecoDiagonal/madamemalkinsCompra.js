@@ -9,32 +9,45 @@ module.exports = {
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
 
-        const file = fs.readFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, 'utf8');
+        let file = fs.readFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, 'utf8');
         const userInv = JSON.parse(file)
 
+        file = fs.readFileSync(`./RPGData/item_list.json`, 'utf8');
+        const item_list = JSON.parse(file)
+
         const roupasList = {
-            vestes_comum_trabalho: {name:'Conjuntos de vestes comuns de trabalho (pretas)', price: 1, amount: 3},
-            chapeu_pontudo_simples: {name:'Chapéu pontudo simples (preto)', price: 1, amount: 1},
-            luvas_protetoras: {name:'Par de Luvas protetoras (couro de dragão ou similar)', price: 1, amount: 1},
-            capa_inverno: {name:'Capa de inverno (preta, com fechos prateados)', price: 1, amount: 1},
+            vestes_comum_trabalho: { amount: 3},
+            chapeu_pontudo_simples: { amount: 1},
+            luvas_protetoras: { amount: 1},
+            capa_inverno: { amount: 1},
         }
 
         let listCompras = []
 
         let totalCost = 0;
-        for (const roupa in Object.values(roupasList)) {
-            totalCost += roupa.price*roupa.amount;
+        for (const [item,roupa] in Object.entries(roupasList)) {
+            totalCost += item_list[item].price*roupa.amount;
         }
         if (userInv.inventario.galeoes && userInv.inventario.galeoes.amount >= totalCost) {
             return interaction.reply({ content: `Você não tenho galeões suficientes`, ephemeral: true });
         }
         
-        for (const [key,roupa] of Object.entries(roupasList)) {
-            if(!userInv.inventario[key]){
-                userInv.inventario[key] = {name: roupa.name, amount: 1}
-                userInv.inventario.galeoes.amount -= roupa.price*roupa.amount
+        for (const [item,roupa] of Object.entries(roupasList)) {
+            if(!userInv.inventario[item]){
+                userInv.inventario[item] = {
+                    amount: roupa.amount,
+                    name: item_list[item].name,
+                    description: item_list[item].description,
+                    type: item_list[item].type,
+                    // value: item_list[item].value,
+                    // weight: item_list[item].weight,
+                    // rarity: item_list[item].rarity,
+                    image: item_list[item].image
+                };
 
-                listCompras.push(`${roupa.amount} x ${roupa.name}`)
+                userInv.inventario.galeoes.amount -= item_list[item].price*roupa.amount
+
+                listCompras.push(`${roupa.amount} x ${item_list[item].name}`)
             }
         }
         fs.writeFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, JSON.stringify(userInv));

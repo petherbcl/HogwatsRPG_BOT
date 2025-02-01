@@ -26,7 +26,7 @@ module.exports = {
         let listCompras = []
 
         let totalCost = 0;
-        livroList.forEach( livro => totalCost += item_list[livro].price )
+        livroList.forEach( item => totalCost += item_list[item].price )
 
         if (!userInv.inventario.galeoes && userInv.inventario.galeoes.amount < totalCost) {
             return interaction.reply({ content: `Você não tenho galeões suficientes`, ephemeral: true });
