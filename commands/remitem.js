@@ -4,8 +4,8 @@ const fs = require('fs');
 module.exports = {
     admin: true,
     data: new SlashCommandBuilder()
-    .setName('additem')
-    .setDescription('Adiciona item ao player.')
+    .setName('remitem')
+    .setDescription('Remove item do player.')
     .addStringOption(option => option.setName('player').setDescription('Marque o player. EX: @fulano').setRequired(true))
     .addStringOption(option => option.setName('item').setDescription('Código do item').setRequired(true))
     .addStringOption(option => option.setName('quantidade').setDescription('Quantidade').setRequired(false)),
@@ -40,19 +40,14 @@ module.exports = {
         const player_file = fs.readFileSync(`./RPGData/players/inv_${player_user.user.username}_${player_user.user.id}.json`, 'utf8');
         const player_inv = JSON.parse(player_file)
 
-        if(player_inv.inventario[item]){
-            player_inv.inventario[item].amount += quantidade;
+        if(player_inv.inventario[item] && player_inv.inventario[item].amount >= quantidade){
+            player_inv.inventario[item].amount -= quantidade;
+
+            if(player_inv.inventario[item].amount <= 0){
+                delete player_inv.inventario[item];
+            }
         } else {
-            player_inv.inventario[item] = {
-                amount: quantidade,
-                name: item_list[item].name,
-                description: item_list[item].description,
-                type: item_list[item].type,
-                // value: item_list[item].value,
-                // weight: item_list[item].weight,
-                // rarity: item_list[item].rarity,
-                image: item_list[item].image
-            };
+            return interaction.reply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}** não possui **${quantidade} x ${item_list[item].name}**.`, ephemeral: true });
         }
 
         fs.writeFileSync(`./RPGData/players/inv_${player_user.user.username}_${player_user.user.id}.json`, JSON.stringify(player_inv));

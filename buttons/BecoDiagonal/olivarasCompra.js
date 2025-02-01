@@ -1,5 +1,5 @@
 const fs = require('fs');
-const item = 'frasco_vazio';
+const item = 'varinha';
 
 module.exports = {
     customID: 'olivarasCompra',

@@ -15,7 +15,7 @@ module.exports = {
         const file = fs.readFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, 'utf8');
         const user_inv = JSON.parse(file)
 
-        const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Itens do Inventário').setDescription(Object.entries(user_inv.inventario).map(([key, item]) => `* **${key}** - ${item.name} | *${item.description}*`).join('\n'));
+        const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Itens do Inventário').setDescription(Object.entries(user_inv.inventario).map(([key, item]) => `* **${key}** - ${item.amount} x ${item.name} | *${item.description}*`).join('\n'));
         await interaction.reply({ embeds: [embed], ephemeral: true });
     },
 };
