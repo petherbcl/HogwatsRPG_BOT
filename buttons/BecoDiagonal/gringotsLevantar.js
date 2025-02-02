@@ -21,7 +21,7 @@ module.exports = {
             const galeoes = dice * 100;
             userInv.gringots = true;
             userInv.inventario[item] = {
-                amount: 1,
+                amount: galeoes,
                 name: item_list[item].name,
                 description: item_list[item].description,
                 type: item_list[item].type,
