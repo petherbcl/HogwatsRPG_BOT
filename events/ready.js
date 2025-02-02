@@ -409,6 +409,12 @@ module.exports = {
 
         client.structure = [
             {
+                name: "╭--🔹Mapa🔹--╮",
+                channels: [
+                    { name: "consultar-mapa", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel'], deny: ['UseApplicationCommands', 'SendMessages'], }], hasPassage: false },
+                ]
+            },
+            {
                 name: "╭--🔹Chegada🔹--╮",
                 channels: [
                     { name: "caldeirão-furado", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel', 'Connect','Speak', 'UseApplicationCommands'], deny: ['UseApplicationCommands', 'SendMessages'], }], hasPassage: false },
