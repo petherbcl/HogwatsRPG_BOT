@@ -1,5 +1,4 @@
 const { SlashCommandBuilder, PermissionsBitField, ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder } = require('discord.js');
-const roleApprovals = '1325174179829645454'
 const roleApprovalsAllow = ['ViewChannel', 'UseApplicationCommands', 'SendMessages','AddReactions','AttachFiles','ReadMessageHistory']
 const roleApprovalsDeny = []
 const userAllow = ['ViewChannel', 'UseApplicationCommands', 'SendMessages','AddReactions','AttachFiles','ReadMessageHistory']
@@ -10,7 +9,7 @@ module.exports = {
         let categoryChannel = guild.channels.cache.find((c) => c.name === '╭--🔹Chegada🔹--╮' && c.type === 4);
         if (categoryChannel) {
             const user = interaction.user;
-
+            
             let channel = guild.channels.cache.find((c) => c.name === `carta-de-${user.username}-${user.id}` && c.type === 0);
             if(!channel){
                 channel = await guild.channels.create({
@@ -19,7 +18,7 @@ module.exports = {
                     parent: categoryChannel.id,
                     permissionOverwrites: [
                         {
-                            id: roleApprovals,
+                            id: guild.roles.cache.find((r) => r.name === 'DM').id,
                             allow: roleApprovalsAllow.map((p) => PermissionsBitField.Flags[p]),
                             deny: roleApprovalsDeny.map((p) => PermissionsBitField.Flags[p]),
                         },

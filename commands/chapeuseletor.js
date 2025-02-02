@@ -30,7 +30,7 @@ module.exports = {
                 'Grifinória': guild.roles.cache.find((r) => r.name === 'Grifinória').id,
                 'Sonserina': guild.roles.cache.find((r) => r.name === 'Sonserina').id,
                 'Corvinal': guild.roles.cache.find((r) => r.name === 'Corvinal').id,
-                'Lufa-Lufa': guild.roles.cache.find((r) => r.name === 'LuffaLuffa').id
+                'Lufa-Lufa': guild.roles.cache.find((r) => r.name === 'LufaLufa').id
             };
             const houseImg = {
                 'Grifinória': 'https://imgur.com/aAlMgXS.png',

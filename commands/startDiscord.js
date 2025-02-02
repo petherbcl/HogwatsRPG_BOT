@@ -61,7 +61,7 @@ async function createStructure(client, guild) {
                     type: channel.type,
                     parent: categoryChannel.id,
                     permissionOverwrites: channel.permissions.map((role) => ({
-                        id: guild.roles.cache.find((r) => r.name === client.roomRoles[channel.name]).id,
+                        id: guild.roles.cache.find((r) => r.name === (client.roomRoles[channel.name] || '@everyone')).id,
                         allow: role.allow.map((p) => PermissionsBitField.Flags[p]),
                         deny: role.deny.map((p) => PermissionsBitField.Flags[p]),
                     }))
@@ -134,6 +134,20 @@ Direção de Hogwarts
     const row = new ActionRowBuilder().addComponents(button);
 
     await CartaChannel.send({ embeds: [embed], components: [row], ephemeral: false });
+}
+
+async function startMapaHogwarts(guild) {
+
+    const MapaChannel = guild.channels.cache.find((c) => c.name === 'consultar-mapa');
+    const fetchedMessages = await MapaChannel.messages.fetch({ limit: 100 });
+    await MapaChannel.bulkDelete(fetchedMessages, true);
+
+    const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Mapa de Hogwarts').setDescription(`Consulte o mapa de Hogwarts para encontrar salas, corredores e passagens secretas. 🗺️`)
+
+    const button = new ButtonBuilder().setCustomId('openmap').setStyle(ButtonStyle.Primary).setLabel('Abrir Mapa');
+    const row = new ActionRowBuilder().addComponents(button);
+
+    await MapaChannel.send({ embeds: [embed], components: [row], ephemeral: false });
 }
 
 async function manageBecoDiagonal(guild) {
@@ -392,6 +406,7 @@ module.exports = {
         await createStructure(client, guild)
         await setupExpressoChannel(guild)
         await startMessageCartaHogwarts(guild)
+        await startMapaHogwarts(guild)
         await manageBecoDiagonal(guild)
         await checkUsersInventory(guild)
 

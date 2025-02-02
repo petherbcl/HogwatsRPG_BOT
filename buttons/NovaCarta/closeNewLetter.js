@@ -1,5 +1,3 @@
-const { SlashCommandBuilder, PermissionsBitField, ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder } = require('discord.js');
-const roleApprovals = '1325174179829645454'
 module.exports = {
     customID: 'closeNewLetter',
     async execute(interaction, client) {
@@ -7,7 +5,7 @@ module.exports = {
         const channelId = interaction.channelId;
         const channel = guild.channels.cache.get(channelId);
 
-        if (channel && interaction.member.roles.cache.get(roleApprovals)) {
+        if (channel && interaction.member.roles.cache.find((role) => role.name === 'DM')) {
             await channel.delete();
         } 
     }

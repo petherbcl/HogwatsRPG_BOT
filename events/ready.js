@@ -213,7 +213,7 @@ module.exports = {
             'corredor-piso-1': [
                 { room: 'hall-de-entrada', label: '↗️ Hall Entrada - Piso 3' },
                 { room: 'cozinha', label: '🚪 Cozinha' },
-                { room: 'sala-comunal-lufa-lufa', role: 'LuffaLuffa', label: '🦝 Sala Comunal Lufa Lufa' },
+                { room: 'sala-comunal-lufa-lufa', role: 'LufaLufa', label: '🦝 Sala Comunal Lufa Lufa' },
             ],
             'cozinha': [
                 { room: 'corredor-piso-1', label: '🚪 Corredor Piso 1' },
@@ -366,6 +366,8 @@ module.exports = {
 
         client.rpgRoles = [
             // { name: 'HogwartsRPG', color: 0 },
+            { name: 'DM', color: '#6800b2' },
+            { name: '---------------------', color: 10066329 },
             { name: 'Diretor', color: 7419530 },
             { name: 'Vice-diretor', color: 10181046 },
             { name: 'Chefe do Conselho Diretorial', color: 12684027 },
@@ -373,7 +375,7 @@ module.exports = {
             { name: 'Diretor Grifinória', color: 10420224 },
             { name: 'Diretor Sonserina', color: 221184 },
             { name: 'Diretor Corvinal', color: 12159 },
-            { name: 'Diretor Luffa-Luffa', color: 8148480 },
+            { name: 'Diretor Lufa-Lufa', color: 8148480 },
             { name: 'Professor', color: 2123412 },
             { name: 'Adivinhação', color: 3447003 },
             { name: 'Aritmância', color: 3447003 },
@@ -397,12 +399,12 @@ module.exports = {
             { name: 'Monitor-chefe', color: 10038562 },
             { name: 'Monitor Corvinal', color: 91391 },
             { name: 'Monitor Grifinória', color: 14548992 },
-            { name: 'Monitor Luffa-Luffa', color: 15844367 },
+            { name: 'Monitor Lufa-Lufa', color: 15844367 },
             { name: 'Monitor Sonserina', color: 50693 },
             { name: 'Aluno', color: 16774656 },
             { name: 'Corvinal', color: 91391 },
             { name: 'Grifinória', color: 14548992 },
-            { name: 'LuffaLuffa', color: 15844367 },
+            { name: 'LufaLufa', color: 15844367 },
             { name: 'Sonserina', color: 50693 },
             { name: '----------------------', color: 10066329 },
         ]; 

@@ -21,7 +21,7 @@ const notAllowMessages = {
         'Preciso aprender a priorizar meus próprios interesses. A lealdade tem limites.',
         'Acho que preciso mostrar mais ambição e desejo de poder. Talvez minha postura não tenha transmitido isso.',
     ],
-    LuffaLuffa: [
+    LufaLufa: [
         'ARGH! VINAGRE! QUE CHEIRO HORRÍVEL!',
         'Credo, preciso tomar um banho urgente! Minhas roupas vão ficar impregnadas com esse cheiro.',
         'Puxa, eu estava quase conseguindo! Acho que errei o ritmo na última batida.',

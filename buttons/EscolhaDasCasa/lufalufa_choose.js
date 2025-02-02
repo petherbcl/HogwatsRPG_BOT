@@ -12,7 +12,7 @@ module.exports = {
             return
         }
 
-        const roleAluno = guild.roles.cache.find((role) => role.name === "LuffaLuffa");
+        const roleAluno = guild.roles.cache.find((role) => role.name === "LufaLufa");
         const roleCasa = guild.roles.cache.find((role) => role.name === "Aluno");
         const salaChegada = guild.roles.cache.find((role) => role.name === client.roomRoles["cabana-dos-barcos"]);
 
