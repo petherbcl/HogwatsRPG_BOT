@@ -38,15 +38,20 @@ async function createStructure(client, guild) {
         for (const channel of category.channels) {
             channel.name = channel.name.toLowerCase().replaceAll(' ', '-');
             for (const role of channel.permissions) {
-                let channelRole = guild.roles.cache.find(r => r.name === client.roomRoles[channel.name]);
-                if (!channelRole) {
-                    channelRole = await guild.roles.create({
-                        name: client.roomRoles[channel.name],
-                        color: role.color,
-                        permissions: new PermissionsBitField()
-                    });
-                    console.warn(`          Role ${channelRole.name} created under channel ${channel.name}.`);
+                if(client.roomRoles[channel.name]){
+                    let channelRole = guild.roles.cache.find(r => r.name === client.roomRoles[channel.name]);
+                    if (!channelRole) {
+                        channelRole = await guild.roles.create({
+                            name: client.roomRoles[channel.name],
+                            color: role.color,
+                            permissions: new PermissionsBitField()
+                        });
+                        console.warn(`          Role ${channelRole.name} created under channel ${channel.name}.`);
+                    }
+                }else{
+                    console.warn(`          Channel ${channel.name} does not have roles.`);
                 }
+                
             }
 
             let catChannel = guild.channels.cache.find((c) => c.name === channel.name && c.type === channel.type);
