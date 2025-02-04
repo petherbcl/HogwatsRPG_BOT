@@ -2,7 +2,7 @@ const { SlashCommandBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuil
 const fs = require('fs');
 
 module.exports = {
-    admin: true,
+    dm: true,
     data: new SlashCommandBuilder()
     .setName('additem')
     .setDescription('Adiciona item ao player.')

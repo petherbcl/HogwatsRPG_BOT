@@ -22,8 +22,8 @@ module.exports = {
 
         client.isMoving = {};
         client.roomRoles = {
-            'carta-de-hogwarts': 'CartaDeHogwarts',
-            'caldeirão-furado': 'CaldeiraoFurado',
+            // 'carta-de-hogwarts': 'CartaDeHogwarts',
+            // 'caldeirão-furado': 'CaldeiraoFurado',
 
             'beco-diagonal': 'BecoDiagonal',
             'banco-gringotes': 'BecoDiagonal',
@@ -416,13 +416,13 @@ module.exports = {
                     { name: "consultar-mapa", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel'], deny: ['UseApplicationCommands', 'SendMessages'], }], hasPassage: false },
                 ]
             },
-            {
-                name: "╭--🔹Chegada🔹--╮",
-                channels: [
-                    { name: "caldeirão-furado", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel', 'Connect','Speak', 'UseApplicationCommands'], deny: ['UseApplicationCommands', 'SendMessages'], }], hasPassage: false },
-                    { name: "carta-de-hogwarts", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel'], deny: ['UseApplicationCommands', 'SendMessages','AddReactions','AttachFiles'], }], hasPassage: false },
-                ]
-            },
+            // {
+            //     name: "╭--🔹Chegada🔹--╮",
+            //     channels: [
+            //         { name: "caldeirão-furado", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel', 'Connect','Speak', 'UseApplicationCommands'], deny: ['UseApplicationCommands', 'SendMessages'], }], hasPassage: false },
+            //         { name: "carta-de-hogwarts", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel'], deny: ['UseApplicationCommands', 'SendMessages','AddReactions','AttachFiles'], }], hasPassage: false },
+            //     ]
+            // },
 
             {
                 name: "╭--🔹Beco Diagonal🔹--╮",

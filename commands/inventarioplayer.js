@@ -2,7 +2,7 @@ const { SlashCommandBuilder, EmbedBuilder,  } = require("discord.js");
 const fs = require('fs');
 
 module.exports = {
-    admin: true,
+    dm: true,
     data: new SlashCommandBuilder()
     .setName('inventarioplayer')
     .setDescription('Consulta inventário do player.')

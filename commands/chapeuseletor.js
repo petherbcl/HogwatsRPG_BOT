@@ -3,7 +3,6 @@ const { setTimeout } = require('timers/promises');
 const fs = require('fs');
 
 module.exports = {
-    admin: true,
     data: new SlashCommandBuilder()
         .setName('chapeuseletor')
         .setDescription('Inicia a seleção da casa'),
