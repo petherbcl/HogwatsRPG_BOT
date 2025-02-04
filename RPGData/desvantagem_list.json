@@ -1,0 +1,68 @@
+{
+    "desajeitado": {
+        "label": "Desajeitado",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "-1 em testes de Voo ou Quadribol."
+    },
+    "trouxa_criado_por_trouxas": {
+        "label": "Trouxa Criado por Trouxas",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Testes de magia inicial sofrem -1 devido à falta de conhecimento do mundo bruxo."
+    },
+    "medroso": {
+        "label": "Medroso",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Falha automaticamente em testes de coragem diante de perigos."
+    },
+    "problemas_com_pocoes": {
+        "label": "Problemas com Poções",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Tem -1 em Poções e pode causar efeitos inesperados."
+    },
+    "inimigo_de_um_monitor": {
+        "label": "Inimigo de um Monitor",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Um monitor da escola sempre tenta punir ou prejudicar você."
+    },
+    "pesadelos": {
+        "label": "Pesadelos",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Precisa fazer um teste de Resistência todas as noites ou sofrerá -1 em todas as ações no dia seguinte."
+    },
+    "alvo_de_bullying": {
+        "label": "Alvo de Bullying",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Um grupo de alunos (de outra casa ou do seu próprio ano) sempre o atormenta."
+    },
+    "vulneravel_a_magia_negra": {
+        "label": "Vulnerável à Magia Negra",
+        "custo": 0,
+        "bonus": 2,
+        "effect": "Sofre -1 em resistência contra feitiços das trevas."
+    },
+    "maldição_de_sangue": {
+        "label": "Maldição de Sangue",
+        "custo": 0,
+        "bonus": 2,
+        "effect": "Sofre efeitos colaterais estranhos ao usar magia (ex: fraqueza, cansaço)."
+    },
+    "cacado_por_criaturas": {
+        "label": "Caçado por Criaturas",
+        "custo": 0,
+        "bonus": 2,
+        "effect": "Uma criatura mágica tem interesse em você e pode persegui-lo."
+    },
+    "toque_da_magia_negra": {
+        "label": "Toque da Magia Negra",
+        "custo": 0,
+        "bonus": 3,
+        "effect": "Se usar arte das trevas, sofre efeitos colaterais piores."
+    }
+}

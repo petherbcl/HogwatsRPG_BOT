@@ -22,7 +22,7 @@ module.exports = {
 
         client.isMoving = {};
         client.roomRoles = {
-            // 'carta-de-hogwarts': 'CartaDeHogwarts',
+            'carta-de-hogwarts': 'CartaDeHogwarts',
             // 'caldeirão-furado': 'CaldeiraoFurado',
 
             'beco-diagonal': 'BecoDiagonal',

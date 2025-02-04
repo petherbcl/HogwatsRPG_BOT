@@ -11,7 +11,6 @@ module.exports = {
 
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
-        // const user = interaction.user;
         const channel = interaction.channel;
 
         const file = fs.readFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, 'utf8');

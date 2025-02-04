@@ -1,0 +1,212 @@
+{
+    "lumos": {
+        "name": "Lumos",
+        "pm": 1,
+        "effect": "Ilumina a ponta da varinha."
+    },
+    "nox": {
+        "name": "Nox",
+        "pm": 1,
+        "effect": "Apaga a luz conjurada por Lumos."
+    },
+    "alohomora": {
+        "name": "Alohomora",
+        "pm": 1,
+        "effect": "Abre fechaduras simples (não mágicas)."
+    },
+    "reparo": {
+        "name": "Reparo",
+        "pm": 1,
+        "effect": "Conserta objetos quebrados."
+    },
+    "wingardium_leviosa": {
+        "name": "Wingardium Leviosa",
+        "pm": 2,
+        "effect": "Faz um objeto levitar."
+    },
+    "flipendo": {
+        "name": "Flipendo",
+        "pm": 2,
+        "effect": "Empurra um alvo para trás."
+    },
+    "expelliarmus": {
+        "name": "Expelliarmus",
+        "pm": 2,
+        "effect": "Desarma o alvo."
+    },
+    "scourgify": {
+        "name": "Scourgify",
+        "pm": 1,
+        "effect": "Limpa sujeira e objetos."
+    },
+    "revelio": {
+        "name": "Revelio",
+        "pm": 3,
+        "effect": "Revela objetos ocultos e detecta magia."
+    },
+    "mucus_ad_nauseam": {
+        "name": "Mucus ad Nauseam",
+        "pm": 2,
+        "effect": "Faz o alvo espirrar e ter coriza intensa."
+    },
+    "riddikulus": {
+        "name": "Riddikulus",
+        "pm": 2,
+        "effect": "Transforma um bicho-papão em algo engraçado."
+    },
+    "lumos_maxima": {
+        "name": "Lumos Maxima",
+        "pm": 2,
+        "effect": "Luz intensa que ilumina uma área maior."
+    },
+    "locomotor": {
+        "name": "Locomotor",
+        "pm": 2,
+        "effect": "Move objetos pelo ar à distância."
+    },
+    "petrificus_totalus": {
+        "name": "Petrificus Totalus",
+        "pm": 3,
+        "effect": "Paralisa um alvo."
+    },
+    "obscuro": {
+        "name": "Obscuro",
+        "pm": 2,
+        "effect": "Cega temporariamente o alvo."
+    },
+    "accio": {
+        "name": "Accio",
+        "pm": 2,
+        "effect": "Atrai objetos ao conjurador."
+    },
+    "depulso": {
+        "name": "Depulso",
+        "pm": 2,
+        "effect": "Afasta objetos ou inimigos."
+    },
+    "incendio": {
+        "name": "Incendio",
+        "pm": 2,
+        "effect": "Cria chamas."
+    },
+    "slugulus_eructo": {
+        "name": "Slugulus Eructo",
+        "pm": 2,
+        "effect": "Faz o alvo vomitar lesmas."
+    },
+    "tarantallegra": {
+        "name": "Tarantallegra",
+        "pm": 2,
+        "effect": "Faz o alvo dançar sem parar."
+    },
+    "protego": {
+        "name": "Protego",
+        "pm": 3,
+        "effect": "Cria uma barreira mágica."
+    },
+    "relashio": {
+        "name": "Relashio",
+        "pm": 2,
+        "effect": "Solta objetos ou criaturas presas."
+    },
+    "diffindo": {
+        "name": "Diffindo",
+        "pm": 2,
+        "effect": "Corta materiais com precisão."
+    },
+    "ventus": {
+        "name": "Ventus",
+        "pm": 2,
+        "effect": "Cria uma rajada de vento."
+    },
+    "aparecium": {
+        "name": "Aparecium",
+        "pm": 1,
+        "effect": "Revela mensagens ocultas."
+    },
+    "glacius": {
+        "name": "Glacius",
+        "pm": 3,
+        "effect": "Congela um alvo ou objeto."
+    },
+    "protego_totalum": {
+        "name": "Protego Totalum",
+        "pm": 4,
+        "effect": "Barreira mágica mais forte."
+    },
+    "expulso": {
+        "name": "Expulso",
+        "pm": 3,
+        "effect": "Explosão mágica que afasta inimigos."
+    },
+    "serpensortia": {
+        "name": "Serpensortia",
+        "pm": 3,
+        "effect": "Conjura uma cobra."
+    },
+    "confringo": {
+        "name": "Confringo",
+        "pm": 5,
+        "effect": "Cria uma explosão de fogo."
+    },
+    "estupefaca": {
+        "name": "Estupefaça",
+        "pm": 4,
+        "effect": "Atordoa um inimigo."
+    },
+    "levicorpus": {
+        "name": "Levicorpus",
+        "pm": 3,
+        "effect": "Suspende um alvo de cabeça para baixo."
+    },
+    "oppugno": {
+        "name": "Oppugno",
+        "pm": 3,
+        "effect": "Faz objetos atacarem um alvo."
+    },
+    "legilimens": {
+        "name": "Legilimens",
+        "pm": 6,
+        "effect": "Permite ler memórias superficiais."
+    },
+    "impervius": {
+        "name": "Impervius",
+        "pm": 5,
+        "effect": "Torna um objeto ou roupa resistente à água."
+    },
+    "deprimo": {
+        "name": "Deprimo",
+        "pm": 6,
+        "effect": "Cria um buraco no solo."
+    },
+    "fianto_duri": {
+        "name": "Fianto Duri",
+        "pm": 8,
+        "effect": "Fortificação mágica."
+    },
+    "legilimencia_avancada": {
+        "name": "Legilimência Avançada",
+        "pm": 10,
+        "effect": "Permite manipular memórias do alvo."
+    },
+    "protego_diabolica": {
+        "name": "Protego Diabolica",
+        "pm": 10,
+        "effect": "Cria um escudo de fogo negro."
+    },
+    "crucio": {
+        "name": "Crucio",
+        "pm": 10,
+        "effect": "Causa dor extrema."
+    },
+    "imperius": {
+        "name": "Imperius",
+        "pm": 10,
+        "effect": "Controla um alvo por 1d6 rodadas."
+    },
+    "avada_kedavra": {
+        "name": "Avada Kedavra",
+        "pm": "Todo o PM disponível",
+        "effect": "Mata instantaneamente."
+    }
+}

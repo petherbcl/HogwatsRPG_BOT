@@ -1,0 +1,90 @@
+{
+    "1": {
+        "vantagem": [
+            "talento_natural",
+            "mente_afiada",
+            "vassoura_pessoal",
+            "curioso",
+            "bom_de_fuga",
+            "familiar_especial"
+        ],
+        "desvantagem": [
+            "desajeitado",
+            "trouxa_criado_por_trouxas",
+            "medroso",
+            "problemas_com_pocoes",
+            "inimigo_de_um_monitor"
+        ]
+    },
+    "2": {
+        "vantagem": [
+            "aparencia_inofensiva",
+            "intuicao_agucada",
+            "lingua_de_cobra",
+            "sentidos_agucados",
+            "resistencia_a_feiticos"
+        ],
+        "desvantagem": [
+            "pesadelos",
+            "alvo_de_bullying",
+            "vulneravel_a_magia_negra"
+        ]
+    },
+    "3": {
+        "vantagem": [
+            "conhecimento_proibido",
+            "duelista_habilidoso",
+            "sangue_puro_tradicionalista",
+            "metamorfomagia_iniciante"
+        ],
+        "desvantagem": [
+            "curiosidade_perigosa",
+            "fraco_contra_dementadores",
+            "problemas_com_autoridade"
+        ]
+    },
+    "4": {
+        "vantagem": [
+            "legilimencia_basica",
+            "duelista_avancado",
+            "voo_acrobatico",
+            "criador_de_pocoes"
+        ],
+        "desvantagem": [
+            "maldição_de_sangue",
+            "cacado_por_criaturas"
+        ]
+    },
+    "5": {
+        "vantagem": [
+            "legilimencia_basica",
+            "duelista_avancado",
+            "voo_acrobatico",
+            "criador_de_pocoes"
+        ],
+        "desvantagem": [
+            "maldição_de_sangue",
+            "cacado_por_criaturas"
+        ]
+    },
+    "6": {
+        "vantagem": [
+            "animagia_iniciante",
+            "legilimencia_avancada",
+            "resistencia_a_maldição_imperius"
+        ],
+        "desvantagem": [
+            "toque_da_magia_negra"
+        ]
+    },
+    "7": {
+        "vantagem": [
+            "animagia_iniciante",
+            "legilimencia_avancada",
+            "resistencia_a_maldição_imperius"
+        ],
+        "desvantagem": [
+            "toque_da_magia_negra"
+        ]
+    }
+}

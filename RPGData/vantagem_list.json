@@ -1,0 +1,152 @@
+{
+    "talento_natural": {
+        "label": "Talento Natural",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "Recebe +1 em testes de perícia (Herbologia, Poções, Quadribol, etc.)"
+    },
+    "mente_afiada": {
+        "label": "Mente Afiada",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "Pode repetir um teste de Lógica ou Adivinhação por dia."
+    },
+    "vassoura_pessoal": {
+        "label": "Vassoura Pessoal",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "O personagem começa com uma vassoura melhor que as escolares (+1 em testes de Voo)."
+    },
+    "curioso": {
+        "label": "Curioso",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "Pode rolar Habilidade +1 ao tentar descobrir informações secretas."
+    },
+    "bom_de_fuga": {
+        "label": "Bom de Fuga",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "+1 em testes para escapar de situações perigosas."
+    },
+    "familiar_especial": {
+        "label": "Familiar Especial",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "Seu animal traz benefícios extras (ex: uma coruja que pode entregar cartas rapidamente)."
+    },
+    "aparencia_inofensiva": {
+        "label": "Aparência Inofensiva",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "Pode enganar adultos ou professores com mais facilidade."
+    },
+    "intuicao_agucada": {
+        "label": "Intuição Aguçada",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "+1 em testes para descobrir mentiras ou armadilhas mágicas."
+    },
+    "lingua_de_cobra": {
+        "label": "Língua de Cobra",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "Pode entender Parseltongue (mas não falar)."
+    },
+    "sentidos_agucados": {
+        "label": "Sentidos Aguçados",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "+1 em testes de audição e percepção mágica."
+    },
+    "resistencia_a_feiticos": {
+        "label": "Resistência a Feitiços",
+        "custo": 2,
+        "bonus": 0,
+        "effect": "+1 em testes contra feitiços de controle mental ou de impacto direto."
+    },
+    "conhecimento_proibido": {
+        "label": "Conhecimento Proibido",
+        "custo": 2,
+        "bonus": 0,
+        "effect": "Pode tentar conjurar feitiços fora do currículo sem penalidade."
+    },
+    "duelista_habilidoso": {
+        "label": "Duelista Habilidoso",
+        "custo": 2,
+        "bonus": 0,
+        "effect": "+1 em testes de Duelos Mágicos."
+    },
+    "sangue_puro_tradicionalista": {
+        "label": "Sangue-Puro Tradicionalista",
+        "custo": 1,
+        "bonus": 0,
+        "effect": "+1 em testes de Etiqueta Bruxa e História da Magia."
+    },
+    "metamorfomagia_iniciante": {
+        "label": "Metamorfomagia Iniciante",
+        "custo": 2,
+        "bonus": 0,
+        "effect": "Pode mudar pequenos detalhes da aparência (ex: cor dos olhos e cabelo)."
+    },
+    "curiosidade_perigosa": {
+        "label": "Curiosidade Perigosa",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Sempre precisa testar Resistência para não mexer em algo perigoso."
+    },
+    "fraco_contra_dementadores": {
+        "label": "Fraco contra Dementadores",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Sempre sofre -2 em testes contra a presença de Dementadores."
+    },
+    "problemas_com_autoridade": {
+        "label": "Problemas com Autoridade",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Tem dificuldade com professores e recebe punições com mais frequência."
+    },
+    "legilimencia_basica": {
+        "label": "Legilimência Básica",
+        "custo": 3,
+        "bonus": 0,
+        "effect": "Pode tentar ler emoções de pessoas próximas."
+    },
+    "duelista_avancado": {
+        "label": "Duelista Avançado",
+        "custo": 3,
+        "bonus": 0,
+        "effect": "+2 em testes de duelos mágicos."
+    },
+    "voo_acrobatico": {
+        "label": "Voo Acrobático",
+        "custo": 2,
+        "bonus": 0,
+        "effect": "+1 em testes de voo e Quadribol."
+    },
+    "criador_de_pocoes": {
+        "label": "Criador de Poções",
+        "custo": 3,
+        "bonus": 0,
+        "effect": "Pode fabricar Poções Mágicas de nível médio."
+    },
+    "animagia_iniciante": {
+        "label": "Animagia Iniciante",
+        "custo": 4,
+        "bonus": 0,
+        "effect": "Pode aprender a se transformar em um animal."
+    },
+    "legilimencia_avancada": {
+        "label": "Legilimência Avançada",
+        "custo": 4,
+        "bonus": 0,
+        "effect": "Pode tentar ler pensamentos de alvos."
+    },
+    "resistencia_a_maldição_imperius": {
+        "label": "Resistência à Maldição Imperius",
+        "custo": 4,
+        "bonus": 0,
+        "effect": "Pode repetir o teste para resistir à maldição Imperius."
+    }
+}

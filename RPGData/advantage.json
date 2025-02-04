@@ -1,9 +1,0 @@
-{
-    "talento_natural":{
-        "lable":"Talento Natural",
-        "custo": 1,
-        "bonus": 0,
-        "effect": "Recebe +1 em todos os testes de perícia.",
-        "year": 1
-    }
-}

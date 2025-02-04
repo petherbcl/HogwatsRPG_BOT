@@ -389,8 +389,7 @@ module.exports = {
     async execute(interaction, client) {
 
         await interaction.deferReply({ ephemeral: true }).catch( () => {} );
-        await interaction.deferReply({ ephemeral: true }).catch( () => {} );
-
+        
         const guild = client.guilds.cache.get(interaction.guildId);
         if (!guild) return console.error("Guild not found");
 
