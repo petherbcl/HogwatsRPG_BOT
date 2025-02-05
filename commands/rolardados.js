@@ -31,7 +31,7 @@ module.exports = {
         .setDescription('Simula a rolagem de dados.')
         .addStringOption(option => option.setName('dados').setDescription('Notação dos dados para rolar (ex: 3D20 2D6)').setRequired(true)),
     async execute(interaction) {
-        const diceNotation = interaction.options.getString('dados');
+        const diceNotation = interaction.options.getString('dados').toUpperCase();
         const args = diceNotation.split(' ');
 
         const result = rollMultipleDice(args);

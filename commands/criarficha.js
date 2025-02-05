@@ -2,6 +2,7 @@ const { SlashCommandBuilder, AttachmentBuilder } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+const {StringFormat} = require('../utils/utils.js');
 
 const spell_by_year = JSON.parse(fs.readFileSync(`./RPGData/spell_by_year.json`, 'utf8'))
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
@@ -17,7 +18,7 @@ const questions = {
     race: { label: 'Raça: (Humano, meio-veela, lobisomem, mestiço, etc.)', type: 'string', question: true },
     age: { label: 'Idade:', type: 'number', question: true },
 
-    features: { label: 'Características\n*Distribua  5 pontos entre as características:* ***Força(F) , Habilidade(H) , Resistência(R) , Armadura(A) , Poder de Fogo(PdF)***', type: 'string', question: false },
+    features: { label: 'Características\n*Distribua {0} pontos entre as características:* ***Força(F) , Habilidade(H) , Resistência(R) , Armadura(A) , Poder de Fogo(PdF)***', type: 'string', question: false },
     F: { label: 'Força (F):', type: 'number', question: true },
     H: { label: 'Habilidade (H):', type: 'number', question: true },
     R: { label: 'Resistência (R):', type: 'number', question: true },
@@ -161,7 +162,6 @@ module.exports = {
             PdF: null,
             PV: null,
             PM: null,
-            PE: null,
             spells: null,
             vantagens: null,
             desvantagens: null,
@@ -177,6 +177,7 @@ module.exports = {
 
         const filter = response => response.author.id === interaction.user.id;
         let currentQuestion = 0;
+        let PE = 0
 
         const askQuestion = async () => {
             try {
@@ -204,16 +205,20 @@ module.exports = {
                             }else{
                                 question.label += Object.values(desvantagem_list).map( v => v.label).join(', ')
                             }
+                        } else if (key === 'features') {
+                            question.label = StringFormat(question.label, PE)
                         }
 
-                        const fetchedMessages = await channel.messages.fetch({ limit: 1 });
-                        await channel.bulkDelete(fetchedMessages, true);
+                        if(currentQuestion > 0){
+                            const fetchedMessages = await channel.messages.fetch({ limit: 1 });
+                            await channel.bulkDelete(fetchedMessages, true);
+                        }
 
                         await interaction.editReply({ content: question.label, ephemeral: true });
 
                         if (question.question) {
 
-                            const collected = await interaction.channel.awaitMessages({ filter, max: 1, time: 60000, errors: ['time'] });
+                            const collected = await interaction.channel.awaitMessages({ filter, max: 1, time: 300000, errors: ['time'] });
                             let answer = collected.first().content;
                             if (collected.first().attachments.size > 0) {
                                 const attachment = collected.first().attachments.first();
@@ -262,11 +267,11 @@ module.exports = {
                                 if (job === 'ALUNO') {
                                     ficha_personagem['year'] = 1
                                     ficha_personagem['age'] = 11
-                                    ficha_personagem['PE'] = 6
+                                    PE = 6
                                 } else if (job === 'PROFESSOR') {
                                     ficha_personagem['year'] = 'Professor'
                                     ficha_personagem['spells'] = Object.keys(spell_list)
-                                    ficha_personagem['PE'] = 24
+                                    PE = 24
                                 }
                             } else {
                                 ficha_personagem[key] = answer
@@ -284,7 +289,7 @@ module.exports = {
                     const fetchedMessages = await channel.messages.fetch({ limit: 1 });
                     await channel.bulkDelete(fetchedMessages, true);
 
-                    if (ficha_personagem.F + ficha_personagem.H + ficha_personagem.R + ficha_personagem.A + ficha_personagem.PdF > 5) {
+                    if (ficha_personagem.F + ficha_personagem.H + ficha_personagem.R + ficha_personagem.A + ficha_personagem.PdF > PE) {
                         await interaction.editReply('Pontos distribuidos entre as características superiores ao permitido. Terá que refazer a ficha.');
                     } else {
                         ficha_personagem.PV = ficha_personagem.R * 5;
@@ -316,7 +321,6 @@ module.exports = {
 **${fichaCampos['PdF']}:** ${ficha_personagem['PdF']}
 **${fichaCampos['PV']}:** ${ficha_personagem['PV']}
 **${fichaCampos['PM']}:** ${ficha_personagem['PM']}
-**${fichaCampos['PE']}:** ${ficha_personagem['PE']}
 **${fichaCampos['spells']}:** ${ficha_personagem['spells'].map( spell => spell_list[spell].name).join(' , ')}
 **${fichaCampos['vantagens']}:** ${ficha_personagem['vantagens'].map( vantagem => vantagem_list[vantagem].label).join(' , ')}
 **${fichaCampos['desvantagens']}:** ${ficha_personagem['desvantagens'].map( desvantagem => desvantagem_list[desvantagem].label).join(' , ')}
@@ -343,7 +347,7 @@ module.exports = {
         };
 
         await interaction.deferReply({ ephemeral: true }).catch(() => { });
-        await interaction.editReply({ content: '**Iniciando Ficha de personagem**\n*Para cada pergunta terá o tempo de 1 minuto para responder*', ephemeral: true });
+        await interaction.editReply({ content: '**Iniciando Ficha de personagem**\n*Para cada pergunta terá o tempo de 5 minutos para responder*', ephemeral: true });
         await new Promise(resolve => setTimeout(resolve, 5000));
 
         askQuestion();
