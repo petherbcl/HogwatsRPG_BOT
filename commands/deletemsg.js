@@ -5,7 +5,7 @@ module.exports = {
     dm: true,
     data: new SlashCommandBuilder()
     .setName('deletemsg')
-    .setDescription('Deleta mensagens do canal.')
+    .setDescription('[DM] Deleta mensagens do canal.')
     .addStringOption(option => option.setName('qtd').setDescription('numero de mensagens a deletar').setRequired(true)),
     async execute(interaction, client) {
 

@@ -5,7 +5,7 @@ module.exports = {
     dm: true,
     data: new SlashCommandBuilder()
     .setName('inventarioplayer')
-    .setDescription('Consulta inventário do player.')
+    .setDescription('[DM] Consulta inventário do player.')
     .addStringOption(option => option.setName('player').setDescription('Marque o player. EX: @fulano').setRequired(true)),
     async execute(interaction, client) {
 

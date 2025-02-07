@@ -2,10 +2,9 @@ const { SlashCommandBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuil
 const fs = require('fs');
 
 module.exports = {
-    dm: true,
     data: new SlashCommandBuilder()
-    .setName('listdesvantagem')
-    .setDescription('Lista de Desvantagens.'),
+    .setName('vantagem')
+    .setDescription('Lista de Vantagens.'),
     async execute(interaction, client) {
 
         const guild = client.guilds.cache.get(interaction.guildId);
@@ -13,10 +12,10 @@ module.exports = {
         const user = interaction.user;
         const channel = interaction.channel;
 
-        const file = fs.readFileSync(`./RPGData/desvantagem_list.json`, 'utf8');
-        const desvantagem_list = JSON.parse(file)
+        const file = fs.readFileSync(`./RPGData/vantagem_list.json`, 'utf8');
+        const vantagem_list = JSON.parse(file)
 
-        const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Desvantagens').setDescription(Object.entries(desvantagem_list).map(([key, item]) => `* **${key}** - ${item.label} | **Custo:** ${item.custo} | **Bonus:** ${item.bonus} | ${item.effect}`).join('\n'));
+        const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Vantagens').setDescription(Object.entries(vantagem_list).map(([key, item]) => `* **${key}** - ${item.label} | **Custo:** ${item.custo} | **Bonus:** ${item.bonus} | ${item.effect}`).join('\n'));
         await interaction.reply({ embeds: [embed], ephemeral: true });
     },
 };

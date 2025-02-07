@@ -1,12 +1,9 @@
-const { SlashCommandBuilder, PermissionsBitField, ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder } = require('discord.js');
+const { PermissionsBitField, ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder } = require('discord.js');
+const {RemoveSpecialCharacters} = require('../utils/utils.js');
 
 const roleApprovalsAllow = ['ViewChannel', 'UseApplicationCommands', 'SendMessages','AddReactions','AttachFiles','ReadMessageHistory']
 const roleApprovalsDeny = []
 const userAllow = ['ViewChannel', 'UseApplicationCommands', 'SendMessages','AddReactions','AttachFiles','ReadMessageHistory']
-
-function removeSpecialCharacters(str) {
-    return str.replace(/[^a-zA-Z0-9 ]/g, '');
-}
 
 module.exports = {
 	customID: 'sendNewLetter',
@@ -16,7 +13,7 @@ module.exports = {
         if (categoryChannel) {
             const user = interaction.user;
             
-            let channel = guild.channels.cache.find((c) => c.name === `carta-de-${removeSpecialCharacters(user.username)}-${user.id}` && c.type === 0);
+            let channel = guild.channels.cache.find((c) => c.name === `carta-de-${RemoveSpecialCharacters(user.username)}-${user.id}` && c.type === 0);
             if(!channel){
                 channel = await guild.channels.create({
                     name: `carta-de-${user.username}-${user.id}`,

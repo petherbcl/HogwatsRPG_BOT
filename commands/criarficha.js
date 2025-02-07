@@ -2,7 +2,7 @@ const { SlashCommandBuilder, AttachmentBuilder } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const {StringFormat} = require('../utils/utils.js');
+const {StringFormat, RemoveSpecialCharacters} = require('../utils/utils.js');
 
 const spell_by_year = JSON.parse(fs.readFileSync(`./RPGData/spell_by_year.json`, 'utf8'))
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
@@ -61,10 +61,6 @@ const fichaCampos = {
     appearance: 'Aparência',
     personality: 'Personalidade',
     history: 'História/Antecedentes',
-}
-
-function removeSpecialCharacters(str) {
-    return str.replace(/[^a-zA-Z0-9 ]/g, '');
 }
 
 function answerValidator(index, answer) {
@@ -171,8 +167,8 @@ module.exports = {
             history: null,
         }
 
-        // if(channel.name !== `carta-de-${removeSpecialCharacters(member.user.username)}-${member.user.id}`){
-        //     return interaction.reply({ content: `Esse comando só pode ser usado no canal **carta-de-${removeSpecialCharacters(member.user.username)}-${member.user.id}**`, ephemeral: true });
+        // if(channel.name !== `carta-de-${RemoveSpecialCharacters(member.user.username)}-${member.user.id}`){
+        //     return interaction.reply({ content: `Esse comando só pode ser usado no canal **carta-de-${RemoveSpecialCharacters(member.user.username)}-${member.user.id}**`, ephemeral: true });
         // }
 
         const filter = response => response.author.id === interaction.user.id;
@@ -329,7 +325,7 @@ module.exports = {
 **${fichaCampos['personality']}:**\n ${ficha_personagem['personality']}
 **${fichaCampos['history']}:**\n ${ficha_personagem['history']}`;
 
-                        const filePath = path.join('./tempdata/', `ficha_personagem_${removeSpecialCharacters(member.user.username)}_${member.user.id}.txt`);
+                        const filePath = path.join('./tempdata/', `ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.txt`);
                         fs.writeFileSync(filePath, fichaText);
 
                         const attachment = new AttachmentBuilder(filePath);
