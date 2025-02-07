@@ -1,5 +1,5 @@
 const { PermissionsBitField, ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder } = require('discord.js');
-const {RemoveSpecialCharacters} = require('../utils/utils.js');
+const {RemoveSpecialCharacters} = require('../../utils/utils.js');
 
 const roleApprovalsAllow = ['ViewChannel', 'UseApplicationCommands', 'SendMessages','AddReactions','AttachFiles','ReadMessageHistory']
 const roleApprovalsDeny = []
