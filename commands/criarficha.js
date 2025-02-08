@@ -135,7 +135,6 @@ function answerValidator(index, answer) {
 }
 
 module.exports = {
-    dm: true,
     data: new SlashCommandBuilder()
         .setName('criarficha')
         .setDescription('Inicia ficha de personagem.'),
