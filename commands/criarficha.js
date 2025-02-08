@@ -167,9 +167,9 @@ module.exports = {
             history: null,
         }
 
-        // if(channel.name !== `carta-de-${RemoveSpecialCharacters(member.user.username)}-${member.user.id}`){
-        //     return interaction.reply({ content: `Esse comando só pode ser usado no canal **carta-de-${RemoveSpecialCharacters(member.user.username)}-${member.user.id}**`, ephemeral: true });
-        // }
+        if(channel.name !== `carta-de-${RemoveSpecialCharacters(member.user.username)}-${member.user.id}`){
+            return interaction.reply({ content: `Esse comando só pode ser usado no canal **carta-de-${RemoveSpecialCharacters(member.user.username)}-${member.user.id}**`, ephemeral: true });
+        }
 
         const filter = response => response.author.id === interaction.user.id;
         let currentQuestion = 0;
