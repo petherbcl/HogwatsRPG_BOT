@@ -1,1 +1,27 @@
-{"name":"teste","house":"Grifinória","year":1,"race":"Humano","age":11,"F":1,"H":1,"R":1,"A":1,"PdF":1,"PV":5,"PM":5,"spells":["lumos","wingardium_leviosa","levicorpus"],"vantagens":["mente_afiada","curioso","familiar_especial"],"desvantagens":["trouxa_criado_por_trouxas","problemas_com_pocoes"],"vantagem_obrigatoria":"Magia Elemental","appearance":"teste","personality":"teste","history":"teste"}
+{
+    "name": "b",
+    "house": "Grifinória",
+    "year": 1,
+    "race": "Humano",
+    "age": 11,
+    "F": 1,
+    "H": 1,
+    "R": 1,
+    "A": 1,
+    "PdF": 1,
+    "PV": 5,
+    "PM": 5,
+    "spells": [
+        "nox"
+    ],
+    "vantagens": [
+        "talento_natural"
+    ],
+    "desvantagens": [
+        "medroso"
+    ],
+    "vantagem_obrigatoria": "Magia Elemental",
+    "appearance": "bb",
+    "personality": "b",
+    "history": "b"
+}

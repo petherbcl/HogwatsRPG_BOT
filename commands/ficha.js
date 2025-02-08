@@ -67,7 +67,7 @@ module.exports = {
         const user = interaction.user;
         const channel = interaction.channel;
 
-        const isDM = !member.roles.cache.find((role) => role.name === 'DM')
+        const isDM = member.roles.cache.find((role) => role.name === 'DM')
         const option = interaction.options.getSubcommand();
 
         let player, playerID, player_user, player_file, ficha_player, fichaText, attachment, filePath

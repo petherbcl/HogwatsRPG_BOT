@@ -11,6 +11,7 @@ const desvantagem_list = JSON.parse(fs.readFileSync(`./RPGData/desvantagem_list.
 const vantagem_list = JSON.parse(fs.readFileSync(`./RPGData/vantagem_list.json`, 'utf8'))
 
 const questions = {
+
     name: { label: 'Nome:', type: 'string', question: true },
     house: { label: 'Casa de Hogwarts: (Grifinória, Sonserina, Corvinal, Lufa-Lufa)?', type: 'string', question: true },
     //year: { label: 'Ano Escolar: (1, 2, 3, 4, 5, 6, 7)?', type: 'number', question: true },
@@ -96,11 +97,12 @@ function answerValidator(index, answer) {
             return 'Por favor, responda com até 3 feitiços.';
         }
 
-        spells.forEach(spell => {
+        for(let i=0; i<spells.length; i++){
+            const spell = spells[i]
             if (!Object.values(spell_list).map(s => s.name).includes(spell)) {
-                return 'Por favor, escolhe feitiços das lista';
+                return 'Por favor, escolhe feitiços da lista';
             }
-        })
+        }
 
     }
 
@@ -110,11 +112,12 @@ function answerValidator(index, answer) {
             return 'Por favor, responda com até 3 vantagens.';
         }
 
-        vantagens.forEach(vantagem => {
+        for(let i=0; i<vantagens.length; i++){
+            const vantagem = vantagens[i]
             if (!Object.values(vantagem_list).map(v => v.label).includes(vantagem)) {
-                return 'Por favor, escolha vantagens das lista';
+                return 'Por favor, escolha vantagens da lista';
             }
-        })
+        }
         
     }
 
@@ -124,11 +127,13 @@ function answerValidator(index, answer) {
             return 'Por favor, responda com até 3 vantagens.';
         }
 
-        devantagens.forEach(devantagem => {
+        for(let i=0; i<devantagens.length; i++){
+            const devantagem = devantagens[i]
             if (!Object.values(desvantagem_list).map(v => v.label).includes(devantagem)) {
-                return 'Por favor, escolha desvantagens das lista';
+                return 'Por favor, escolha desvantagens da lista';
             }
-        })
+        }
+
     }
 
     return null;

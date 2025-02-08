@@ -30,7 +30,7 @@ module.exports = {
         const file = fs.readFileSync(`./RPGData/spell_list.json`, 'utf8');
         const spell_list = JSON.parse(file)
 
-        const isDM =  !interaction.member.roles.cache.find((role) => role.name === 'DM')
+        const isDM =  interaction.member.roles.cache.find((role) => role.name === 'DM')
         const option = interaction.options.getSubcommand();
 
         if(option === 'list'){
