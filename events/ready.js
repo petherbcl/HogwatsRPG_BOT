@@ -419,7 +419,7 @@ module.exports = {
             {
                 name: "╭--🔹Chegada🔹--╮",
                 channels: [
-                    { name: "caldeirão-furado", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel', 'Connect','Speak', 'UseApplicationCommands'], deny: ['UseApplicationCommands', 'SendMessages'], }], hasPassage: false },
+                    { name: "caldeirão-furado", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel', 'Connect','Speak'], deny: ['UseApplicationCommands', 'SendMessages'], }], hasPassage: false },
                     { name: "carta-de-hogwarts", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel'], deny: ['UseApplicationCommands', 'SendMessages','AddReactions','AttachFiles'], }], hasPassage: false },
                 ]
             },
