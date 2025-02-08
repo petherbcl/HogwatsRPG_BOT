@@ -1,8 +1,8 @@
 {
-    "name": "Sophia Gracie Harton Gluckard",
+    "name": "Sophia Gracie Harton Gluckärd",
     "house": "Sonserina",
     "year": 1,
-    "race": "Humano",
+    "race": "Humana - Bruxa puro sangue.",
     "age": 11,
     "F": 0,
     "H": 2,
@@ -13,17 +13,19 @@
     "PM": 5,
     "spells": [
         "flipendo",
-        "levicorpus",
-        "alohomora"
+        "alohomora",
+        "wingardium_leviosa"
     ],
     "vantagens": [
-        "mente_afiada"
+        "talento_natural",
+        "curioso",
+        "bom_de_fuga"
     ],
     "desvantagens": [
         "desajeitado"
     ],
     "vantagem_obrigatoria": "Magia Elemental",
-    "appearance": "Cabelos loiros cacheados, olhos heterocromicos azuis e verdes, corpo esguio e baixa. Pele clara.",
-    "personality": "Competitiva, protege os que lhe são importantes, ambiciosa e esperta. Costuma ser manipuladora e um pouco impulsiva.",
-    "history": "Foi criada em berço de ouro, filha de uma condessa com um bruxo muito rico. Primeira magia com 5 anos fugindo dos avós. Tem um irmão mais novo."
+    "appearance": "É uma garota de tamanho um pouco pequeno para idade e pele pálida. Tem cabelos loiros dourados de aspecto cacheado, indo até sua cintura, com quase sempre uma mecha rosa. Seus olhos são heterocromicos, sendo o direito de cor azul e o olho esquerdo em tom verde. Tem nariz pequeno, feições delicada e rosto um pouco redondo.",
+    "personality": "Sophia é uma garota de vontade forte e que faz de tudo para alcançar seus objetivos. É bem educada e quase sempre gentil quando bem humorada ou lhe interessa. É inteligente e costuma pensar mais do7 que agir. Não costuma ser má educada com as pessoas no entanto, dependendo da hierarquia pode agir puxando o saco da pessoa ou sendo mandona. Quando irritada, pode ser extremamente cruel e fria. Também sendo extremamente competitiva",
+    "history": "Filha de uma condessa bruxa norueguesa e de um magistrado britanico. Viveu com a mae até os 5 anos de idade quando conheceu o pai. Fez sua primeira magia com 5 anos de idade e viveu uma vida de uma criança mimada até receber o convite para a escola britanica."
 }
