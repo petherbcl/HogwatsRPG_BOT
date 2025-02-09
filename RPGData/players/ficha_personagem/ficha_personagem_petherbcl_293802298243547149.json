@@ -12,6 +12,8 @@
     "PdF": 5,
     "PV": 20,
     "PM": 20,
+    "PVMax": 20,
+    "PMMax": 20,
     "spells": [
         "lumos",
         "alohomora",

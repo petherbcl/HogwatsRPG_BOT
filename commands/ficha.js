@@ -181,6 +181,8 @@ module.exports = {
                     ficha_player.PV += pv
                     if (ficha_player.PV <= 0) {
                         ficha_player.PV = 0
+                    }else if(ficha_player.PV > ficha_player.PVMax){
+                        ficha_player.PV = ficha_player.PVMax
                     }
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
@@ -211,6 +213,8 @@ module.exports = {
                     ficha_player.PM += pm
                     if (ficha_player.PM <= 0) {
                         ficha_player.PM = 0
+                    }else if(ficha_player.PM > ficha_player.PMMax){
+                        ficha_player.PM = ficha_player.PMMax
                     }
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));

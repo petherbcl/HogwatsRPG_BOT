@@ -12,6 +12,8 @@
     "PdF": 2,
     "PV": 10,
     "PM": 10,
+    "PVMax": 10,
+    "PMMax": 10,
     "spells": [
         "expelliarmus",
         "alohomora",

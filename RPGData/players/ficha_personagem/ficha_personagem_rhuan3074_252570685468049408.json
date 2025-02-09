@@ -12,6 +12,8 @@
     "PdF": 0,
     "PV": 5,
     "PM": 5,
+    "PVMax": 5,
+    "PMMax": 5,
     "spells": [
         "expelliarmus",
         "flipendo",

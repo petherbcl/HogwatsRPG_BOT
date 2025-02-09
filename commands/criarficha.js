@@ -163,7 +163,9 @@ module.exports = {
             A: null,
             PdF: null,
             PV: null,
+            PVMax: null,
             PM: null,
+            PMMax: null,
             spells: null,
             vantagens: null,
             desvantagens: null,
@@ -298,6 +300,9 @@ module.exports = {
                     } else {
                         ficha_personagem.PV = ficha_personagem.R * 5;
                         ficha_personagem.PM = ficha_personagem.R * 5;
+
+                        ficha_personagem.PVMax = ficha_personagem.R * 5;
+                        ficha_personagem.PMMax = ficha_personagem.R * 5;
 
                         fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`,
                                                     JSON.stringify(ficha_personagem), (err) => {

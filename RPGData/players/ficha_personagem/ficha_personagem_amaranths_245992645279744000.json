@@ -12,6 +12,8 @@
     "PdF": 5,
     "PV": 30,
     "PM": 30,
+    "PVMax": 30,
+    "PMMax": 30,
     "spells": [
         "lumos",
         "nox",
