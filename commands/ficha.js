@@ -79,25 +79,26 @@ module.exports = {
 
                 fichaText = `**Ficha de Personagem de ${member.nickname || member.user.globalName || member.user.username}**
                 
-    **${fichaCampos['name']}:** ${ficha_player['name']}
-    **${fichaCampos['house']}:** ${ficha_player['house']}
-    **${fichaCampos['year']}:** ${ficha_player['year']}
-    **${fichaCampos['race']}:** ${ficha_player['race']}
-    **${fichaCampos['age']}:** ${ficha_player['age']}
-    **${fichaCampos['F']}:** ${ficha_player['F']}
-    **${fichaCampos['H']}:** ${ficha_player['H']}
-    **${fichaCampos['R']}:** ${ficha_player['R']}
-    **${fichaCampos['A']}:** ${ficha_player['A']}
-    **${fichaCampos['PdF']}:** ${ficha_player['PdF']}
-    **${fichaCampos['PV']}:** ${ficha_player['PV']}
-    **${fichaCampos['PM']}:** ${ficha_player['PM']}
-    **${fichaCampos['spells']}:** ${ficha_player['spells'].map(spell => spell_list[spell].name).join(' , ')}
-    **${fichaCampos['vantagens']}:** ${ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join(' , ')}
-    **${fichaCampos['desvantagens']}:** ${ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join(' , ')}
-    **${fichaCampos['vantagem_obrigatoria']}:** ${ficha_player['vantagem_obrigatoria']}
-    **${fichaCampos['appearance']}:**\n ${ficha_player['appearance']}
-    **${fichaCampos['personality']}:**\n ${ficha_player['personality']}
-    **${fichaCampos['history']}:**\n ${ficha_player['history']}`;
+**${fichaCampos['name']}:** ${ficha_player['name']}
+**${fichaCampos['age']}:** ${ficha_player['age']}
+**${fichaCampos['race']}:** ${ficha_player['race']}
+**${fichaCampos['house']}:** ${ficha_player['house']}
+**${fichaCampos['job']}:** ${ficha_player['job']}
+**${fichaCampos['year']}:** ${ficha_player['year']}
+**${fichaCampos['F']}:** ${ficha_player['F']}
+**${fichaCampos['H']}:** ${ficha_player['H']}
+**${fichaCampos['R']}:** ${ficha_player['R']}
+**${fichaCampos['A']}:** ${ficha_player['A']}
+**${fichaCampos['PdF']}:** ${ficha_player['PdF']}
+**${fichaCampos['PV']}:** ${ficha_player['PV']}
+**${fichaCampos['PM']}:** ${ficha_player['PM']}
+**${fichaCampos['spells']}:** ${ficha_player['spells'].map(spell => spell_list[spell].name).join(' , ')}
+**${fichaCampos['vantagens']}:** ${ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join(' , ')}
+**${fichaCampos['desvantagens']}:** ${ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join(' , ')}
+**${fichaCampos['vantagem_obrigatoria']}:** ${ficha_player['vantagem_obrigatoria']}
+**${fichaCampos['appearance']}:**\n ${ficha_player['appearance']}
+**${fichaCampos['personality']}:**\n ${ficha_player['personality']}
+**${fichaCampos['history']}:**\n ${ficha_player['history']}`;
 
                 filePath = path.join('./tempdata/', `ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.txt`);
                 fs.writeFileSync(filePath, fichaText);
@@ -126,10 +127,11 @@ module.exports = {
                     fichaText = `**Ficha de Personagem de ${player_user.nickname || player_user.user.globalName || player_user.user.username}**
                 
 **${fichaCampos['name']}:** ${ficha_player['name']}
-**${fichaCampos['house']}:** ${ficha_player['house']}
-**${fichaCampos['year']}:** ${ficha_player['year']}
-**${fichaCampos['race']}:** ${ficha_player['race']}
 **${fichaCampos['age']}:** ${ficha_player['age']}
+**${fichaCampos['race']}:** ${ficha_player['race']}
+**${fichaCampos['house']}:** ${ficha_player['house']}
+**${fichaCampos['job']}:** ${ficha_player['job']}
+**${fichaCampos['year']}:** ${ficha_player['year']}
 **${fichaCampos['F']}:** ${ficha_player['F']}
 **${fichaCampos['H']}:** ${ficha_player['H']}
 **${fichaCampos['R']}:** ${ficha_player['R']}

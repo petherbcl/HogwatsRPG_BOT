@@ -45,6 +45,7 @@ const fichaCampos = {
     year: 'Ano Escolar',
     race: 'Raça',
     age: 'Idade',
+    job: 'Cargo',
     F: 'Força (F)',
     H: 'Habilidade (H)',
     R: 'Resistência (R)',
@@ -152,6 +153,7 @@ module.exports = {
         const ficha_personagem = {
             name: null,
             house: null,
+            job: null,
             year: null,
             race: null,
             age: null,
@@ -265,11 +267,13 @@ module.exports = {
                             } else if (key === 'job') {
                                 const job = answer.toUpperCase()
                                 if (job === 'ALUNO') {
+                                    ficha_personagem['job'] = 'ALUNO'
                                     ficha_personagem['year'] = 1
                                     ficha_personagem['age'] = 11
                                     PE = 6
                                 } else if (job === 'PROFESSOR') {
-                                    ficha_personagem['year'] = 'Professor'
+                                    ficha_personagem['job'] = 'PROFESSOR'
+                                    ficha_personagem['year'] = 0
                                     ficha_personagem['spells'] = Object.keys(spell_list)
                                     PE = 24
                                 }
@@ -314,10 +318,11 @@ module.exports = {
                         const fichaText = `**Ficha de Personagem de ${member.nickname || member.user.globalName || member.user.username}**
 
 **${fichaCampos['name']}:** ${ficha_personagem['name']}
-**${fichaCampos['house']}:** ${ficha_personagem['house']}
-**${fichaCampos['year']}:** ${ficha_personagem['year']}
-**${fichaCampos['race']}:** ${ficha_personagem['race']}
 **${fichaCampos['age']}:** ${ficha_personagem['age']}
+**${fichaCampos['race']}:** ${ficha_personagem['race']}
+**${fichaCampos['house']}:** ${ficha_personagem['house']}
+**${fichaCampos['job']}:** ${ficha_personagem['job']}
+**${fichaCampos['year']}:** ${ficha_personagem['year']}
 **${fichaCampos['F']}:** ${ficha_personagem['F']}
 **${fichaCampos['H']}:** ${ficha_personagem['H']}
 **${fichaCampos['R']}:** ${ficha_personagem['R']}

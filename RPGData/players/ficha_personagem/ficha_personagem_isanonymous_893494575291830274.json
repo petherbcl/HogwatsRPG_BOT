@@ -1,1 +1,32 @@
-{"name":"Kassandra Limeira Blackthorne","house":"Corvinal","year":1,"race":"Humano","age":11,"F":1,"H":1,"R":2,"A":1,"PdF":1,"PV":10,"PM":10,"spells":["lumos","flipendo","revelio"],"vantagens":["mente_afiada","curioso","bom_de_fuga"],"desvantagens":["inimigo_de_um_monitor"],"vantagem_obrigatoria":"Magia Elemental","appearance":"1,60m, morena, cabelo preto curto, olhos castanhos, pequena cicatriz na boca","personality":"InteligÃªncia analÃ­tica: Kassandra toma decisÃµes de forma racional, ponderando os fatores envolvidos. Mesmo assim, isso nÃ£o a impede de agir contra as normas.\n2. ObstinaÃ§Ã£o Seletiva: Quando Kassandra realmente quer algo, ela dÃ¡ um jeito de conseguir, mesmo que isso envolva quebrar regras.\n3. IntrospecÃ§Ã£o: Kassandra nÃ£o tem habilidade para fazer novas amizades de forma fÃ¡cil, ao contrÃ¡rio ela sempre espera que se aproximem, o que Ã© difÃ­cil jÃ¡ que ela sempre transmite uma postura sÃ©ria e individualista.\n4. PaixÃ£o por aventuras: Kassandra esconde dentro de si um lado totalmente oposto de sua personalidade, o qual se deixa dominar poucas vezes, que Ã© a paixÃ£o por aventuras. Kassandra ama voar com a vassoura e ama duelar, porÃ©m seu medo da desaprovaÃ§Ã£o e falta de socialidade a impede de se aproximar de pessoas ou lugares os quais proporcionam esses eventos.","history":"Kassandra é filha de uma Grifinória com um Sonserino, que se separaram quando ela era criança. Kassandra herdou muitas das características de seu pai, que era envolvido com assuntos das trevas, sendo assim ela temia ter o mesmo destino. Foi convocada para Hogwarts, e contrariando as espectativas da família, foi selecionada para a Corvinal. Por mais que se destacasse em algumas áreas ela não se achava inteligente o suficiente para a casa, mas com temor, resolveu aceitar seu destino. Seu sonho era ser professora de feitiços e astronomia, logo esta casa possibilidade melhores oportunidades para sua realização."}
+{
+    "name": "Kassandra Limeira Blackthorne",
+    "house": "Corvinal",
+    "year": 1,
+    "job": "ALUNO",
+    "race": "Humano",
+    "age": 11,
+    "F": 1,
+    "H": 1,
+    "R": 2,
+    "A": 1,
+    "PdF": 1,
+    "PV": 10,
+    "PM": 10,
+    "spells": [
+        "lumos",
+        "flipendo",
+        "revelio"
+    ],
+    "vantagens": [
+        "mente_afiada",
+        "curioso",
+        "bom_de_fuga"
+    ],
+    "desvantagens": [
+        "inimigo_de_um_monitor"
+    ],
+    "vantagem_obrigatoria": "Magia Elemental",
+    "appearance": "1,60m, morena, cabelo preto curto, olhos castanhos, pequena cicatriz na boca",
+    "personality": "InteligÃªncia analÃ­tica: Kassandra toma decisÃµes de forma racional, ponderando os fatores envolvidos. Mesmo assim, isso nÃ£o a impede de agir contra as normas.\n2. ObstinaÃ§Ã£o Seletiva: Quando Kassandra realmente quer algo, ela dÃ¡ um jeito de conseguir, mesmo que isso envolva quebrar regras.\n3. IntrospecÃ§Ã£o: Kassandra nÃ£o tem habilidade para fazer novas amizades de forma fÃ¡cil, ao contrÃ¡rio ela sempre espera que se aproximem, o que Ã© difÃ­cil jÃ¡ que ela sempre transmite uma postura sÃ©ria e individualista.\n4. PaixÃ£o por aventuras: Kassandra esconde dentro de si um lado totalmente oposto de sua personalidade, o qual se deixa dominar poucas vezes, que Ã© a paixÃ£o por aventuras. Kassandra ama voar com a vassoura e ama duelar, porÃ©m seu medo da desaprovaÃ§Ã£o e falta de socialidade a impede de se aproximar de pessoas ou lugares os quais proporcionam esses eventos.",
+    "history": "Kassandra é filha de uma Grifinória com um Sonserino, que se separaram quando ela era criança. Kassandra herdou muitas das características de seu pai, que era envolvido com assuntos das trevas, sendo assim ela temia ter o mesmo destino. Foi convocada para Hogwarts, e contrariando as espectativas da família, foi selecionada para a Corvinal. Por mais que se destacasse em algumas áreas ela não se achava inteligente o suficiente para a casa, mas com temor, resolveu aceitar seu destino. Seu sonho era ser professora de feitiços e astronomia, logo esta casa possibilidade melhores oportunidades para sua realização."
+}
