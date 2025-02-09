@@ -62,18 +62,18 @@ module.exports = {
                 if(!ficha_player.spells.includes(spell)){
                     ficha_player.spells.push(spell)
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
-                    return interaction.reply({ content: `Adicionado feitiço **${spell_list[spell]}** ao player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**.`, ephemeral: true });
+                    return interaction.reply({ content: `Adicionado feitiço **${spell_list[spell].name}** ao player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**.`, ephemeral: true });
                 }else{
-                    return interaction.reply({ content: `O player **${player_user.nickname || player_user.user.globalName || player_user.user.username}** já possui o feitiço **${spell_list[spell]}**.`, ephemeral: true });
+                    return interaction.reply({ content: `O player **${player_user.nickname || player_user.user.globalName || player_user.user.username}** já possui o feitiço **${spell_list[spell].name}**.`, ephemeral: true });
                 }
 
             }else if(option === 'rem'){
                 if(ficha_player.spells.includes(spell)){
-                    // ficha_player.spells = ficha_player.spells.map( s => s!== spell)
+                    ficha_player.spells = ficha_player.spells.filter(s => s !== spell);
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
-                    return interaction.reply({ content: `Removido feitiço **${spell_list[spell]}** do player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**.`, ephemeral: true });
+                    return interaction.reply({ content: `Removido feitiço **${spell_list[spell].name}** do player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**.`, ephemeral: true });
                 }else{
-                    return interaction.reply({ content: `O player **${player_user.nickname || player_user.user.globalName || player_user.user.username}** não possui o feitiço **${spell_list[spell]}**.`, ephemeral: true });
+                    return interaction.reply({ content: `O player **${player_user.nickname || player_user.user.globalName || player_user.user.username}** não possui o feitiço **${spell_list[spell].name}**.`, ephemeral: true });
                 }
             }
 
