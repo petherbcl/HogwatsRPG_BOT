@@ -166,6 +166,7 @@ module.exports = {
             PVMax: null,
             PM: null,
             PMMax: null,
+            PE: null,
             spells: null,
             vantagens: null,
             desvantagens: null,
@@ -304,6 +305,8 @@ module.exports = {
                         ficha_personagem.PVMax = ficha_personagem.R * 5;
                         ficha_personagem.PMMax = ficha_personagem.R * 5;
 
+                        ficha_personagem.PE = 0;
+
                         fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`,
                                                     JSON.stringify(ficha_personagem), (err) => {
                                                         if (err) {
@@ -335,6 +338,7 @@ module.exports = {
 **${fichaCampos['PdF']}:** ${ficha_personagem['PdF']}
 **${fichaCampos['PV']}:** ${ficha_personagem['PV']} / ${ficha_personagem['PVMax']}
 **${fichaCampos['PM']}:** ${ficha_personagem['PM']} / ${ficha_personagem['PMMax']}
+**${fichaCampos['PE']}:** ${ficha_personagem['PE']}
 **${fichaCampos['spells']}:** ${ficha_personagem['spells'].map( spell => spell_list[spell].name).join(' , ')}
 **${fichaCampos['vantagens']}:** ${ficha_personagem['vantagens'].map( vantagem => vantagem_list[vantagem].label).join(' , ')}
 **${fichaCampos['desvantagens']}:** ${ficha_personagem['desvantagens'].map( desvantagem => desvantagem_list[desvantagem].label).join(' , ')}

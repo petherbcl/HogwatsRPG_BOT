@@ -12,6 +12,7 @@
     "PdF": 5,
     "PV": 20,
     "PM": 20,
+    "PE": 0,
     "PVMax": 20,
     "PMMax": 20,
     "spells": [

@@ -55,9 +55,8 @@ module.exports = {
             .addStringOption(option => option.setName('pm').setDescription('Pontos de Magia').setRequired(true))
         )
         .addSubcommand(command => command.setName('pe')
-            .setDescription('[DM] Adicionar/Remover PE a player')
+            .setDescription('[DM] Adicionar/Remover PE ao player')
             .addStringOption(option => option.setName('player').setDescription('Marque o player. EX: @fulano').setRequired(true))
-            .addStringOption(option => option.setName('pe').setDescription('Caracteristica - F , H , R , A , PdF)').setRequired(true))
             .addStringOption(option => option.setName('pontos').setDescription('Pontos').setRequired(true))
         ),
     async execute(interaction, client) {
@@ -92,6 +91,7 @@ module.exports = {
 **${fichaCampos['PdF']}:** ${ficha_player['PdF']}
 **${fichaCampos['PV']}:** ${ficha_player['PV']} / ${ficha_player['PVMax']}
 **${fichaCampos['PM']}:** ${ficha_player['PM']} / ${ficha_player['PMMax']}
+**${fichaCampos['PE']}:** ${ficha_player['PE']}
 **${fichaCampos['spells']}:** ${ficha_player['spells'].map(spell => spell_list[spell].name).join(' , ')}
 **${fichaCampos['vantagens']}:** ${ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join(' , ')}
 **${fichaCampos['desvantagens']}:** ${ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join(' , ')}
@@ -139,6 +139,7 @@ module.exports = {
 **${fichaCampos['PdF']}:** ${ficha_player['PdF']}
 **${fichaCampos['PV']}:** ${ficha_player['PV']} / ${ficha_player['PVMax']}
 **${fichaCampos['PM']}:** ${ficha_player['PM']} / ${ficha_player['PMMax']}
+**${fichaCampos['PE']}:** ${ficha_player['PE']}
 **${fichaCampos['spells']}:** ${ficha_player['spells'].map(spell => spell_list[spell].name).join(' , ')}
 **${fichaCampos['vantagens']}:** ${ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join(' , ')}
 **${fichaCampos['desvantagens']}:** ${ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join(' , ')}
@@ -228,15 +229,10 @@ module.exports = {
                     player = interaction.options.getString('player');
                     playerID = player.match(/\d+/)[0]; // Get the user ID from the mention
                     player_user = guild.members.cache.get(playerID); // Get the member object from the ID
-                    const pe = interaction.options.getString('pe').toUpperCase();
                     const pontos = Number(interaction.options.getString('pontos'));
 
                     if (!player_user) {
                         return interaction.reply({ content: `Player **${player}** não existe.`, ephemeral: true });
-                    }
-
-                    if (!['F', 'H', 'R', 'A', 'PDF'].includes(pe)) {
-                        return interaction.reply({ content: `Caracteristica **${pe}** não existe.`, ephemeral: true });
                     }
 
                     if (isNaN(pontos)) {
@@ -247,14 +243,14 @@ module.exports = {
                     player_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
                     ficha_player = JSON.parse(player_file)
 
-                    ficha_player[pe] += pontos
+                    ficha_player['PE'] += pontos
                     if (ficha_player[pe] <= 0) {
                         ficha_player[pe] = 0
                     }
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
 
-                    interaction.reply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n${fichaCampos[pe]} atual é ${ficha_player[pe]} `, ephemeral: true });
+                    interaction.reply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n${ficha_player[pe]} atual é ${ficha_player[pe]} `, ephemeral: true });
                 }
 
                 break
