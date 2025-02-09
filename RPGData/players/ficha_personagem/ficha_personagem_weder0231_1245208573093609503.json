@@ -1,1 +1,34 @@
-{"name":"Tony Brooks","house":"Sonserina","year":1,"race":"Humano, sangue-puro","age":11,"F":1,"H":2,"R":1,"A":1,"PdF":1,"PV":5,"PM":5,"spells":["reparo","flipendo","expelliarmus"],"vantagens":["talento_natural","curioso","bom_de_fuga"],"desvantagens":["desajeitado","problemas_com_pocoes","inimigo_de_um_monitor"],"vantagem_obrigatoria":"Magia Negra","appearance":"Tony tem cabelos negros como ébano, levemente ondulados e que caem sobre sua testa de forma desalinhada, dando-lhe um ar um pouco rebelde. Seus olhos são cinza-azulados, quase como uma névoa, e parecem esconder segredos que poucos conseguem decifrar. Ele é magro e ágil, com uma expressão facial que alterna entre seriedade e um sorriso sarcástico. Sua pele é levemente morena, e ele tem uma pequena cicatriz na sobrancelha esquerda, resultado de uma \"experiência mágica\" malsucedida na infância. Tony não se importa muito com regras de etiqueta, mas ainda assim carrega um ar de nobreza que denuncia suas origens. Ele tem um jeito único de usar o uniforme de Sonserina. Ele deixa o botão superior da camisa levemente desabotoado e a gravata um pouco solta, dando um ar descontraído, mas ainda assim elegante. Ele também usa um relógio de pulso antigo, herdado de seu avô, que parece ter um brilho mágico. Além do relógio, Tony carrega consigo um anel de prata com o brasão da família Brooks, um símbolo de seu orgulho como sangue puro. O anel tem pequenas inscrições em runas antigas que ele ainda está tentando decifrar.  Tony tem um olhar penetrante e um sorriso ligeiramente maroto, como se estivesse sempre planejando algo. Ele sabe usar seu charme para conseguir o que quer, seja para convencer um colega a emprestar-lhe um livro ou para escapar de uma situação complicada.","personality":"Tony é o tipo de garoto que sempre tem um plano. Ele sabe que, para alcançar seus objetivos, precisa ser inteligente e estratégico. Ele não hesita em fazer aliados, mas também sabe quando é hora de agir sozinho. Ele tem um jeito natural de conquistar as pessoas. Seja com um elogio bem colocado ou com uma piada inteligente, Tony sabe como ganhar a simpatia dos outros. No entanto, ele também sabe quando ser sério e assertivo. O garoto adora um desafio e está sempre disposto a provar seu valor, seja em uma partida de xadrez mágico ou em uma competição de feitiços. Ele não gosta de perder e fará de tudo para vencer.","history":"A família Brooks é conhecida por sua longa linhagem de bruxos poderosos e influentes. Eles valorizam muito a tradição e o status de sangue puro, e Tony cresceu ouvindo histórias sobre os grandes feitos de seus antepassados. Seus pais têm grandes expectativas para ele, e Tony está determinado a não os decepcionar. Tony cresceu em uma casa antiga e imponente, cercada por jardins mágicos e criaturas exóticas. Desde cedo, ele foi ensinado a usar a magia de forma responsável e a valorizar o conhecimento. Ele também aprendeu a jogar xadrez com seu avô, um exímio estrategista. Tony quer provar que é digno de seu sobrenome e deixar sua própria marca no mundo mágico. Ele sonha em se tornar um bruxo poderoso e influente, talvez até mesmo um líder no Ministério da Magia."}
+{
+    "name": "Tony Brooks",
+    "house": "Sonserina",
+    "year": 1,
+    "race": "Humano, sangue-puro",
+    "age": 11,
+    "job": "ALUNO",
+    "F": 1,
+    "H": 2,
+    "R": 1,
+    "A": 1,
+    "PdF": 1,
+    "PV": 5,
+    "PM": 5,
+    "spells": [
+        "reparo",
+        "flipendo",
+        "expelliarmus"
+    ],
+    "vantagens": [
+        "talento_natural",
+        "curioso",
+        "bom_de_fuga"
+    ],
+    "desvantagens": [
+        "desajeitado",
+        "problemas_com_pocoes",
+        "inimigo_de_um_monitor"
+    ],
+    "vantagem_obrigatoria": "Magia Negra",
+    "appearance": "Tony tem cabelos negros como ébano, levemente ondulados e que caem sobre sua testa de forma desalinhada, dando-lhe um ar um pouco rebelde. Seus olhos são cinza-azulados, quase como uma névoa, e parecem esconder segredos que poucos conseguem decifrar. Ele é magro e ágil, com uma expressão facial que alterna entre seriedade e um sorriso sarcástico. Sua pele é levemente morena, e ele tem uma pequena cicatriz na sobrancelha esquerda, resultado de uma \"experiência mágica\" malsucedida na infância. Tony não se importa muito com regras de etiqueta, mas ainda assim carrega um ar de nobreza que denuncia suas origens. Ele tem um jeito único de usar o uniforme de Sonserina. Ele deixa o botão superior da camisa levemente desabotoado e a gravata um pouco solta, dando um ar descontraído, mas ainda assim elegante. Ele também usa um relógio de pulso antigo, herdado de seu avô, que parece ter um brilho mágico. Além do relógio, Tony carrega consigo um anel de prata com o brasão da família Brooks, um símbolo de seu orgulho como sangue puro. O anel tem pequenas inscrições em runas antigas que ele ainda está tentando decifrar.  Tony tem um olhar penetrante e um sorriso ligeiramente maroto, como se estivesse sempre planejando algo. Ele sabe usar seu charme para conseguir o que quer, seja para convencer um colega a emprestar-lhe um livro ou para escapar de uma situação complicada.",
+    "personality": "Tony é o tipo de garoto que sempre tem um plano. Ele sabe que, para alcançar seus objetivos, precisa ser inteligente e estratégico. Ele não hesita em fazer aliados, mas também sabe quando é hora de agir sozinho. Ele tem um jeito natural de conquistar as pessoas. Seja com um elogio bem colocado ou com uma piada inteligente, Tony sabe como ganhar a simpatia dos outros. No entanto, ele também sabe quando ser sério e assertivo. O garoto adora um desafio e está sempre disposto a provar seu valor, seja em uma partida de xadrez mágico ou em uma competição de feitiços. Ele não gosta de perder e fará de tudo para vencer.",
+    "history": "A família Brooks é conhecida por sua longa linhagem de bruxos poderosos e influentes. Eles valorizam muito a tradição e o status de sangue puro, e Tony cresceu ouvindo histórias sobre os grandes feitos de seus antepassados. Seus pais têm grandes expectativas para ele, e Tony está determinado a não os decepcionar. Tony cresceu em uma casa antiga e imponente, cercada por jardins mágicos e criaturas exóticas. Desde cedo, ele foi ensinado a usar a magia de forma responsável e a valorizar o conhecimento. Ele também aprendeu a jogar xadrez com seu avô, um exímio estrategista. Tony quer provar que é digno de seu sobrenome e deixar sua própria marca no mundo mágico. Ele sonha em se tornar um bruxo poderoso e influente, talvez até mesmo um líder no Ministério da Magia."
+}
