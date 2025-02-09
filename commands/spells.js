@@ -59,7 +59,7 @@ module.exports = {
 
             if(option === 'add'){
 
-                if(!ficha_player.spells[spell]){
+                if(!ficha_player.spells.includes(spell)){
                     ficha_player.spells.push(spell)
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
                     return interaction.reply({ content: `Adicionado feitiço **${spell_list[spell]}** ao player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**.`, ephemeral: true });
@@ -68,8 +68,8 @@ module.exports = {
                 }
 
             }else if(option === 'rem'){
-                if(ficha_player.spells[spell]){
-                    ficha_player.spells = ficha_player.spells.map( s => s!== spell)
+                if(ficha_player.spells.includes(spell)){
+                    // ficha_player.spells = ficha_player.spells.map( s => s!== spell)
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
                     return interaction.reply({ content: `Removido feitiço **${spell_list[spell]}** do player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**.`, ephemeral: true });
                 }else{
