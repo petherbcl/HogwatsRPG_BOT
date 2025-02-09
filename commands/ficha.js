@@ -90,8 +90,8 @@ module.exports = {
 **${fichaCampos['R']}:** ${ficha_player['R']}
 **${fichaCampos['A']}:** ${ficha_player['A']}
 **${fichaCampos['PdF']}:** ${ficha_player['PdF']}
-**${fichaCampos['PV']}:** ${ficha_player['PV']}
-**${fichaCampos['PM']}:** ${ficha_player['PM']}
+**${fichaCampos['PV']}:** ${ficha_player['PV']} / ${ficha_player['PVMax']}
+**${fichaCampos['PM']}:** ${ficha_player['PM']} / ${ficha_player['PMMax']}
 **${fichaCampos['spells']}:** ${ficha_player['spells'].map(spell => spell_list[spell].name).join(' , ')}
 **${fichaCampos['vantagens']}:** ${ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join(' , ')}
 **${fichaCampos['desvantagens']}:** ${ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join(' , ')}
@@ -137,8 +137,8 @@ module.exports = {
 **${fichaCampos['R']}:** ${ficha_player['R']}
 **${fichaCampos['A']}:** ${ficha_player['A']}
 **${fichaCampos['PdF']}:** ${ficha_player['PdF']}
-**${fichaCampos['PV']}:** ${ficha_player['PV']}
-**${fichaCampos['PM']}:** ${ficha_player['PM']}
+**${fichaCampos['PV']}:** ${ficha_player['PV']} / ${ficha_player['PVMax']}
+**${fichaCampos['PM']}:** ${ficha_player['PM']} / ${ficha_player['PMMax']}
 **${fichaCampos['spells']}:** ${ficha_player['spells'].map(spell => spell_list[spell].name).join(' , ')}
 **${fichaCampos['vantagens']}:** ${ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join(' , ')}
 **${fichaCampos['desvantagens']}:** ${ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join(' , ')}

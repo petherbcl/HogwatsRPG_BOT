@@ -333,8 +333,8 @@ module.exports = {
 **${fichaCampos['R']}:** ${ficha_personagem['R']}
 **${fichaCampos['A']}:** ${ficha_personagem['A']}
 **${fichaCampos['PdF']}:** ${ficha_personagem['PdF']}
-**${fichaCampos['PV']}:** ${ficha_personagem['PV']}
-**${fichaCampos['PM']}:** ${ficha_personagem['PM']}
+**${fichaCampos['PV']}:** ${ficha_personagem['PV']} / ${ficha_personagem['PVMax']}
+**${fichaCampos['PM']}:** ${ficha_personagem['PM']} / ${ficha_personagem['PMMax']}
 **${fichaCampos['spells']}:** ${ficha_personagem['spells'].map( spell => spell_list[spell].name).join(' , ')}
 **${fichaCampos['vantagens']}:** ${ficha_personagem['vantagens'].map( vantagem => vantagem_list[vantagem].label).join(' , ')}
 **${fichaCampos['desvantagens']}:** ${ficha_personagem['desvantagens'].map( desvantagem => desvantagem_list[desvantagem].label).join(' , ')}
