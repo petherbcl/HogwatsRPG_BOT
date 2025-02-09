@@ -295,7 +295,7 @@ module.exports = {
                         ficha_personagem.PV = ficha_personagem.R * 5;
                         ficha_personagem.PM = ficha_personagem.R * 5;
 
-                        fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${member.user.username}_${member.user.id}.json`,
+                        fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`,
                                                     JSON.stringify(ficha_personagem), (err) => {
                                                         if (err) {
                                                             console.error('Erro ao criar ficha de personagem:', err);
