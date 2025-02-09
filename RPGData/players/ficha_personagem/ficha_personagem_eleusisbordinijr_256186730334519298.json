@@ -1,1 +1,30 @@
-{"name":"Eduardo Silva","house":"Corvinal","year":1,"race":"Humano","age":11,"F":0,"H":3,"R":1,"A":2,"PdF":0,"PV":5,"PM":5,"spells":["nox","expelliarmus","revelio"],"vantagens":["curioso"],"desvantagens":["trouxa_criado_por_trouxas"],"vantagem_obrigatoria":"Magia Branca","appearance":"Um jovem magro, com altura mais baixa para sua idade, de cabelos pretos e olhos verdes, com uma cicatriz levemente aparecendo perto da sua orelha direita.","personality":"É um jovem tímido, parte por sentir vergonha da sua cicatriz, mas que faz amigos com facilidade devido a sua empatia. É adepto pelo respeito as regras, é sempre focado nos estudos e em obter conhecimento. Quando se sente a vontade, gosta de fazer piadas e conversar. Em alguns esportes que demandam agilidade, ele é bem versátil, já em outros que demandam mais força bruta, nem tanto.","history":"Nasceu de uma família de trouxas, de pais brasileiros que moram na Inglaterra, onde o pai é engenheiro e a mãe arquiteta. Quando novo, sempre teve uma infância comum, e nunca apresentou qualquer poder até os 10 anos de idade. Na ocasião, ele estava brincando no parque da escola quando um valentão veio tirá-lo do balanço. O valentão o tirou com força, fazendo com que caísse no chão e sujasse sua roupa com terra. Quando viu o valentão se gabando com seus amigos, Eduardo desejou que o valentão recebesse o troco, e caísse no chão também. Foi quando uma lufada de vento forte soprou, o fez perder o equilíbrio e caiu no chão, sujando suas roupas também. Ele saiu correndo de vergonha enquanto Eduardo ainda no chão esboçou um riso e depois de algum tempo caiu na gargalhada. Até então não soube oque havia ocorrido, até receber sua carta de Hogwarts."}
+{
+    "name": "Eduardo Silva",
+    "house": "Corvinal",
+    "year": 1,
+    "job": "ALUNO",
+    "race": "Humano",
+    "age": 11,
+    "F": 0,
+    "H": 3,
+    "R": 1,
+    "A": 2,
+    "PdF": 0,
+    "PV": 5,
+    "PM": 5,
+    "spells": [
+        "nox",
+        "expelliarmus",
+        "revelio"
+    ],
+    "vantagens": [
+        "curioso"
+    ],
+    "desvantagens": [
+        "trouxa_criado_por_trouxas"
+    ],
+    "vantagem_obrigatoria": "Magia Branca",
+    "appearance": "Um jovem magro, com altura mais baixa para sua idade, de cabelos pretos e olhos verdes, com uma cicatriz levemente aparecendo perto da sua orelha direita.",
+    "personality": "É um jovem tímido, parte por sentir vergonha da sua cicatriz, mas que faz amigos com facilidade devido a sua empatia. É adepto pelo respeito as regras, é sempre focado nos estudos e em obter conhecimento. Quando se sente a vontade, gosta de fazer piadas e conversar. Em alguns esportes que demandam agilidade, ele é bem versátil, já em outros que demandam mais força bruta, nem tanto.",
+    "history": "Nasceu de uma família de trouxas, de pais brasileiros que moram na Inglaterra, onde o pai é engenheiro e a mãe arquiteta. Quando novo, sempre teve uma infância comum, e nunca apresentou qualquer poder até os 10 anos de idade. Na ocasião, ele estava brincando no parque da escola quando um valentão veio tirá-lo do balanço. O valentão o tirou com força, fazendo com que caísse no chão e sujasse sua roupa com terra. Quando viu o valentão se gabando com seus amigos, Eduardo desejou que o valentão recebesse o troco, e caísse no chão também. Foi quando uma lufada de vento forte soprou, o fez perder o equilíbrio e caiu no chão, sujando suas roupas também. Ele saiu correndo de vergonha enquanto Eduardo ainda no chão esboçou um riso e depois de algum tempo caiu na gargalhada. Até então não soube oque havia ocorrido, até receber sua carta de Hogwarts."
+}
