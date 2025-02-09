@@ -1,1 +1,32 @@
-{"name":"Ninna Lewis","house":"Grifinória","year":1,"race":"Bruxo Puro Sangue","age":11,"F":1,"H":1,"R":2,"A":0,"PdF":2,"PV":10,"PM":10,"spells":["expelliarmus","alohomora","flipendo"],"vantagens":["curioso","bom_de_fuga","familiar_especial"],"desvantagens":["desajeitado","problemas_com_pocoes"],"vantagem_obrigatoria":"Magia Negra","appearance":"Pele parda com olhos verdes, cabelo preto e cacheados e naturais. Marcas de pintas e sardas no rosto, covinhas, altura média  para idade.","personality":"Bondosa: Cuida dos amigos e animais\nIrônica e sacástica: Senso de humor aguçado\nCuriosa: Busca conhecimento e aventuras\nCorajosa: Raramente sente medo\nFiel: Protege amigos e familiares","history":"Ninna filha única, nascida em Worthing - Londres um bairro de trouxas porém sua residência lugar mais afastado, mora com seus pais e avós paternos e sempre viaja para Brasil para visitar sua família materna. Teve uma infância muito alegre e seu pai sempre incentivando a ser uma grande auror e  ele e seu tio contavam sobre seus anos em hogwarts. Quando tinha 7 anos, recebeu a notícia que seu tio foi morto pela ordem sombria causando grande choque na família e inclusive nela. Até hoje tentam encontrar o assassino de seu tio, seu pai se distanciou ficando cada vez fora de casa a procura do culpado. Ela e sua mãe então ficaram com seus avós paternos, sua mãe trabalhando e ao mesmo tempo preocupada com notícias do seu marido, enquanto se empenhava em cuidar da única filha. E com isso Ninna prometeu entrar em hogwarts, se tornar uma auror e encontrar ela mesma o o líder da ordem das sombras. Mais até lá muitas coisas aconteceriam e coisas seriam descobertas."}
+{
+    "name": "Ninna Lewis",
+    "house": "Grifinória",
+    "year": 1,
+    "race": "Bruxo Puro Sangue",
+    "age": 11,
+    "F": 1,
+    "H": 1,
+    "R": 2,
+    "A": 0,
+    "PdF": 2,
+    "PV": 10,
+    "PM": 10,
+    "spells": [
+        "expelliarmus",
+        "alohomora",
+        "flipendo"
+    ],
+    "vantagens": [
+        "curioso",
+        "bom_de_fuga",
+        "familiar_especial"
+    ],
+    "desvantagens": [
+        "desajeitado",
+        "problemas_com_pocoes"
+    ],
+    "vantagem_obrigatoria": "Magia Negra",
+    "appearance": "Pele parda com olhos verdes, cabelo preto e cacheados e naturais. Marcas de pintas e sardas no rosto, covinhas, altura média  para idade.",
+    "personality": "Bondosa: Cuida dos amigos e animais\nIrônica e sacástica: Senso de humor aguçado\nCuriosa: Busca conhecimento e aventuras\nCorajosa: Raramente sente medo\nFiel: Protege amigos e familiares",
+    "history": "Ninna filha única, nascida em Worthing - Londres um bairro de trouxas porém sua residência lugar mais afastado, mora com seus pais e avós paternos e sempre viaja para Brasil para visitar sua família materna. Teve uma infância muito alegre e seu pai sempre incentivando a ser uma grande auror e  ele e seu tio contavam sobre seus anos em hogwarts. Quando tinha 7 anos, recebeu a notícia que seu tio foi morto pela ordem sombria causando grande choque na família e inclusive nela. Até hoje tentam encontrar o assassino de seu tio, seu pai se distanciou ficando cada vez fora de casa a procura do culpado. Ela e sua mãe então ficaram com seus avós paternos, sua mãe trabalhando e ao mesmo tempo preocupada com notícias do seu marido, enquanto se empenhava em cuidar da única filha. E com isso Ninna prometeu entrar em hogwarts, se tornar uma auror e encontrar ela mesma o o líder da ordem das sombras. Mais até lá muitas coisas aconteceriam e coisas seriam descobertas."
+}
