@@ -64,5 +64,23 @@
         "custo": 0,
         "bonus": 3,
         "effect": "Se usar arte das trevas, sofre efeitos colaterais piores."
+    },
+    "curiosidade_perigosa": {
+        "label": "Curiosidade Perigosa",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Sempre precisa testar Resistência para não mexer em algo perigoso."
+    },
+    "fraco_contra_dementadores": {
+        "label": "Fraco contra Dementadores",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Sempre sofre -2 em testes contra a presença de Dementadores."
+    },
+    "problemas_com_autoridade": {
+        "label": "Problemas com Autoridade",
+        "custo": 0,
+        "bonus": 1,
+        "effect": "Tem dificuldade com professores e recebe punições com mais frequência."
     }
 }
