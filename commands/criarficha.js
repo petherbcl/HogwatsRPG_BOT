@@ -305,6 +305,10 @@ module.exports = {
                                                     }
                                         );
 
+                        // Alterar o nickname do usuário
+                        const newNickname = ficha_personagem.name;
+                        await member.setNickname(newNickname).catch(console.error);
+
                         interaction.editReply('Ficha de personagem concluído!');
 
                         const fichaText = `**Ficha de Personagem de ${member.nickname || member.user.globalName || member.user.username}**
