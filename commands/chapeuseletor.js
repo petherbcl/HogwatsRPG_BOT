@@ -8,7 +8,7 @@ module.exports = {
         .setName('chapeuseletor')
         .setDescription('Inicia a seleção da casa'),
     async execute(interaction, client) {
-        await interaction.deferReply({ ephemeral: true }).catch(() => {});
+        await interaction.deferReply({ ephemeral: false }).catch(() => {});
 
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
@@ -16,6 +16,8 @@ module.exports = {
 
         const file = fs.readFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, 'utf8');
         const userInv = JSON.parse(file)
+        const ficha_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, 'utf8');
+        const ficha = JSON.parse(ficha_file)
 
         if (!guild) {
             await interaction.editReply({ content: `⚠️ Servidor não encontrado!`, ephemeral: true });
@@ -24,7 +26,6 @@ module.exports = {
 
         if(channel.id === guild.channels.cache.find((c) => c.name === 'grande-salão').id && !userInv.casa) {
 
-            const houses = ['Grifinória', 'Sonserina', 'Corvinal', 'Lufa-Lufa'];
             const houseRoles = {
                 'Grifinória': guild.roles.cache.find((r) => r.name === 'Grifinória').id,
                 'Sonserina': guild.roles.cache.find((r) => r.name === 'Sonserina').id,
@@ -52,22 +53,21 @@ module.exports = {
                 await setTimeout(2000);
             }
     
-            const selectedHouse = houses[Math.floor(Math.random() * houses.length)];
-            const role = guild.roles.cache.get(houseRoles[selectedHouse]);
-            const img = houseImg[selectedHouse];
+            const role = guild.roles.cache.get(houseRoles[ficha.house]);
+            const img = houseImg[ficha.house];
     
             if (role) {
                 await member.roles.add(role);
-                const embed = new EmbedBuilder().setImage(img).setDescription(`<:sortinghat:1333596295708803094> Parabéns **${member.nickname || member.user.globalName || member.user.username}**! Você foi selecionado para a casa **${selectedHouse}**!`);
+                const embed = new EmbedBuilder().setImage(img).setDescription(`<:sortinghat:1333596295708803094> Parabéns **${member.nickname || member.user.globalName || member.user.username}**! Você foi selecionado para a casa **${ficha.house}**!`);
                 await interaction.editReply({ content: '', embeds: [embed], ephemeral: false });
 
-                userInv.casa = selectedHouse;
+                userInv.casa = true;
                 fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
             } else {
-                await interaction.editReply({ content: `⚠️ Não foi possível atribuir a casa. Role não encontrada.`, ephemeral: true });
+                await interaction.editReply({ content: `⚠️ Não foi possível atribuir a casa. Role não encontrada.`, ephemeral: false });
             }
         }else{
-            await interaction.followUp({ content: '⚠️ Não pode usar esse comando',ephemeral: true });
+            await interaction.followUp({ content: '⚠️ Não pode usar esse comando',ephemeral: false });
         }
         
     }
