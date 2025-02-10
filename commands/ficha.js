@@ -1,7 +1,7 @@
 const { SlashCommandBuilder, EmbedBuilder, AttachmentBuilder } = require("discord.js");
 const fs = require('fs');
 const path = require('path');
-const { RemoveSpecialCharacters } = require('../utils/utils.js');
+const { RemoveSpecialCharacters, FichaToPDF } = require('../utils/utils.js');
 
 
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
@@ -60,6 +60,7 @@ module.exports = {
             .addStringOption(option => option.setName('pontos').setDescription('Pontos').setRequired(true))
         ),
     async execute(interaction, client) {
+        await interaction.deferReply({ ephemeral: true }).catch( () => {} );
 
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
@@ -105,10 +106,23 @@ module.exports = {
 
                 attachment = new AttachmentBuilder(filePath);
 
-                await interaction.reply({ files: [attachment], ephemeral: true });
+                await interaction.editReply({ files: [attachment], ephemeral: true });
 
                 // Remover o arquivo temporário após o envio
                 fs.unlinkSync(filePath);
+
+
+                await FichaToPDF(member.user.username,member.user.id)
+                const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.docx`);
+                const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.pdf`);
+
+                attachment = new AttachmentBuilder(filePathPdf);
+                interaction.followUp({ files: [attachment], ephemeral: true });
+
+                await new Promise(resolve => setTimeout(resolve, 5000));
+
+                fs.unlinkSync(filePathDoc);
+                fs.unlinkSync(filePathPdf);
 
                 break;
             case 'player':
@@ -118,7 +132,7 @@ module.exports = {
                     player_user = guild.members.cache.get(playerID); // Get the member object from the ID
 
                     if (!player_user) {
-                        return interaction.reply({ content: `Player **${player}** não existe.`, ephemeral: true });
+                        return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
                     }
 
                     player_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
@@ -153,11 +167,23 @@ module.exports = {
 
                     attachment = new AttachmentBuilder(filePath);
 
-                    await interaction.reply({ files: [attachment], ephemeral: true });
+                    await interaction.editReply({ files: [attachment], ephemeral: true });
 
                     // Remover o arquivo temporário após o envio
                     fs.unlinkSync(filePath);
 
+
+                    await FichaToPDF(player_user.user.username,player_user.user.id)
+                    const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.docx`);
+                    const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.pdf`);
+    
+                    attachment = new AttachmentBuilder(filePathPdf);
+                    interaction.followUp({ files: [attachment], ephemeral: true });
+    
+                    await new Promise(resolve => setTimeout(resolve, 5000));
+    
+                    fs.unlinkSync(filePathDoc);
+                    fs.unlinkSync(filePathPdf);
                 }
 
                 break;
@@ -169,11 +195,11 @@ module.exports = {
                     const pv = interaction.options.getString('pv');
 
                     if (!player_user) {
-                        return interaction.reply({ content: `Player **${player}** não existe.`, ephemeral: true });
+                        return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
                     }
 
                     if (isNaN(pv)) {
-                        return interaction.reply({ content: `PV deverá ser um numero`, ephemeral: true });
+                        return interaction.editReply({ content: `PV deverá ser um numero`, ephemeral: true });
                     }
 
                     player_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
@@ -188,7 +214,7 @@ module.exports = {
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
 
-                    interaction.reply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PV atual é ${ficha_player.PV} `, ephemeral: true });
+                    interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PV atual é ${ficha_player.PV} `, ephemeral: true });
 
                 }
 
@@ -201,11 +227,11 @@ module.exports = {
                     const pm = Number(interaction.options.getString('pm'));
 
                     if (!player_user) {
-                        return interaction.reply({ content: `Player **${player}** não existe.`, ephemeral: true });
+                        return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
                     }
 
                     if (isNaN(pm)) {
-                        return interaction.reply({ content: `PM deverá ser um numero`, ephemeral: true });
+                        return interaction.editReply({ content: `PM deverá ser um numero`, ephemeral: true });
                     }
 
                     player_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
@@ -220,7 +246,7 @@ module.exports = {
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
 
-                    interaction.reply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PM atual é ${ficha_player.PM} `, ephemeral: true });
+                    interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PM atual é ${ficha_player.PM} `, ephemeral: true });
                 }
 
                 break;
@@ -232,11 +258,11 @@ module.exports = {
                     const pontos = Number(interaction.options.getString('pontos'));
 
                     if (!player_user) {
-                        return interaction.reply({ content: `Player **${player}** não existe.`, ephemeral: true });
+                        return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
                     }
 
                     if (isNaN(pontos)) {
-                        return interaction.reply({ content: `Pontos deverão ser um numero`, ephemeral: true });
+                        return interaction.editReply({ content: `Pontos deverão ser um numero`, ephemeral: true });
                     }
 
 
@@ -250,12 +276,12 @@ module.exports = {
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
 
-                    interaction.reply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n${ficha_player[pe]} atual é ${ficha_player[pe]} `, ephemeral: true });
+                    interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n${ficha_player[pe]} atual é ${ficha_player[pe]} `, ephemeral: true });
                 }
 
                 break
             default:
-                interaction.reply({ content: ``, ephemeral: true });
+                interaction.editReply({ content: ``, ephemeral: true });
                 break;
         }
 

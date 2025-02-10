@@ -1,15 +1,15 @@
 {
-    "name": "Algol Black",
-    "house": "Sonserina",
+    "name": "Pedro Mestre de Programa",
+    "house": "Grifinória",
     "year": 1,
     "job": "ALUNO",
-    "race": "Bruxo sangue puro",
+    "race": "Humano",
     "age": 11,
-    "F": 0,
-    "H": 5,
+    "F": 1,
+    "H": 2,
     "R": 1,
-    "A": 0,
-    "PdF": 0,
+    "A": 1,
+    "PdF": 1,
     "PV": 5,
     "PM": 5,
     "PE": 0,
@@ -28,8 +28,8 @@
     "desvantagens": [
         "desajeitado"
     ],
-    "vantagem_obrigatoria": "Magia Negra",
-    "appearance": "Pele pálida, cabelos e olhos prateados, cicatrizes notória no rosto, e várias pelo corpo",
-    "personality": "Extremamente auto confiante, arrogante com mestiços, só valoriza aqueles que são talentosos, odeia fracassados, possui um carisma natural, manipulador, adora colecionar peões",
-    "history": "Algol teve uma infância, traumática, regada a violência e tortura, seu pai era muito exigente, sempre o preparando para ser o melhor,  seu pai era mestre na maldição crucio, e frequentemente o torturava quando ele não atendia as rígidas expectativas.\n\nCerta vez, ele falhou, em ajudar seu pai em um dos seus constantes experimentos de magia negra.\n\nSeu pai enfurecido, lançou um feitiço poderoso, ferindo o seu rosto, e quando ele erguei a varinha para lançar crucio, a magia em Algol despertou de forma violenta,  o evento foi tão poderoso, que os cabelos negros de Algol se tornaram prateados, e ele desarmou seu pai apenas, um feito impressionante, pois seu pai já foram um dos líderes da lança prateada, apois o evento a varinha inclinou sua lealdade a Algol, que passou a tela como herança, pela primeira vez, ele sentia que seu pai estava feliz e satisfeito com ele"
+    "vantagem_obrigatoria": "Magia Elementar",
+    "appearance": "Ele é um rapaz magro e de estatura ligeiramente abaixo da média para a idade, com um porte ágil e expressivo. Os olhos grandes e curiosos brilham com um tom vibrante, revelando uma mente ávida por conhecimento e aventura. O cabelo, ligeiramente desalinhado, cai em ondas rebeldes sobre a testa, como se recusasse a ser domado, dando-lhe um ar despreocupado e naturalmente encantador. A pele é clara, salpicada por algumas sardas discretas no nariz e nas maçãs do rosto, um reflexo dos muitos dias passados ao ar livre a explorar cada canto misterioso do mundo mágico. As mãos, apesar de jovens, têm já a destreza de quem pratica feitiços em segredo, segurando a varinha com um misto de hesitação e entusiasmo.",
+    "personality": "Curioso por natureza, este jovem bruxo tem uma mente inquieta e está sempre à procura de respostas, seja nos livros proibidos da biblioteca ou nos corredores menos explorados do castelo. A sua sede de conhecimento muitas vezes leva-o a meter-se em sarilhos, mas a sua inteligência e criatividade ajudam-no a sair deles… na maioria das vezes. É leal aos amigos e tem um forte senso de justiça, odiando ver alguém a ser tratado de forma injusta. Mesmo sendo novo no mundo mágico, tem um espírito destemido e um desejo secreto de provar o seu valor. Pode ser um pouco teimoso quando acredita que está certo, mas está disposto a admitir os seus erros (ainda que com relutância). Tem um sentido de humor afiado e adora pequenos desafios, seja resolver um enigma mágico ou testar um feitiço novo. Às vezes, a impulsividade leva-o a agir sem pensar nas consequências, mas aprende rapidamente com as experiências. Apesar do seu lado aventureiro, há momentos em que se sente inseguro—afinal, é apenas um miúdo num mundo muito maior do que imaginava. No entanto, é exatamente essa mistura de determinação, medo e coragem que o tornará um grande bruxo um dia.",
+    "history": "Desde que se lembra, sempre houve algo de estranho nele. Pequenos acontecimentos inexplicáveis marcavam o seu dia a dia - livros que caíam das estantes sozinhos quando estava frustrado, luzes que piscavam quando ficava animado, brinquedos que pareciam mover-se sem que ninguém lhes tocasse. Mas, na sua casa, isso nunca foi visto como algo anormal. Nascido numa família de bruxos, desde cedo ouviu histórias sobre feitiços, criaturas mágicas e as proezas dos seus antepassados. No entanto, a sua família não era poderosa nem influente—eram simples bruxos que levavam a vida de forma modesta, longe dos holofotes do mundo mágico. O pai trabalhava numa loja de ingredientes para poções e a mãe encantava objetos para vender em feiras mágicas. O ambiente em casa era acolhedor, mas também exigente: desde cedo, aprendera que a magia não era um brinquedo, mas uma responsabilidade. Com cerca de seis anos, começou a demonstrar magia de forma mais evidente. Um dia, ao ser perseguido por um cão grande e barulhento no parque, fechou os olhos e, sem perceber como, apareceu no telhado da casa mais próxima. Os pais, ao perceberem que os seus poderes estavam a despertar, começaram a preparar-lhe para o futuro, contando-lhe sobre a escola de magia onde ele estudaria e o que o esperava por lá. Apesar de crescer num ambiente mágico, nunca deixou de sentir uma certa ansiedade em relação ao seu próprio talento. Será que seria um grande bruxo? Conseguiria estar à altura das expectativas da família? E se não fosse tão talentoso como os outros alunos? Essas perguntas perseguiam-no nos últimos meses antes da carta da escola chegar. Quando finalmente recebeu a tão aguardada carta, o misto de emoções foi intenso—excitação, medo, alegria e um leve aperto no estômago. No dia da compra dos materiais, percorreu as ruas do Beco Diagonal (ou outro local mágico adequado ao teu cenário), maravilhado com a imensidão de possibilidades que o esperavam. Escolher a varinha foi um momento especial: ao segurá-la, sentiu um arrepio percorrer-lhe os dedos, como se algo nele finalmente se encaixasse. Agora, prestes a embarcar na maior aventura da sua vida, olhava para o futuro com um misto de entusiasmo e nervosismo. Sabia que a escola de magia seria um desafio, mas também um lugar onde poderia descobrir quem realmente era."
 }

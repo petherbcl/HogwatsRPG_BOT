@@ -2,7 +2,7 @@ const { SlashCommandBuilder, AttachmentBuilder } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const {StringFormat, RemoveSpecialCharacters} = require('../utils/utils.js');
+const {StringFormat, RemoveSpecialCharacters, FichaToPDF} = require('../utils/utils.js');
 
 const spell_by_year = JSON.parse(fs.readFileSync(`./RPGData/spell_by_year.json`, 'utf8'))
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
@@ -356,6 +356,18 @@ module.exports = {
 
                         // Remover o arquivo temporário após o envio
                         fs.unlinkSync(filePath);
+
+                        await FichaToPDF(player_user.user.username,player_user.user.id)
+                        const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.docx`);
+                        const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.pdf`);
+        
+                        attachment = new AttachmentBuilder(filePathPdf);
+                        interaction.followUp({ files: [attachment], ephemeral: true });
+        
+                        await new Promise(resolve => setTimeout(resolve, 5000));
+        
+                        fs.unlinkSync(filePathDoc);
+                        fs.unlinkSync(filePathPdf);
                     }
                 }
             } catch (error) {
