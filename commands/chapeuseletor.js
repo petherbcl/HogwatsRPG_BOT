@@ -1,6 +1,7 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('@discordjs/builders');
 const { setTimeout } = require('timers/promises');
 const fs = require('fs');
+const { RemoveSpecialCharacters } = require('../utils/utils');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -13,7 +14,7 @@ module.exports = {
         const member = guild.members.cache.get(interaction.user.id);
         const channel = interaction.channel;
 
-        const file = fs.readFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, 'utf8');
+        const file = fs.readFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, 'utf8');
         const userInv = JSON.parse(file)
 
         if (!guild) {
@@ -61,7 +62,7 @@ module.exports = {
                 await interaction.editReply({ content: '', embeds: [embed], ephemeral: false });
 
                 userInv.casa = selectedHouse;
-                fs.writeFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, JSON.stringify(userInv));
+                fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
             } else {
                 await interaction.editReply({ content: `⚠️ Não foi possível atribuir a casa. Role não encontrada.`, ephemeral: true });
             }

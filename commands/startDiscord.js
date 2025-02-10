@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, PermissionsBitField, ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder } = require("discord.js");
 const fs = require('fs');
+const { RemoveSpecialCharacters } = require("../utils/utils");
 
 async function createRpgRoles(client, guild) {
  
@@ -367,8 +368,8 @@ async function checkUsersInventory(guild) {
         if(member[1].user.bot)  continue;
 
         const user = member[1].user;
-        if (!fs.existsSync(`./RPGData/players/inv_${user.username}_${user.id}.json`)) {
-            fs.writeFileSync(`./RPGData/players/inv_${user.username}_${user.id}.json`,
+        if (!fs.existsSync(`./RPGData/players/inv_${RemoveSpecialCharacters(user.username)}_${user.id}.json`)) {
+            fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(user.username)}_${user.id}.json`,
                 JSON.stringify({inventario:{}}), (err) => {
                     if (err) {
                         console.error('Erro ao criar o arquivo inventário:', err);

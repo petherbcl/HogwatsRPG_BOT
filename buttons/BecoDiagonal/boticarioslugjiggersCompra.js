@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { RemoveSpecialCharacters } = require('../../utils/utils');
 const item = 'frasco_vazio';
 
 module.exports = {
@@ -7,7 +8,7 @@ module.exports = {
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
 
-        let file = fs.readFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, 'utf8');
+        let file = fs.readFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, 'utf8');
         const userInv = JSON.parse(file)
 
         file = fs.readFileSync(`./RPGData/item_list.json`, 'utf8');
@@ -34,7 +35,7 @@ module.exports = {
 
         userInv.inventario.galeoes.amount -= item_list[item].price;
 
-        fs.writeFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, JSON.stringify(userInv));
+        fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
         
         return interaction.reply({ content: `Você comprou 1 Fraco Vazio`, ephemeral: true });
     }

@@ -1,5 +1,6 @@
 const { Events, EmbedBuilder } = require("discord.js");
 const fs = require('fs');
+const { RemoveSpecialCharacters } = require("../../utils/utils");
 
 async function startMessageCartaHogwarts(guild,user) {
     const CartaChannel = guild.channels.cache.find((c) => c.name === 'carta-de-hogwarts');
@@ -37,7 +38,7 @@ module.exports = {
                 )
                 .catch((err) => console.error(`Erro ao atribuir role: ${err}`));
 
-            fs.writeFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`,
+            fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`,
                             JSON.stringify({inventario:{}}), (err) => {
                                 if (err) {
                                     console.error('Erro ao criar o arquivo inventário:', err);

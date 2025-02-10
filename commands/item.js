@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, } = require("discord.js");
 const fs = require('fs');
+const { RemoveSpecialCharacters } = require("../utils/utils");
 
 module.exports = {
     dm: true,
@@ -53,7 +54,7 @@ module.exports = {
                 return interaction.reply({ content: `Quantidade deverá ser maior que 0.`, ephemeral: true });
             }
 
-            const player_file = fs.readFileSync(`./RPGData/players/inv_${player_user.user.username}_${player_user.user.id}.json`, 'utf8');
+            const player_file = fs.readFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
             const player_inv = JSON.parse(player_file)
 
             if (option === 'add') {
@@ -87,7 +88,7 @@ module.exports = {
 
             }
 
-            fs.writeFileSync(`./RPGData/players/inv_${player_user.user.username}_${player_user.user.id}.json`, JSON.stringify(player_inv));
+            fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(player_inv));
 
             return interaction.reply({ content: `${option === 'add' ? 'Adicionado' : 'Removido'} **${quantidade} x ${item_list[item].name}** ao player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**.`, ephemeral: false });
 

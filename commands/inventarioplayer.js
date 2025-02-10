@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder,  } = require("discord.js");
 const fs = require('fs');
+const { RemoveSpecialCharacters } = require("../utils/utils");
 
 module.exports = {
     dm: true,
@@ -20,7 +21,7 @@ module.exports = {
             return interaction.reply({ content: `Player **${player}** não existe.`, ephemeral: true });
         }
 
-        const file = fs.readFileSync(`./RPGData/players/inv_${player_user.user.username}_${player_user.user.id}.json`, 'utf8');
+        const file = fs.readFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
         const user_inv = JSON.parse(file)
 
         const embed = new EmbedBuilder().setColor('#ffad00').setTitle(`Lista de Itens do Inventário do Player - ${player_user.nickname || player_user.user.globalName || player_user.user.username}`).setDescription(Object.entries(user_inv.inventario).map(([key, item]) => `* **${key}** - ${item.amount} x ${item.name} | *${item.description}*`).join('\n'));

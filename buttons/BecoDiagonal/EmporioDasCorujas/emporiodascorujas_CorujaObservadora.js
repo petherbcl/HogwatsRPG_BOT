@@ -1,5 +1,6 @@
 const { EmbedBuilder } = require('discord.js');
 const fs = require('fs');
+const { RemoveSpecialCharacters } = require('../../../utils/utils');
 
 const name = 'Coruja Observadora'
 const price = 10
@@ -11,7 +12,7 @@ module.exports = {
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
 
-        const file = fs.readFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, 'utf8');
+        const file = fs.readFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, 'utf8');
         const userInv = JSON.parse(file)
 
         if(!userInv.inventario.galeoes || userInv.inventario.galeoes.amount < price){
@@ -24,7 +25,7 @@ module.exports = {
             userInv.inventario.galeoes.amount -= price;
             userInv.inventario.animal= {name: name, type: 'owl', img: img, amount: 1}
             
-            fs.writeFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, JSON.stringify(userInv));
+            fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
             const embed = new EmbedBuilder().setColor('#ffad00').setImage(img).setDescription(`Você comprou 1 ${name}`);
             
             return interaction.reply({  embeds: [embed], ephemeral: true });

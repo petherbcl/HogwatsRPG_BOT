@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { RemoveSpecialCharacters } = require('../../utils/utils');
 
 module.exports = {
     customID: 'floreioseborroesCompra',
@@ -6,7 +7,7 @@ module.exports = {
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
 
-        let file = fs.readFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, 'utf8');
+        let file = fs.readFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, 'utf8');
         const userInv = JSON.parse(file)
 
         file = fs.readFileSync(`./RPGData/item_list.json`, 'utf8');
@@ -50,7 +51,7 @@ module.exports = {
                 listCompras.push(item_list[item].name)
             }
         })
-        fs.writeFileSync(`./RPGData/players/inv_${member.user.username}_${member.user.id}.json`, JSON.stringify(userInv));
+        fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
 
         if(listCompras.length > 0){
             return interaction.reply({ content: `*Você comprou os seguintes livros:*${listCompras.map( elem => '\n* '+elem)}`, ephemeral: true });
