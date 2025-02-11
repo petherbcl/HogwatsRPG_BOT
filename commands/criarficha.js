@@ -357,9 +357,11 @@ module.exports = {
                         // Remover o arquivo temporário após o envio
                         fs.unlinkSync(filePath);
 
-                        await FichaToPDF(player_user.user.username,player_user.user.id)
-                        const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.docx`);
-                        const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.pdf`);
+                        interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
+
+                        await FichaToPDF(member.user.username,member.user.id)
+                        const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.docx`);
+                        const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.pdf`);
         
                         attachment = new AttachmentBuilder(filePathPdf);
                         interaction.followUp({ files: [attachment], ephemeral: true });
