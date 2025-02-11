@@ -184,7 +184,7 @@ Confie em Gringotes, onde sua fortuna está sempre em mãos (ou garras) seguras.
 Seja para encontrar aquele grimório raro, um clássico das histórias mágicas ou o mais recente guia de poções, temos exatamente o que precisa para enriquecer os seus estudos e aventuras.
 
 Entre e explore! As melhores histórias começam com um bom livro. 🪄`);
-    button = new ButtonBuilder().setCustomId('floreioseborroesCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Livros 1º ano');
+    button = new ButtonBuilder().setCustomId('floreioseborroesCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Livros 1º ano - 8$G');
     row = new ActionRowBuilder().addComponents(button);
     await floreioseborroeschannel.send({ embeds: [embedImg,embed], components: [row], ephemeral: false });
 
@@ -201,7 +201,7 @@ Seja você um jovem bruxo adquirindo seu primeiro uniforme de Hogwarts ou um mag
 Entre, experimente e deixe que a magia do tecido trabalhe a seu favor! ✨
 
 Se precisar de ajuda, nossa equipe estará encantada em atender. 🪄`);
-    button = new ButtonBuilder().setCustomId('madamemalkinsCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Roupas 1º ano');
+    button = new ButtonBuilder().setCustomId('madamemalkinsCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Roupas 1º ano  - 6$G');
     row = new ActionRowBuilder().addComponents(button);
     await madamemalkinschannel.send({ embeds: [embedImg,embed], components: [row], ephemeral: false });
 
@@ -219,7 +219,7 @@ Aqui, onde a magia encontra o artesanato, ajudaremos você a encontrar a varinha
 Explore as prateleiras, sinta a energia das varinhas ao seu redor e lembre-se: a varinha escolhe o bruxo. ✨
 
 Que esta seja a primeira de muitas aventuras mágicas! Se precisar de orientação, estou à disposição. 🪄`);
-    button = new ButtonBuilder().setCustomId('olivarasCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Varinha');
+    button = new ButtonBuilder().setCustomId('olivarasCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Varinha  - 1$G');
     row = new ActionRowBuilder().addComponents(button);
     await olivaraschannel.send({ embeds: [embedImg,embed], components: [row], ephemeral: false });
 
@@ -237,7 +237,7 @@ Aqui encontrará caldeirões perfeitos para cada necessidade mágica: de estanho
 Seja você um estudante iniciando as aulas de Poções ou um mestre alquimista em busca de excelência, temos o caldeirão ideal para o seu talento.
 
 Escolha com cuidado, pois a magia começa no recipiente certo! Se precisar de ajuda, nossa equipe estará pronta para auxiliar. 🪄`);
-    button = new ButtonBuilder().setCustomId('caldeiroesdepotageCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Caldeirão');
+    button = new ButtonBuilder().setCustomId('caldeiroesdepotageCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Caldeirão  - 1$G');
     row = new ActionRowBuilder().addComponents(button);
     await caldeiroesdepotagechannel.send({ embeds: [embedImg,embed], components: [row], ephemeral: false });
     
@@ -255,7 +255,7 @@ Aqui encontrará tudo o que precisa para preparar desde poções simples até el
 Misture, crie e explore os limites da alquimia! Se precisar de ajuda para encontrar um ingrediente específico ou orientação para sua próxima criação mágica, estamos à disposição.
 
 Sua jornada na arte das poções começa aqui! 🪄✨`);
-    button = new ButtonBuilder().setCustomId('boticarioslugjiggersCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Frascos Vazios');
+    button = new ButtonBuilder().setCustomId('boticarioslugjiggersCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Frascos Vazios  - 1$G');
     row = new ActionRowBuilder().addComponents(button);
     await boticarioslugjiggerschannel.send({ embeds: [embedImg,embed], components: [row], ephemeral: false });
 
@@ -274,8 +274,8 @@ Aqui encontrará os itens essenciais para sua jornada mágica: telescópios enca
 Descubra o que precisa para tornar sua magia ainda mais incrível! Se tiver dúvidas ou precisar de assistência, ficaremos encantados em ajudar. ✨
 
 Prepare-se para transformar o ordinário em extraordinário! 🪄`);
-    button = new ButtonBuilder().setCustomId('wiseacreswizardingwquipmentTelescopioCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Telescópio');
-    let button2 = new ButtonBuilder().setCustomId('wiseacreswizardingwquipmentBalacaCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Balança de Latão');
+    button = new ButtonBuilder().setCustomId('wiseacreswizardingwquipmentTelescopioCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Telescópio  - 1$G');
+    let button2 = new ButtonBuilder().setCustomId('wiseacreswizardingwquipmentBalacaCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Balança de Latão - 1$G');
     row = new ActionRowBuilder().addComponents(button).addComponents(button2);
     await wiseacreswizardingwquipmentchannel.send({ embeds: [embedImg,embed], components: [row], ephemeral: false });
 
@@ -316,7 +316,7 @@ Escolha com sabedoria, pois uma boa coruja é mais do que um mensageiro - é um 
 
     let buttonsList = [];
     for(const coruja of corujasList){
-        buttonsList.push( new ButtonBuilder().setCustomId(`emporiodascorujas_${coruja.replace(/\s+/g, '')}`).setStyle( ButtonStyle.Primary).setLabel(`🦉 Comprar ${coruja}`) )
+        buttonsList.push( new ButtonBuilder().setCustomId(`emporiodascorujas_${coruja.replace(/\s+/g, '')}`).setStyle( ButtonStyle.Primary).setLabel(`🦉 Comprar ${coruja}  - 10$G`) )
     }
     let buttonsAux = [...buttonsList]
     row = []
@@ -350,7 +350,7 @@ Porque todo grande bruxo merece uma criatura mágica ao seu lado! Se precisar de
 
     buttonsList = [];
     for(const animal of animaisList){
-        buttonsList.push( new ButtonBuilder().setCustomId(`animaismagicos_${animal.replace(/\s+/g, '')}`).setStyle( ButtonStyle.Primary).setLabel(`Comprar ${animal}`) )
+        buttonsList.push( new ButtonBuilder().setCustomId(`animaismagicos_${animal.replace(/\s+/g, '')}`).setStyle( ButtonStyle.Primary).setLabel(`Comprar ${animal}  - 10$G`) )
     }
     buttonsAux = [...buttonsList]
     row = []
