@@ -345,7 +345,8 @@ Porque todo grande bruxo merece uma criatura mágica ao seu lado! Se precisar de
         "Puffskein",
         "Kneazle",
         "Rato",
-        "Sapo"
+        "Sapo",
+        "Pelucio"
     ];
 
     buttonsList = [];
