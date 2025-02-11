@@ -14,6 +14,7 @@ const fichaCampos = {
     year: 'Ano Escolar',
     race: 'Raça',
     age: 'Idade',
+    job: 'Cargo',
     F: 'Força (F)',
     H: 'Habilidade (H)',
     R: 'Resistência (R)',
