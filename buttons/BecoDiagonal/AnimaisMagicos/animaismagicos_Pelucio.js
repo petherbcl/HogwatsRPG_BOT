@@ -7,7 +7,7 @@ const price = 10
 const img = 'https://imgur.com/BhNIetI.png'
 
 module.exports = {
-    customID: 'animaismagicos_Puffskein',
+    customID: 'animaismagicos_Pelucio',
     async execute(interaction, client) {
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
