@@ -26,11 +26,12 @@ module.exports = {
         let listCompras = []
 
         let totalCost = 0;
-        for (const [item,roupa] in Object.entries(roupasList)) {
+        for (const [item,roupa] of Object.entries(roupasList)) {
             totalCost += item_list[item].price*roupa.amount;
         }
-        if (userInv.inventario.galeoes && userInv.inventario.galeoes.amount >= totalCost) {
-            return interaction.reply({ content: `Você não tenho galeões suficientes`, ephemeral: true });
+
+        if (userInv.inventario.galeoes && userInv.inventario.galeoes.amount < totalCost) {
+            return interaction.reply({ content: `Você não tem galeões suficientes`, ephemeral: true });
         }
         
         for (const [item,roupa] of Object.entries(roupasList)) {
