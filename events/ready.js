@@ -417,6 +417,12 @@ module.exports = {
                 ]
             },
             {
+                name: "╭--🔹Taça das Casas🔹--╮",
+                channels: [
+                    { name: "pontos-das-casas", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel'], deny: ['UseApplicationCommands', 'SendMessages'], }], hasPassage: false },
+                ]
+            },
+            {
                 name: "╭--🔹Chegada🔹--╮",
                 channels: [
                     { name: "caldeirão-furado", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel', 'Connect','Speak'], deny: ['UseApplicationCommands', 'SendMessages'], }], hasPassage: false },
