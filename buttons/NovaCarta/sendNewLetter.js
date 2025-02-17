@@ -16,7 +16,7 @@ module.exports = {
             let channel = guild.channels.cache.find((c) => c.name === `carta-de-${RemoveSpecialCharacters(user.username)}-${user.id}` && c.type === 0);
             if(!channel){
                 channel = await guild.channels.create({
-                    name: `carta-de-${user.username}-${user.id}`,
+                    name: `carta-de-${RemoveSpecialCharacters(user.username)}-${user.id}`,
                     type: 0,
                     parent: categoryChannel.id,
                     permissionOverwrites: [
