@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { RemoveSpecialCharacters } = require('../../utils/utils');
+const { MessageFlags } = require('discord.js');
 const item = 'caldeirao_estanho_2';
 
 module.exports = {
@@ -15,11 +16,11 @@ module.exports = {
         const item_list = JSON.parse(file)
 
         if(!userInv.inventario.galeoes || userInv.inventario.galeoes.amount < item_list[item].price){
-            return interaction.reply({ content: `Você não tem Galeões suficientes`, ephemeral: true });
+            return interaction.reply({ content: `Você não tem Galeões suficientes`, flags: MessageFlags.Ephemeral });
         }
 
         if(userInv.inventario[item]) {
-            return interaction.reply({ content: `Você já comprou **${item_list[item].name}**`, ephemeral: true });
+            return interaction.reply({ content: `Você já comprou **${item_list[item].name}**`, flags: MessageFlags.Ephemeral });
         }else{
             userInv.inventario[item] = {
                 amount: 1,
@@ -36,7 +37,7 @@ module.exports = {
             
             fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
 
-            return interaction.reply({ content: `Você comprou sua 1 Caldeirão (estanho, tamanho padrão 2)`, ephemeral: true });
+            return interaction.reply({ content: `Você comprou sua 1 Caldeirão (estanho, tamanho padrão 2)`, flags: MessageFlags.Ephemeral });
         }
     }
 }

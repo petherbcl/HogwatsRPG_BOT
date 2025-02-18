@@ -1,4 +1,4 @@
-const { Client, PermissionsBitField } = require('discord.js');
+const { Client, PermissionsBitField, MessageFlags } = require('discord.js');
 const mongoose = require('mongoose');
 
 const client = new Client({
@@ -63,15 +63,15 @@ async function InteractionHandler(interaction, type) {
     try {
         //command properties
         if (component.admin) {
-            if (!interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) return await interaction.reply({ content: `⚠️ Only administrators can use this command!`, ephemeral: true });
+            if (!interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) return await interaction.reply({ content: `⚠️ Only administrators can use this command!`, flags: MessageFlags.Ephemeral });
         }
 
         if (component.owner) {
-            if (interaction.user.id !== '293802298243547149') return await interaction.reply({ content: `⚠️ Only bot owners can use this command!`, ephemeral: true });
+            if (interaction.user.id !== '293802298243547149') return await interaction.reply({ content: `⚠️ Only bot owners can use this command!`, flags: MessageFlags.Ephemeral });
         }
 
         if (component.dm) {
-            if (!interaction.member.roles.cache.find((role) => role.name === 'DM')) return await interaction.reply({ content: `⚠️ This command can only be used in DMs!`, ephemeral: true });
+            if (!interaction.member.roles.cache.find((role) => role.name === 'DM')) return await interaction.reply({ content: `⚠️ This command can only be used in DMs!`, flags: MessageFlags.Ephemeral });
         }
 
         //the mod command property requires additional setup, watch the video here to set it up: https://youtu.be/2Tqy6Cp_10I?si=bharHI_Vw7qjaG2Q

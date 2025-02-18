@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { RemoveSpecialCharacters } = require('../../utils/utils');
+const { MessageFlags } = require('discord.js');
 const item = 'frasco_vazio';
 
 module.exports = {
@@ -15,7 +16,7 @@ module.exports = {
         const item_list = JSON.parse(file)
         
         if(!userInv.inventario.galeoes || userInv.inventario.galeoes.amount < item_list[item].price){
-            return interaction.reply({ content: `Você não tem Galeões suficientes`, ephemeral: true });
+            return interaction.reply({ content: `Você não tem Galeões suficientes`, flags: MessageFlags.Ephemeral });
         }
 
         if(userInv.inventario[item]) {
@@ -37,6 +38,6 @@ module.exports = {
 
         fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
         
-        return interaction.reply({ content: `Você comprou 1 Fraco Vazio`, ephemeral: true });
+        return interaction.reply({ content: `Você comprou 1 Fraco Vazio`, flags: MessageFlags.Ephemeral });
     }
 }

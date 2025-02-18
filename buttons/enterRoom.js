@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+const { EmbedBuilder, MessageFlags } = require("discord.js");
 const notAllowMessages = {
     Grifinória: [
         'Alto lá! Você não me parece um grifinório. O que pensa que está fazendo aqui? Se não tiver um bom motivo, chamarei o zelador.',
@@ -39,7 +39,7 @@ const ERROR_MESSAGES = {
 module.exports = async function (room, interaction, client) {
     if (client.isMoving[interaction.user.id]) {
         const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Em movimento').setDescription(ERROR_MESSAGES.MOVING);
-        await interaction.reply({ embeds: [embed], ephemeral: true });
+        await interaction.reply({ embeds: [embed], flags: MessageFlags.Ephemeral });
         return;
     }
 
@@ -51,7 +51,7 @@ module.exports = async function (room, interaction, client) {
 
     if (!member.voice.channel) {
         client.isMoving[interaction.user.id] = false;
-        await interaction.reply({ content: ERROR_MESSAGES.NOT_IN_VOICE_CHANNEL, ephemeral: true });
+        await interaction.reply({ content: ERROR_MESSAGES.NOT_IN_VOICE_CHANNEL, flags: MessageFlags.Ephemeral });
         return;
     }
 
@@ -92,7 +92,7 @@ module.exports = async function (room, interaction, client) {
     } else {
         client.isMoving[interaction.user.id] = false;
         const embed = new EmbedBuilder().setColor('#ffad00').setDescription(notAllowMessages[neededRole][Math.floor(Math.random() * notAllowMessages[neededRole].length)]);
-        await interaction.reply({ embeds: [embed], ephemeral: true });
+        await interaction.reply({ embeds: [embed], flags: MessageFlags.Ephemeral });
     }
 };
 

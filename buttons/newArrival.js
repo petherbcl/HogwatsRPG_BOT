@@ -1,45 +1,8 @@
-const { ActionRowBuilder, ButtonBuilder, EmbedBuilder, ButtonStyle } = require("discord.js");
+const { ActionRowBuilder, ButtonBuilder, EmbedBuilder, ButtonStyle, MessageFlags } = require("discord.js");
 
 module.exports = {
 	customID: 'newArrival',
 	async execute(interaction, client) {
-
-        // const botaoGrifinoria = new ButtonBuilder()
-        //     .setCustomId('grifinoria_choose')
-        //     .setLabel('Grifinória')
-        //     .setEmoji('🦁') // Emoji do leão
-        //     .setStyle(ButtonStyle.Primary);
-
-        // const botaoSonserina = new ButtonBuilder()
-        //     .setCustomId('sonserina_choose')
-        //     .setLabel('Sonserina')
-        //     .setEmoji('🐍') // Emoji da cobra
-        //     .setStyle(ButtonStyle.Success);
-
-        // const botaoCorvinal = new ButtonBuilder()
-        //     .setCustomId('corvinal_choose')
-        //     .setLabel('Corvinal')
-        //     .setEmoji('🦅') // Emoji da águia
-        //     .setStyle(ButtonStyle.Secondary);
-
-        // const botaoLufaLufa = new ButtonBuilder()
-        //     .setCustomId('lufalufa_choose')
-        //     .setLabel('Lufa-Lufa')
-        //     .setEmoji('🦡') // Emoji do texugo
-        //     .setStyle(ButtonStyle.Primary);
-
-        // // Organizar os botões em uma linha
-        // const row = new ActionRowBuilder().addComponents(
-        //     botaoGrifinoria,
-        //     botaoSonserina,
-        //     botaoCorvinal,
-        //     botaoLufaLufa
-        // );
-
-        // const embed = new EmbedBuilder().setColor('#ffad00').setTitle('🎓 Bem Vindo a Hogwarts!').setDescription('Escolha a sua casa ')
-
-        // await interaction.reply({ embeds: [embed], components: [row], ephemeral: true });
-
         client.isMoving[interaction.user.id] = true
 
         const guild = interaction.member.guild
@@ -47,7 +10,7 @@ module.exports = {
 
         if (!member.voice.channel) {
             client.isMoving[interaction.user.id] = false
-            await interaction.reply({ content: `⚠️ DEVERÁ ESTÁR LIGADO EM UM CANAL DE VOZ ⚠️`, ephemeral: true })
+            await interaction.reply({ content: `⚠️ DEVERÁ ESTÁR LIGADO EM UM CANAL DE VOZ ⚠️`, flags: MessageFlags.Ephemeral })
             return
         }
 

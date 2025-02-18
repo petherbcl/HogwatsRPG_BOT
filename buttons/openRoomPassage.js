@@ -1,4 +1,4 @@
-const { EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder } = require("discord.js");
+const { EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, MessageFlags } = require("discord.js");
 
 const mensagens = [
     'Para onde será que eu vou agora?',
@@ -32,7 +32,7 @@ module.exports = {
             row.push({type:1, components: [...buttonsAux.slice(0,5)] })
             buttonsAux = buttonsAux.slice(5)
         }
-        await interaction.reply({ embeds: [embed], components: row, ephemeral: true });
+        await interaction.reply({ embeds: [embed], components: row, flags: MessageFlags.Ephemeral });
 	}
 }
 

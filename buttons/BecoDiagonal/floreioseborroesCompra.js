@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { RemoveSpecialCharacters } = require('../../utils/utils');
+const { MessageFlags } = require('discord.js');
 
 module.exports = {
     customID: 'floreioseborroesCompra',
@@ -30,7 +31,7 @@ module.exports = {
         livroList.forEach( item => totalCost += item_list[item].price )
 
         if (!userInv.inventario.galeoes && userInv.inventario.galeoes.amount < totalCost) {
-            return interaction.reply({ content: `Você não tenho galeões suficientes`, ephemeral: true });
+            return interaction.reply({ content: `Você não tenho galeões suficientes`, flags: MessageFlags.Ephemeral });
         }
         
         livroList.forEach( item => { 
@@ -54,9 +55,9 @@ module.exports = {
         fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
 
         if(listCompras.length > 0){
-            return interaction.reply({ content: `*Você comprou os seguintes livros:*${listCompras.map( elem => '\n* '+elem)}`, ephemeral: true });
+            return interaction.reply({ content: `*Você comprou os seguintes livros:*${listCompras.map( elem => '\n* '+elem)}`, flags: MessageFlags.Ephemeral });
         }else{
-            return interaction.reply({ content: `Você já tem todos os livros`, ephemeral: true });
+            return interaction.reply({ content: `Você já tem todos os livros`, flags: MessageFlags.Ephemeral });
         }
         
     }
