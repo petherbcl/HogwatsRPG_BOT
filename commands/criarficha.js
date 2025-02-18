@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, AttachmentBuilder } = require('discord.js');
+const { SlashCommandBuilder, AttachmentBuilder, EmbedBuilder } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
@@ -19,20 +19,20 @@ const questions = {
     race: { label: 'Raça: (Humano, meio-veela, lobisomem, mestiço, etc.)', type: 'string', question: true },
     age: { label: 'Idade:', type: 'number', question: true },
 
-    features: { label: 'Características\n*Distribua {0} pontos entre as características:* ***Força(F) , Habilidade(H) , Resistência(R) , Armadura(A) , Poder de Fogo(PdF)***', type: 'string', question: false },
+    features: { label: 'Características\n*Distribua {0} pontos entre as características:*\n* **Força(F)**\n* **Habilidade(H)**\n* **Resistência(R)**\n* **Armadura(A)**\n* **Poder de Fogo(PdF)**', type: 'string', question: false },
     F: { label: 'Força (F):', type: 'number', question: true },
     H: { label: 'Habilidade (H):', type: 'number', question: true },
     R: { label: 'Resistência (R):', type: 'number', question: true },
     A: { label: 'Armadura (A):', type: 'number', question: true },
     PdF: { label: 'Poder de Fogo (PdF):', type: 'number', question: true },
 
-    spells: { label: 'Feitiços Conhecidos:\n*Escolha até 3*\n***Separe os feitiços por virgula***\n*Pode consultar mais detalhes em <#1334980589652148244>*\n**Lista de feitiços:** ', type: 'string', question: true },
+    spells: { label: 'Irá escolher até 3 feitiços conhecidos da lista abaixo\n*Lista de feitiços:* {0}\n\n*Pode consultar mais detalhes em <#1334980589652148244>*\n\n**Feitiços Conhecidos:**\n-# *Separe os feitiços por virgula*', type: 'string', question: true },
 
-    vantagens: { label: 'Vantagens:\n*Escolha até 3*\n***Separe as vantagens por virgula***\n*Pode consultar mais detalhes em <#1334975689257914480>*\n**Lista de Vantagens:** ', type: 'string', question: true },
+    vantagens: { label: 'Irá escolher até 3 vantagens da lista abaixo\n*Lista de Vantagens:* {0}\n\n*Pode consultar mais detalhes em <#1334975689257914480>*\n\n**Vantagens:**\n-# Separe as vantagens por virgula', type: 'string', question: true },
 
-    desvantagens: { label: 'Desvantagens:\n*Escolha até 3*\n***Separe as desvantagens por virgula***\nPode consultar lista em <#1334975689257914480>*\n**Lista de Desvantagens:** ', type: 'string', question: true },
+    desvantagens: { label: 'Irá escolher até 3 desvantagens da lista abaixo\n*Lista de Desvantagens:* {0}\n\n*Pode consultar mais detalhes em <#1334975689257914480>*\n\n**Desvantagens:**\n-# Separe as desvantagens por virgula', type: 'string', question: true },
 
-    vantagem_obrigatoria: { label: 'Vantagem Obrigatória.\nEscolha uma das seguintes:\n* Magia Branca\n* Magia Elemental\n* Magia Negra', type: 'string', question: true },
+    vantagem_obrigatoria: { label: 'Vantagem Obrigatória.\nEscolha uma das seguintes:\n*Magia Branca* , *Magia Elemental* , *Magia Negra*', type: 'string', question: true },
 
     appearance: { label: 'Aparência:', type: 'string', question: true },
     personality: { label: 'Personalidade:', type: 'string', question: true },
@@ -149,6 +149,7 @@ module.exports = {
         const guild = interaction.member.guild
         const member = guild.members.cache.get(interaction.user.id);
         const channel = interaction.channel;
+        const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Criação de Ficha de Personagem')
 
         const ficha_personagem = {
             name: null,
@@ -194,32 +195,33 @@ module.exports = {
 
                         if (key === 'spells') {
                             const spellyear = spell_by_year[ficha_personagem.year];
-                            question.label += spellyear.map(spell => spell_list[spell].name).join(', ');
+                            question.label = StringFormat(question.label, spellyear.map(spell => spell_list[spell].name).join(', '))
                         } else if (key === 'vantagens') {
                             if(typeof(ficha_personagem['year'])==='number'){
                                 const vantagemyear = vantagem_desvantagem_by_year[ficha_personagem.year].vantagem
-                                question.label += vantagemyear.map(v => vantagem_list[v].label).join(', ');
+                                question.label = StringFormat(question.label, vantagemyear.map(v => vantagem_list[v].label).join(', '))
                             }else{
-                                question.label += Object.values(vantagem_list).map( v => v.label).join(', ')
+                                question.label = StringFormat(question.label, Object.values(vantagem_list).map( v => v.label).join(', '))
                             }
                             
                         } else if (key === 'desvantagens') {
                             if(typeof(ficha_personagem['year'])==='number'){
                                 const desvantagemyear = vantagem_desvantagem_by_year[ficha_personagem.year].desvantagem
-                                question.label += desvantagemyear.map(v => desvantagem_list[v].label).join(', ');
+                                question.label = StringFormat(question.label, desvantagemyear.map(v => desvantagem_list[v].label).join(', '))
                             }else{
-                                question.label += Object.values(desvantagem_list).map( v => v.label).join(', ')
+                                question.label = StringFormat(question.label, Object.values(desvantagem_list).map( v => v.label).join(', '))
                             }
                         } else if (key === 'features') {
                             question.label = StringFormat(question.label, PE)
                         }
 
-                        if(currentQuestion > 0){
+                        if(currentQuestion > 0 || question.question===true ){
                             const fetchedMessages = await channel.messages.fetch({ limit: 1 });
                             await channel.bulkDelete(fetchedMessages, true);
                         }
 
-                        await interaction.editReply({ content: question.label, ephemeral: true });
+                        embed.setDescription(question.label)
+                        await interaction.editReply({ embeds: [embed], ephemeral: true });
 
                         if (question.question) {
 
@@ -229,13 +231,16 @@ module.exports = {
                                 const attachment = collected.first().attachments.first();
                                 const response = await fetch(attachment.url);
                                 answer = await response.text();
+                                console.log(attachment.url, response)
                             }
                             answer.replace(`"`, `'`)
                             answer = question.type === 'number' ? parseInt(answer) : answer;
 
                             const validation = answerValidator(currentQuestion, answer)
                             if (validation) {
-                                await interaction.editReply(validation);
+                                embed.setDescription(validation)
+                                await interaction.editReply({ embeds: [embed], ephemeral: true });
+
                                 await new Promise(resolve => setTimeout(resolve, 3000));
                                 return askQuestion();
                             }
@@ -297,7 +302,8 @@ module.exports = {
                     await channel.bulkDelete(fetchedMessages, true);
 
                     if (ficha_personagem.F + ficha_personagem.H + ficha_personagem.R + ficha_personagem.A + ficha_personagem.PdF > PE) {
-                        await interaction.editReply('Pontos distribuidos entre as características superiores ao permitido. Terá que refazer a ficha.');
+                        embed.setDescription(`*Pontos distribuidos entre as características superiores ao permitido. Terá que refazer a ficha.*`)
+                        await interaction.editReply({ embeds: [embed], ephemeral: true });
                     } else {
                         ficha_personagem.PV = ficha_personagem.R * 5;
                         ficha_personagem.PM = ficha_personagem.R * 5;
@@ -321,7 +327,8 @@ module.exports = {
                         const newNickname = ficha_personagem.name;
                         await member.setNickname(newNickname).catch(console.error);
 
-                        interaction.editReply('Ficha de personagem concluído!');
+                        embed.setDescription(`*Ficha de personagem concluído!*`)
+                        await interaction.editReply({ embeds: [embed], ephemeral: true });
 
                         const fichaText = `**Ficha de Personagem de ${member.nickname || member.user.globalName || member.user.username}**
 
@@ -374,12 +381,14 @@ module.exports = {
                 }
             } catch (error) {
                 console.log(error);
-                interaction.editReply('**Tempo de espera ultrapassado!**');
+                embed.setDescription(`**Tempo de espera ultrapassado!**`)
+                await interaction.editReply({ embeds: [embed], ephemeral: true });
             }
         };
 
         await interaction.deferReply({ ephemeral: true }).catch(() => { });
-        await interaction.editReply({ content: '**Iniciando Ficha de personagem**\n*Para cada pergunta terá o tempo de 5 minutos para responder*', ephemeral: true });
+        embed.setDescription(`**Iniciando Ficha de personagem**\n*Para cada pergunta terá o tempo de 5 minutos para responder*`)
+        await interaction.editReply({ embeds: [embed], ephemeral: true });
         await new Promise(resolve => setTimeout(resolve, 5000));
 
         askQuestion();

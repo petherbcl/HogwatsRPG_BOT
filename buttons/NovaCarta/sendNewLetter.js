@@ -36,7 +36,7 @@ module.exports = {
             const embed = new EmbedBuilder().setColor('#ffad00').setDescription(`Uma nova sala <#${channel.id}> foi criada para você enviar sua carta.`);
             await interaction.reply({ embeds: [embed], ephemeral: true });
 
-            const embedChannel = new EmbedBuilder().setColor('#ffad00').setTitle('Carta de Hogwats').setDescription(`Olá ${user.username}. 
+            const embedChannel = new EmbedBuilder().setColor('#ffad00').setTitle('Carta de Hogwats').setDescription(`Olá **${user.username}**. 
 Nesse canal você pode enviar sua ficha de personagem completa.
 Após o envio, aguarde a aprovação de um dos DMs.`);
             const button = new ButtonBuilder().setCustomId('closeNewLetter').setStyle(ButtonStyle.Danger).setLabel('Fechar Canal');
