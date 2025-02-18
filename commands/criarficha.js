@@ -100,7 +100,7 @@ function answerValidator(index, answer) {
 
         for(let i=0; i<spells.length; i++){
             const spell = spells[i]
-            if (!Object.values(spell_list).map(s => s.name).includes(spell)) {
+            if (!Object.values(spell_list).map(s => s.name.toUpperCase()).includes(spell.toUpperCase())) {
                 return 'Por favor, escolhe feitiços da lista';
             }
         }
@@ -115,7 +115,7 @@ function answerValidator(index, answer) {
 
         for(let i=0; i<vantagens.length; i++){
             const vantagem = vantagens[i]
-            if (!Object.values(vantagem_list).map(v => v.label).includes(vantagem)) {
+            if (!Object.values(vantagem_list).map(v => v.label.toUpperCase()).includes(vantagem.toUpperCase())) {
                 return 'Por favor, escolha vantagens da lista';
             }
         }
@@ -130,7 +130,7 @@ function answerValidator(index, answer) {
 
         for(let i=0; i<devantagens.length; i++){
             const devantagem = devantagens[i]
-            if (!Object.values(desvantagem_list).map(v => v.label).includes(devantagem)) {
+            if (!Object.values(desvantagem_list).map(v => v.label.toUpperCase()).includes(devantagem.toUpperCase())) {
                 return 'Por favor, escolha desvantagens da lista';
             }
         }
@@ -249,7 +249,7 @@ module.exports = {
                                 const spells = answer.split(',').map(v => v.trim());
                                 answer = [];
                                 spells.forEach(spell => {
-                                    const id = Object.keys(spell_list).find(key => spell_list[key].name === spell);
+                                    const id = Object.keys(spell_list).find(key => spell_list[key].name.toUpperCase() === spell.toUpperCase());
                                     answer.push(id)
                                 })
 
@@ -258,7 +258,7 @@ module.exports = {
                                 const vantagens = answer.split(',').map(v => v.trim());
                                 answer = [];
                                 vantagens.forEach(vantagem => {
-                                    const id = Object.keys(vantagem_list).find(key => vantagem_list[key].label === vantagem);
+                                    const id = Object.keys(vantagem_list).find(key => vantagem_list[key].label.toUpperCase() === vantagem.toUpperCase());
                                     answer.push(id)
                                 })
 
@@ -267,7 +267,7 @@ module.exports = {
                                 const desvantagens = answer.split(',').map(v => v.trim());
                                 answer = [];
                                 desvantagens.forEach(desvantagem => {
-                                    const id = Object.keys(desvantagem_list).find(key => desvantagem_list[key].label === desvantagem);
+                                    const id = Object.keys(desvantagem_list).find(key => desvantagem_list[key].label.toUpperCase() === desvantagem.toUpperCase());
                                     answer.push(id)
                                 })
 
@@ -357,7 +357,7 @@ module.exports = {
                         const filePath = path.join('./tempdata/', `ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.txt`);
                         fs.writeFileSync(filePath, fichaText);
 
-                        const attachment = new AttachmentBuilder(filePath);
+                        let attachment = new AttachmentBuilder(filePath);
 
                         await interaction.followUp({ files: [attachment] });
 
