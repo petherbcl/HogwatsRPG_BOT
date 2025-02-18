@@ -80,6 +80,14 @@ async function createStructure(client, guild) {
                         components: [row]
                     });
                 }
+            }else{
+                catChannel.permissionOverwrites.set(
+                    channel.permissions.map((role) => ({
+                        id: guild.roles.cache.find((r) => r.name === (client.roomRoles[channel.name] || '@everyone')).id,
+                        allow: role.allow.map((p) => PermissionsBitField.Flags[p]),
+                        deny: role.deny.map((p) => PermissionsBitField.Flags[p]),
+                    }))
+                )
             }
         }
     }
