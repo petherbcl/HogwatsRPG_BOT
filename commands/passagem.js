@@ -11,12 +11,14 @@ module.exports = {
         const user = interaction.user;
         const channel = interaction.channel;
 
-        if(Object.keys(client.roomsList).filter( r => r === channel.name)){
+        if(Object.keys(client.roomsList).filter( r => r === channel.name).length > 0){
 
             const button = new ButtonBuilder().setCustomId('openRoomPassage').setStyle(ButtonStyle.Primary).setLabel('Ver Passagens');
             const row = new ActionRowBuilder().addComponents(button);
 
             await interaction.reply({components: [row], flags: MessageFlags.Ephemeral});
+        }else{
+            await interaction.reply({content: 'Não existe passagem disponível', flags: MessageFlags.Ephemeral});
         }
     },
 };
