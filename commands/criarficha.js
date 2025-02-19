@@ -215,7 +215,7 @@ module.exports = {
                             question.label = StringFormat(question.label, PE)
                         }
 
-                        if(currentQuestion > 0 || question.question===true ){
+                        if(currentQuestion > 0 && question.question===true ){
                             const fetchedMessages = await channel.messages.fetch({ limit: 1 });
                             await channel.bulkDelete(fetchedMessages, true);
                         }

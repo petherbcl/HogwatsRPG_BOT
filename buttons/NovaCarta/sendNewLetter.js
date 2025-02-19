@@ -38,7 +38,8 @@ module.exports = {
 
             const embedChannel = new EmbedBuilder().setColor('#ffad00').setTitle('Carta de Hogwats').setDescription(`Olá **${user.username}**. 
 Nesse canal você pode enviar sua ficha de personagem completa.
-Após o envio, aguarde a aprovação de um dos DMs.`);
+Após o envio, aguarde a aprovação de um dos DMs.
+Para enviar sua ficha use o comando ${"`/criarficha`"}`);
             const button = new ButtonBuilder().setCustomId('closeNewLetter').setStyle(ButtonStyle.Danger).setLabel('Fechar Canal');
             const row = new ActionRowBuilder().addComponents(button);
             await channel.send({ embeds: [embedChannel], components: [row], ephemeral: false });
