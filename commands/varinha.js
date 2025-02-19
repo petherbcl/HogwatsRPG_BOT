@@ -3,7 +3,7 @@ const { RemoveSpecialCharacters, importImage } = require("../utils/utils");
 const fs = require('fs');
 
 const madeiras = ["Acácia", "Amieiro", "Macieira", "Freixo", "Álamo", "Faia", "Espinheiro-Negro", "Nogueira-negra", "Cedro", "Cerejeira", "Castanheira", "Cipestre", "Corniso", "Ébano", "Sabugueiro", "Olmo", "Carvalho Inglês", "Abeto", "Espinheiro-alvo", "Aveleira", "Azevinho", "Choupo-Branco", "Lariço", "Loureiro", "Bordo", "Pereira", "Pinho", "Choupo", "Carvalho", "Pau-Brasil", "Romeira", "Lima-prata", "Abeto Vermelho", "Figueira", "Videira", "Nogueira", "Salgueiro", "Teixo"]
-const nucleo = ["Cabelo de Unicórnio", "Fibra de Coração de Dragão", "Pena de Fênix", "Pelo de Pumuruna", "Chifre de Serpente Chifruda", "Pena de Thunderbird", "Fibra de Coração de Snallygaster", "Fragmento de Raiz de Mandrágura", "Pó de Presas de Basilisco", "Veneno de Acromântula", "Pelo da Cauda de Testrálios", "Pena de Hipogrifo", "Cabelo de Veela", "Escama de Sereiano", "Veneno de Basilisco", "Bigode de Trasgo Montanhês", "Essência de Cinzal"]
+const nucleo = ["Cabelo de Unicórnio", "Fibra de Coração de Dragão", "Pena de Fênix", "Pelo de Pumuruna", "Chifre de Serpente Chifruda Albina", "Pena de Thunderbird", "Fibra de Coração de Snallygaster", "Fragmento de Raiz de Mandrágura", "Pó de Presas de Basilisco", "Veneno de Acromântula", "Pelo da Cauda de Testrálios", "Pena de Hipogrifo", "Cabelo de Veela", "Escama de Sereiano", "Veneno de Basilisco", "Bigode de Trasgo Montanhês", "Essência de Cinzal"]
 
 module.exports = {
     data: new SlashCommandBuilder()
