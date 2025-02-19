@@ -1,5 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const axios = require('axios');
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+const FormData = require('form-data');
+const { v4: uuidv4 } = require('uuid');
 
 const libre = require('libreoffice-convert');
 libre.convertAsync = require('util').promisify(libre.convert);
@@ -20,7 +24,10 @@ const template_file = {
     'Lufa-Lufa': 'template_h'
 }
 /***********************************/
-
+function generateUUID() {
+    return uuidv4();
+}
+/***********************************/
 
 function StringFormat(str, ...args) {
     if (args && args.length > 0) {
@@ -93,9 +100,45 @@ async function FichaToPDF(username, id) {
     return
 }
 
+async function importImage(imageUrl, username, id) {
+    const config = require('../config.json');
+    const response = await fetch(imageUrl);
+    const arrayBuffer = await response.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+    const imagePath = path.join('./tempdata/', `img_${RemoveSpecialCharacters(username)}_${id}_${generateUUID()}.jpg`);
+    fs.writeFileSync(imagePath, buffer);
+
+    const url = 'https://api.fivemanage.com/api/image';
+
+    const formData = new FormData();
+
+    formData.append('file', fs.createReadStream(imagePath));
+    formData.append("metadata", JSON.stringify({
+        name: `Varinha ${RemoveSpecialCharacters(username)} ${id}`,
+        description: `Varinha de ${username} #${id}`,
+    }));
+
+    try {
+        const result = await axios.post(url, formData, {
+            headers: {
+                Authorization: config.FIVEMANAGE_API_KEY,
+                ...formData.getHeaders()
+            }
+        })
+
+        fs.unlinkSync(imagePath);
+        return result.data.url
+    } catch (error) {
+        console.error(error)
+        fs.unlinkSync(imagePath);
+        return null
+    }
+}
+
 module.exports = {
     StringFormat,
     RemoveSpecialCharacters,
     FichaToWord,
-    FichaToPDF
+    FichaToPDF,
+    importImage
 };

@@ -1,1 +1,37 @@
-{"name":"Magnus Revencroft","house":"Grifinória","job":"ALUNO","year":1,"race":"Criado por trouxas","age":11,"F":1,"H":2,"R":1,"A":0,"PdF":2,"PV":5,"PVMax":5,"PM":5,"PMMax":5,"PE":0,"spells":["alohomora","flipendo","expelliarmus"],"vantagens":["talento_natural","mente_afiada","vassoura_pessoal"],"desvantagens":["desajeitado","medroso","inimigo_de_um_monitor"],"vantagem_obrigatoria":"Magia Negra","appearance":"Magnus tem pele parda, olhos verdes e cabelos pretos e lisos. Seu rosto é marcado por pintas e sardas, além de covinhas que aparecem quando sorri. Para sua idade, tem altura mediana e um porte esguio, o que o ajuda em sua agilidade e discrição.","personality":"Magnus é um garoto enigmático e calculista, sempre observando tudo à sua volta e planejando seus próximos passos. Sua inteligência e pensamento estratégico fazem dele alguém difícil de enganar, mas sua curiosidade muitas vezes o coloca em situações complicadas.\nFiel: Protege seus amigos e familiares com determinação, mesmo que tenha que quebrar algumas regras para isso.","history":"Magnus nasceu na linhagem Revencroft, na Escócia uma das famílias bruxas mais antigas e misteriosas. Seus pais, Lucian e Selene Revencroft, desapareceram misteriosamente quando ele era bebê, deixando para trás uma fortuna inestimável guardada nos cofres mais profundos de Gringotes. Além do ouro, ele herdou propriedades secretas, artefatos mágicos raros e conhecimento proibido que poucos ousam explorar.\n\nCriado sem saber de sua verdadeira origem, Magnus passou anos vivendo entre trouxas, sem noção do poder e da riqueza que o aguardavam. Ao receber sua carta de Hogwarts, descobriu que é um dos bruxos mais ricos de sua geração, com influência e acesso a recursos que poucos podem sonhar.\n\nSua vassoura pessoal não é apenas um modelo de ponta—é uma peça única, fabricada por um artesão bruxo lendário e encantada para um desempenho superior. Ele também possui acesso a itens raros, como livros proibidos, poções poderosas e artefatos encantados que podem ajudá-lo (ou colocá-lo em apuros).\n\nNo entanto, sua fortuna também atrai inimigos. Alguns bruxos poderosos acreditam que a linhagem Revencroft guarda segredos que nunca deveriam ser revelados. Enquanto Magnus tenta entender seu legado, ele precisará decidir se usará sua riqueza para o bem, ou para conquistar um poder ainda maior.\n\nSeu familiar, o corvo Nyx, é uma presença constante ao seu lado. Há rumores de que ele não é um animal comum, mas sim um guardião antigo da família Revencroft, esperando o momento certo para revelar a verdade sobre o passado de Magnus.\n\nAgora Magnus não é apenas rico—ele é absurdamente poderoso financeiramente, o que pode trazer tanto vantagens quanto desafios. Se quiser adicionar algum item especial que ele já possu"}
+{
+    "name": "Magnus Revencroft",
+    "house": "Grifinória",
+    "job": "ALUNO",
+    "year": 1,
+    "race": "Criado por trouxas",
+    "age": 11,
+    "F": 1,
+    "H": 2,
+    "R": 1,
+    "A": 0,
+    "PdF": 2,
+    "PV": 5,
+    "PVMax": 5,
+    "PM": 5,
+    "PMMax": 5,
+    "PE": 0,
+    "spells": [
+        "alohomora",
+        "flipendo",
+        "expelliarmus"
+    ],
+    "vantagens": [
+        "talento_natural",
+        "mente_afiada",
+        "vassoura_pessoal"
+    ],
+    "desvantagens": [
+        "desajeitado",
+        "medroso",
+        "inimigo_de_um_monitor"
+    ],
+    "vantagem_obrigatoria": "Magia Negra",
+    "appearance": "Magnus tem pele parda, olhos verdes e cabelos pretos e lisos. Seu rosto é marcado por pintas e sardas, além de covinhas que aparecem quando sorri. Para sua idade, tem altura mediana e um porte esguio, o que o ajuda em sua agilidade e discrição.",
+    "personality": "Magnus é um garoto enigmático e calculista, sempre observando tudo à sua volta e planejando seus próximos passos. Sua inteligência e pensamento estratégico fazem dele alguém difícil de enganar, mas sua curiosidade muitas vezes o coloca em situações complicadas.\nFiel: Protege seus amigos e familiares com determinação, mesmo que tenha que quebrar algumas regras para isso.",
+    "history": "Magnus nasceu na linhagem Revencroft, na Escócia uma das famílias bruxas mais antigas e misteriosas. Seus pais, Lucian e Selene Revencroft, desapareceram misteriosamente quando ele era bebê, deixando para trás uma fortuna inestimável guardada nos cofres mais profundos de Gringotes. Além do ouro, ele herdou propriedades secretas, artefatos mágicos raros e conhecimento proibido que poucos ousam explorar.\nCriado sem saber de sua verdadeira origem, Magnus passou anos vivendo entre trouxas, sem noção do poder e da riqueza que o aguardavam. Ao receber sua carta de Hogwarts, descobriu que é um dos bruxos mais ricos de sua geração, com influência e acesso a recursos que poucos podem sonhar.\nSua vassoura pessoal não é apenas um modelo de ponta—é uma peça única, fabricada por um artesão bruxo lendário e encantada para um desempenho superior. Ele também possui acesso a itens raros, como livros proibidos, poções poderosas e artefatos encantados que podem ajudá-lo (ou colocá-lo em apuros).\nNo entanto, sua fortuna também atrai inimigos. Alguns bruxos poderosos acreditam que a linhagem Revencroft guarda segredos que nunca deveriam ser revelados. Enquanto Magnus tenta entender seu legado, ele precisará decidir se usará sua riqueza para o bem, ou para conquistar um poder ainda maior.\nSeu familiar, o corvo Nyx, é uma presença constante ao seu lado. Há rumores de que ele não é um animal comum, mas sim um guardião antigo da família Revencroft, esperando o momento certo para revelar a verdade sobre o passado de Magnus.\nAgora Magnus não é apenas rico—ele é absurdamente poderoso financeiramente, o que pode trazer tanto vantagens quanto desafios"
+}

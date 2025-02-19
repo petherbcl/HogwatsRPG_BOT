@@ -1,1 +1,41 @@
-{"name":"Pedro (Mago de Programa)","house":"Grifinória","job":"ALUNO","year":1,"race":"Humano","age":11,"F":1,"H":1,"R":1,"A":1,"PdF":1,"PV":5,"PVMax":5,"PM":5,"PMMax":5,"PE":0,"spells":["lumos","nox","alohomora"],"vantagens":["talento_natural","mente_afiada","vassoura_pessoal"],"desvantagens":["desajeitado"],"vantagem_obrigatoria":"Magia Elemental","appearance":"Lindo","personality":"Forte","history":"aaaaa"}
+{
+    "name": "Pedro (Mago de Programa)",
+    "house": "Grifinória",
+    "job": "ALUNO",
+    "year": 1,
+    "race": "Humano",
+    "age": 11,
+    "F": 1,
+    "H": 1,
+    "R": 1,
+    "A": 1,
+    "PdF": 1,
+    "PV": 5,
+    "PVMax": 5,
+    "PM": 5,
+    "PMMax": 5,
+    "PE": 0,
+    "spells": [
+        "lumos",
+        "nox",
+        "alohomora"
+    ],
+    "vantagens": [
+        "talento_natural",
+        "mente_afiada",
+        "vassoura_pessoal"
+    ],
+    "desvantagens": [
+        "desajeitado"
+    ],
+    "vantagem_obrigatoria": "Magia Elemental",
+    "appearance": "Lindo",
+    "personality": "Forte",
+    "history": "aaaaa",
+    "varinha": {
+        "url": "https://r2.fivemanage.com/image/zLTkMDTPMEB9.jpg",
+        "madeira": "Lariço",
+        "nucleo": "Veneno de Basilisco",
+        "comprimento": 16
+    }
+}

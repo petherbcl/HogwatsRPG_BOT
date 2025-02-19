@@ -10,13 +10,15 @@
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
     "@pspdfkit/nodejs": "^0.0.7",
+    "axios": "^1.7.9",
     "discord.js": "^14.14.1",
     "docxtemplater": "^3.59.0",
     "docxtemplater-image-module": "^3.0.0",
     "libreoffice-convert": "^1.6.0",
     "mongoose": "^8.8.3",
     "node-fetch": "^3.3.2",
-    "pizzip": "^3.1.8"
+    "pizzip": "^3.1.8",
+    "uuid": "^11.0.5"
   },
   "repository": {
     "type": "git",
