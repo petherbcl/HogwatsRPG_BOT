@@ -24,7 +24,7 @@ module.exports = {
             const file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, 'utf8');
             const ficha_player = JSON.parse(file)
 
-            embed.setTitle("Criação de Varinha").setDescription('Adicione o link da foto ou a foto da varinha.')
+            embed.setTitle("Criação de Varinha").setDescription('Adicione o link da foto ou a foto da sua varinha.')
 
             await interaction.editReply({ embeds: [embed], withResponse: true, flags: MessageFlags.Ephemeral })
             const filter = response => response.author.id === interaction.user.id;
