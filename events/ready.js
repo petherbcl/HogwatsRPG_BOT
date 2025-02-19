@@ -436,7 +436,7 @@ module.exports = {
                     { name: "beco-diagonal", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: false },
                     { name: "banco-gringotes", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel','ReadMessageHistory'], deny: [], }], hasPassage: false },
                     { name: "floreios-e-borrões", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel','ReadMessageHistory'], deny: [], }], hasPassage: false },
-                    { name: "olivaras", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel','ReadMessageHistory'], deny: [], }], hasPassage: false },
+                    { name: "olivaras", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel','ReadMessageHistory','SendMessages','AttachFiles'], deny: [], }], hasPassage: false },
                     { name: "madame-malkins-roupas-para-todas-as-ocasioes", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel','ReadMessageHistory'], deny: [], }], hasPassage: false },
                     { name: "loja-de-caldeiroes-de-potage", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel','ReadMessageHistory'], deny: [], }], hasPassage: false },
                     { name: "boticario-slug-e-jiggers", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel','ReadMessageHistory'], deny: [], }], hasPassage: false },

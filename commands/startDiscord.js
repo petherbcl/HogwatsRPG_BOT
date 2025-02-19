@@ -226,7 +226,7 @@ Aqui, onde a magia encontra o artesanato, ajudaremos você a encontrar a varinha
 
 Explore as prateleiras, sinta a energia das varinhas ao seu redor e lembre-se: a varinha escolhe o bruxo. ✨
 
-Que esta seja a primeira de muitas aventuras mágicas! Se precisar de orientação, estou à disposição. 🪄`);
+Que esta seja a primeira de muitas aventuras mágicas! Se precisar de orientação, estou à disposição. 🪄\n\n-# **Antes de comprar sua varinha deverá criar uma imagem da mesma para adicionar em sua ficha**`);
     button = new ButtonBuilder().setCustomId('olivarasCompra').setStyle(ButtonStyle.Primary).setLabel('Comprar Varinha  - 1$G');
     row = new ActionRowBuilder().addComponents(button);
     await olivaraschannel.send({ embeds: [embedImg,embed], components: [row], ephemeral: false });
