@@ -1,212 +1,642 @@
 {
     "lumos": {
-        "name": "Lumos",
-        "pm": 1,
-        "effect": "Ilumina a ponta da varinha."
+        "name": "LUMOS",
+        "pm": "1",
+        "effect": "ILUMINA A PONTA DA VARINHA"
     },
     "nox": {
-        "name": "Nox",
-        "pm": 1,
-        "effect": "Apaga a luz conjurada por Lumos."
-    },
-    "alohomora": {
-        "name": "Alohomora",
-        "pm": 1,
-        "effect": "Abre fechaduras simples (não mágicas)."
+        "name": "NOX",
+        "pm": "1",
+        "effect": "APAGA A LUZ CONJURADA POR LUMOS"
     },
     "reparo": {
-        "name": "Reparo",
-        "pm": 1,
-        "effect": "Conserta objetos quebrados."
+        "name": "REPARO",
+        "pm": "1",
+        "effect": "CONCERTA OBJETOS QUEBRADOS"
     },
-    "wingardium_leviosa": {
-        "name": "Wingardium Leviosa",
-        "pm": 2,
-        "effect": "Faz um objeto levitar."
-    },
-    "flipendo": {
-        "name": "Flipendo",
-        "pm": 2,
-        "effect": "Empurra um alvo para trás."
-    },
-    "expelliarmus": {
-        "name": "Expelliarmus",
-        "pm": 2,
-        "effect": "Desarma o alvo."
+    "currente_calamo": {
+        "name": "CURRENTE CALAMO",
+        "pm": "1",
+        "effect": "FAZ SUA PENA ESCREVER SOZINHA APENAS ESCUTANDO SUA VOZ"
     },
     "scourgify": {
-        "name": "Scourgify",
-        "pm": 1,
-        "effect": "Limpa sujeira e objetos."
+        "name": "SCOURGIFY",
+        "pm": "1",
+        "effect": "LIMPA SUJEIRA E OBJETOS"
     },
-    "revelio": {
-        "name": "Revelio",
-        "pm": 3,
-        "effect": "Revela objetos ocultos e detecta magia."
+    "alohomora": {
+        "name": "ALOHOMORA",
+        "pm": "1",
+        "effect": "ABRE FECHADURAS NÃO MAGICAS"
     },
-    "mucus_ad_nauseam": {
-        "name": "Mucus ad Nauseam",
-        "pm": 2,
-        "effect": "Faz o alvo espirrar e ter coriza intensa."
+    "fáisco": {
+        "name": "FÁISCO",
+        "pm": "1",
+        "effect": " CONJURA FAÍSCAS VERDES"
     },
-    "riddikulus": {
-        "name": "Riddikulus",
-        "pm": 2,
-        "effect": "Transforma um bicho-papão em algo engraçado."
+    "wingardium_leviosa": {
+        "name": "WINGARDIUM LEVIOSA",
+        "pm": "2",
+        "effect": "FAZ UM OBJETO LEVITAR"
     },
-    "lumos_maxima": {
-        "name": "Lumos Maxima",
-        "pm": 2,
-        "effect": "Luz intensa que ilumina uma área maior."
+    "commoror_virga": {
+        "name": "COMMOROR VIRGA",
+        "pm": "2",
+        "effect": "CONTRA FEITIÇO DE EXPELLIARMUS, CRIA-SE UMA ÁUREA ESBRANQUISADA AO REDOR DA MÃO A QUAL POSSUI A VARINHA."
     },
-    "locomotor": {
-        "name": "Locomotor",
-        "pm": 2,
-        "effect": "Move objetos pelo ar à distância."
+    "lumos_solem": {
+        "name": "LUMOS SOLEM",
+        "pm": "2",
+        "effect": "MESMO EFEITO DO LUMOS POREM MAIS FORTE, PODENDO ATE CEGAR QUEM ESTIVER MUITO PROXIMO"
     },
-    "petrificus_totalus": {
-        "name": "Petrificus Totalus",
-        "pm": 3,
-        "effect": "Paralisa um alvo."
+    "protego_nivel_1": {
+        "name": "PROTEGO NIVEL 1",
+        "pm": "2",
+        "effect": "CONJURA BARREIRA MAGICA QUE REPELE FEITIÇOS"
     },
-    "obscuro": {
-        "name": "Obscuro",
-        "pm": 2,
-        "effect": "Cega temporariamente o alvo."
-    },
-    "accio": {
-        "name": "Accio",
-        "pm": 2,
-        "effect": "Atrai objetos ao conjurador."
+    "periculum": {
+        "name": "PERICULUM",
+        "pm": "2",
+        "effect": "CONJURA FAÍSCAS VERMELHAS DA PONTA DA VARINHA"
     },
     "depulso": {
-        "name": "Depulso",
-        "pm": 2,
-        "effect": "Afasta objetos ou inimigos."
+        "name": "DEPULSO",
+        "pm": "2",
+        "effect": "AFASTA OBJETOS OU INIMIGOS"
     },
-    "incendio": {
-        "name": "Incendio",
-        "pm": 2,
-        "effect": "Cria chamas."
+    "flipendo": {
+        "name": "FLIPENDO",
+        "pm": "2",
+        "effect": "EMPURRA UM ALVO PARA TRÁS"
     },
-    "slugulus_eructo": {
-        "name": "Slugulus Eructo",
-        "pm": 2,
-        "effect": "Faz o alvo vomitar lesmas."
+    "eletricus": {
+        "name": "ELETRICUS",
+        "pm": "2",
+        "effect": "FAZ COM QUE ALVO SEJA ATINGIDO POR UM CHOQUE, CUJA INTENSIDADE AUMENTA BASEADO NO NIVEL DO BRUXO"
     },
-    "tarantallegra": {
-        "name": "Tarantallegra",
-        "pm": 2,
-        "effect": "Faz o alvo dançar sem parar."
+    "expelliarmus": {
+        "name": "EXPELLIARMUS",
+        "pm": "2",
+        "effect": "DESARMA O ALVO"
     },
-    "protego": {
-        "name": "Protego",
-        "pm": 3,
-        "effect": "Cria uma barreira mágica."
+    "kadabrus": {
+        "name": "KADABRUS",
+        "pm": "2",
+        "effect": "UM RELÂMPAGO SAI DA VARINHA EM DIREÇÃO AO ALVO, JOGANDO PARA TRÁS"
     },
-    "relashio": {
-        "name": "Relashio",
-        "pm": 2,
-        "effect": "Solta objetos ou criaturas presas."
+    "ranhosa": {
+        "name": "RANHOSA",
+        "pm": "3",
+        "effect": "DISPARA A PRODUÇÃO DE MUCO NASAL NUM PERÍODO DE 3 MINUTOS"
     },
-    "diffindo": {
-        "name": "Diffindo",
-        "pm": 2,
-        "effect": "Corta materiais com precisão."
+    "revelio": {
+        "name": "REVELIO",
+        "pm": "3",
+        "effect": "REVELA OBJETOS OCULTO E DETECTA MAGIA"
     },
-    "ventus": {
-        "name": "Ventus",
-        "pm": 2,
-        "effect": "Cria uma rajada de vento."
+    "furunculus": {
+        "name": "FURUNCULUS",
+        "pm": "3",
+        "effect": "FAZ COM QUE, NO LOCAL ATINGIDO, CRESÇAM FURÚNCULOS DE VÁRIOS TAMANHOS. APENAS POÇÃOS PODEM CURAR O EFEITO."
     },
-    "aparecium": {
-        "name": "Aparecium",
-        "pm": 1,
-        "effect": "Revela mensagens ocultas."
+    "colloshoo": {
+        "name": "COLLOSHOO",
+        "pm": "3",
+        "effect": "OS PÉS DO OPONENTE SE GRUDAM COM O CHÃO"
     },
-    "glacius": {
-        "name": "Glacius",
-        "pm": 3,
-        "effect": "Congela um alvo ou objeto."
+    "mimble_wimble": {
+        "name": "MIMBLE WIMBLE",
+        "pm": "3",
+        "effect": "O ALVO ATINGIDO FICA IMEDIATAMENTE GAGO, SEM CONSEGUIR PRONUNCIAR FEITIÇOS"
     },
-    "protego_totalum": {
-        "name": "Protego Totalum",
-        "pm": 4,
-        "effect": "Barreira mágica mais forte."
+    "cara_de_vampiro": {
+        "name": "CARA DE VAMPIRO",
+        "pm": "3",
+        "effect": "FAZ COM QUE CANINOS DO ALVO SE ALONGUEM E POR ISSO SUA FACE LEMBRA UM VAMPIRO"
     },
-    "expulso": {
-        "name": "Expulso",
-        "pm": 3,
-        "effect": "Explosão mágica que afasta inimigos."
+    "protego_horribillis": {
+        "name": "PROTEGO HORRIBILLIS",
+        "pm": "3",
+        "effect": "CONJURA UM ESCUDO DENSO QUE PROTEGE CONTRA AZARAÇÕES, NÃO REPELE TRANSFIGURAÇÕES"
+    },
+    "avis": {
+        "name": "AVIS",
+        "pm": "1",
+        "effect": "CONJURA 3 PÁSSAROS  "
+    },
+    "colloportus": {
+        "name": "COLLOPORTUS",
+        "pm": "1",
+        "effect": "TRANCA PORTAS E OBJETOS"
+    },
+    "feraverto": {
+        "name": "FERAVERTO",
+        "pm": "1",
+        "effect": "TRANSFORMA UM ANIMAL EM UM OBJETO"
+    },
+    "limpar": {
+        "name": "LIMPAR",
+        "pm": "1",
+        "effect": "LIMPA A SUJEIRA INSTANTANEAMENTE"
     },
     "serpensortia": {
-        "name": "Serpensortia",
-        "pm": 3,
-        "effect": "Conjura uma cobra."
+        "name": "SERPENSORTIA",
+        "pm": "1",
+        "effect": "CONJURA UMA SERPENTE"
     },
-    "confringo": {
-        "name": "Confringo",
-        "pm": 5,
-        "effect": "Cria uma explosão de fogo."
+    "pack": {
+        "name": "PACK",
+        "pm": "1",
+        "effect": "FAZ COM QUE MALAS SEJAM ORGANIZADAS SOZINHAS"
     },
-    "estupefaca": {
-        "name": "Estupefaça",
-        "pm": 4,
-        "effect": "Atordoa um inimigo."
+    "vipera_evanesca": {
+        "name": "VIPERA EVANESCA",
+        "pm": "1",
+        "effect": "FAZ COM QUE UMA SERPENTE CONJURADA SEJA DISSEMINADA"
     },
-    "levicorpus": {
-        "name": "Levicorpus",
-        "pm": 3,
-        "effect": "Suspende um alvo de cabeça para baixo."
+    "rictumsempra": {
+        "name": "RICTUMSEMPRA",
+        "pm": "2",
+        "effect": "FAZ O ALVO DAR GARGALHADAS SEM PARAR"
+    },
+    "ottera": {
+        "name": "OTTERA",
+        "pm": "2",
+        "effect": "FAZ O OPOSTO DO FEITIÇO ACCIO"
+    },
+    "peskipiksi_pastermoni": {
+        "name": "PESKIPIKSI PASTERMONI",
+        "pm": "2",
+        "effect": "FAZ COM QUE DIABRETES FUJAM OU DESISTAM DAS TRAVESSURAS"
+    },
+    "aparecium": {
+        "name": "APARECIUM",
+        "pm": "2",
+        "effect": "FAZ COM QUE MENSAGENS INVISÍVEIS EM OBJETOS SEJAM REVELADAS"
+    },
+    "locomotor": {
+        "name": "LOCOMOTOR",
+        "pm": "2",
+        "effect": "MOVE OBJETOS PELO AR Á DISTÂNCIA"
+    },
+    "protego_nivel_2": {
+        "name": "PROTEGO NIVEL 2",
+        "pm": "3",
+        "effect": "CONJURA BARREIRA MÁGICA QUE REPELE FEITIÇOS"
+    },
+    "locomotor_webbley": {
+        "name": "LOCOMOTOR WEBBLEY",
+        "pm": "3",
+        "effect": "FAZ COM QUE OS MEMBROS DO ALVO GRUDEM EM SUA ESTRUTURA 10 MIN"
+    },
+    "protego_nerus": {
+        "name": "PROTEGO NERUS",
+        "pm": "3",
+        "effect": "CONJURA UMA BARREIRA NEGRA CAPAZ DE ESVAIR FEITIÇOS DAS TREVAS"
+    },
+    "incendio": {
+        "name": "INCENDIO",
+        "pm": "3",
+        "effect": "CRIA CHAMAS"
+    },
+    "slugulus_eructo": {
+        "name": "SLUGULUS ERUCTO",
+        "pm": "3",
+        "effect": "FAZ ALVO VOMITAR LESMAS"
+    },
+    "tarantallegra": {
+        "name": "TARANTALLEGRA",
+        "pm": "3",
+        "effect": "FAZ ALVO DANÇAR SEM PARAR"
+    },
+    "arania_exumae": {
+        "name": "ARANIA EXUMAE",
+        "pm": "3",
+        "effect": "DESSEMINA QUALQUER ESPÉCIE DE ARANHA"
+    },
+    "besus_nasus": {
+        "name": "BESUS NASUS",
+        "pm": "3",
+        "effect": "FAZ COM QUE BESOUROS SAIAM DO NARIZ POR 1 MIN"
+    },
+    "derrubare": {
+        "name": "DERRUBARE",
+        "pm": "3",
+        "effect": "PEPRODUZ UM EMPURRÃO LEVE NA DIREÇAO DO ALVO"
+    },
+    "finite_incantatem": {
+        "name": "FINITE INCANTATEM",
+        "pm": "3",
+        "effect": "FAZ COM QUE UM FEITIÇO/ENCANTAMENTO/AZARAÇÃO CESSE"
+    },
+    "kaerat": {
+        "name": "KAERAT",
+        "pm": "1",
+        "effect": "ARRUMA TODOS OS PERTENCES EM SEUS DEVIDOS LUGARES"
+    },
+    "locomotor_objeto": {
+        "name": "LOCOMOTOR OBJETO",
+        "pm": "1",
+        "effect": "FAZ COM QUE OBJETO SEJA CONVOCADO AO SEU CONTROLE"
+    },
+    "araiasortia": {
+        "name": "ARAIASORTIA",
+        "pm": "2",
+        "effect": "CONJURA QUALQUER ARACNÍDEO ( TAMANHO POR CONJURAÇÃO EVOLUI COM ANOS)"
+    },
+    "amornae": {
+        "name": "AMORNAE",
+        "pm": "2",
+        "effect": "FAZ COM QUE FOGO NÃO QUEIME, REDUZINDO SUAS LABAREDAS "
+    },
+    "lumos_maxima": {
+        "name": "LUMOS MAXIMA",
+        "pm": "2",
+        "effect": "LUZ INTENSA QUE ILUMINA ÁREA MAIOR"
+    },
+    "engorgio": {
+        "name": "ENGORGIO",
+        "pm": "2",
+        "effect": "FAZ O OBJETO CRESCER DESCONTROLADAMENTE POR UM PERÍODO DE 3 MINUTOS"
+    },
+    "herbivicus": {
+        "name": "HERBIVICUS",
+        "pm": "2",
+        "effect": "PROVOCA UMA ACELERAÇÃO INSTANTÂNEA NO CRESCIMENTO DE PLANTAS"
+    },
+    "immobilizer": {
+        "name": "IMMOBILIZER",
+        "pm": "2",
+        "effect": "FAZ COM QUE OBJETOS EM MOVIMENTOS SEJA DESACELERADOS OU PARADOS GRADATIVAMENTE"
+    },
+    "ventus": {
+        "name": "VENTUS",
+        "pm": "2",
+        "effect": "CRIA UMA RAJADA DE VENTO"
+    },
+    "reduccio": {
+        "name": "REDUCCIO",
+        "pm": "2",
+        "effect": "FAZ  COM QUE O OBJETO DIMINUA CONSIDERAVELMENTE"
+    },
+    "avifors": {
+        "name": "AVIFORS",
+        "pm": "2",
+        "effect": "TRANSFIGURA OBJETOS EM PÁSSAROS"
+    },
+    "muffiato": {
+        "name": "MUFFIATO",
+        "pm": "2",
+        "effect": "CRIA UM ZUMBIDO NO OUVIDO DA VITIMA, PARA QUE NÃO POSSA OUVIR CONVERSAS ALHEIAS"
+    },
+    "cocerus": {
+        "name": "COCERUS",
+        "pm": "2",
+        "effect": "FAZ COM QUE O ALVO SINTA UMA TERRIVEL COCEIRA NO LOCAL ATINGIDO"
+    },
+    "imobbilus": {
+        "name": "IMOBBILUS",
+        "pm": "3",
+        "effect": "PROVOCA EFEITO ``SLOW-MOTION`` EM PEQUENAS CRIATURAS"
+    },
+    "diffindo": {
+        "name": "DIFFINDO",
+        "pm": "3",
+        "effect": "CORTA QUALQUER TIPO DE OBJETOS, DESDE PANOS ATE PEDRAS"
+    },
+    "protego_nivel_3": {
+        "name": "PROTEGO NIVEL 3",
+        "pm": "4",
+        "effect": "CONJURA BARREIRA MÁGICA QUE REPELE FEITIÇOS"
+    },
+    "enervate": {
+        "name": "ENERVATE",
+        "pm": "4",
+        "effect": "FAZ COM QUE A PESSOA ESTUPORADA DESPERTE"
+    },
+    "expecto_exumae": {
+        "name": "EXPECTO EXUMAE",
+        "pm": "4",
+        "effect": "FAZ COM QUE UM ESCUDO IMPACTANTE AFASTE UM FANTASMA E DISPERSE-O"
     },
     "oppugno": {
-        "name": "Oppugno",
-        "pm": 3,
-        "effect": "Faz objetos atacarem um alvo."
+        "name": "OPPUGNO",
+        "pm": "4",
+        "effect": "OS PASSAROS CONJURADOS PELO AVIS ATACAM O ALVO"
+    },
+    "riddikulus": {
+        "name": "RIDDIKULUS",
+        "pm": "4",
+        "effect": "UTULIZADO PARA DERROTAR BICHO-PAPÃO"
+    },
+    "volate_ascenderae": {
+        "name": "VOLATE ASCENDERAE",
+        "pm": "4",
+        "effect": "LANÇA O ALVO PARA O ALTO, FAZENDO COM QUE ELE BATA VIOLENTAMENTE NO CHÃO"
+    },
+    "accio": {
+        "name": "ACCIO",
+        "pm": "2",
+        "effect": "ATRAI OBEJTOS AO CONJURADOR"
+    },
+    "férula": {
+        "name": "FÉRULA",
+        "pm": "2",
+        "effect": "CONJURA UMA ATADURA QUE PODE SER USADA EM MACHUCADOS"
+    },
+    "lapifors": {
+        "name": "LAPIFORS",
+        "pm": "2",
+        "effect": "TRANSFIGURA UM OBJETO DE PEQUENO OU MEDIO PORTE, EM UM COLEHO"
+    },
+    "obliterae": {
+        "name": "OBLITERAE",
+        "pm": "2",
+        "effect": "APAGA  AS PEGADAS"
+    },
+    "reducto": {
+        "name": "REDUCTO",
+        "pm": "3",
+        "effect": "FAZ PEQUENAS COISAS IMPLODIREM"
+    },
+    "inflatus": {
+        "name": "INFLATUS",
+        "pm": "3",
+        "effect": "FAZ O ALVO INFLAR COMO UM BALÃO"
+    },
+    "petrificus_totallus": {
+        "name": "PETRIFICUS TOTALLUS",
+        "pm": "3",
+        "effect": "DEIXA A VITIMA IMOBILIZADA 3 TURNOS"
+    },
+    "rennervate": {
+        "name": "RENNERVATE",
+        "pm": "4",
+        "effect": "REANIMA PESSOAS DESMAIADAS"
+    },
+    "mutare_face": {
+        "name": "MUTARE FACE",
+        "pm": "4",
+        "effect": "MUDA A APARÊNCIAS DOS ROSTO DA PESSOA TEMPORARIAMENTE"
+    },
+    "cabeça-de-abóbora": {
+        "name": "CABEÇA-DE-ABÓBORA",
+        "pm": "4",
+        "effect": "CONJURA UMA GRANDE ABÓBORA NA CABEÇA DO ALVO"
+    },
+    "gerremoffme": {
+        "name": "GERREMOFFME",
+        "pm": "4",
+        "effect": " CONTRA FEITIÇO DO OPPUGNO"
+    },
+    "cabeça-de-bolha": {
+        "name": "CABEÇA-DE-BOLHA",
+        "pm": "5",
+        "effect": "CRIA UMA BOLHA EM SUA BOCA PARA QUE VOCÊ POSSA RESPIRAR DE BAIXO DE AGUA"
+    },
+    "protego_nivel_4": {
+        "name": "PROTEGO NIVEL 4",
+        "pm": "5",
+        "effect": "CONJURA BARREIRA MÁGICA QUE REPELE FEITIÇOS"
+    },
+    "estupefaça": {
+        "name": "ESTUPEFAÇA",
+        "pm": "5",
+        "effect": "ESTUPORA O ALVO"
+    },
+    "expulsio": {
+        "name": "EXPULSIO",
+        "pm": "5",
+        "effect": "EXPULSA O ALVO DO LOCAL, ATIRANDO-O VIOLENTAMENTE PARA TRÁS"
+    },
+    "flagelum_nerus": {
+        "name": "FLAGELUM NERUS",
+        "pm": "5",
+        "effect": "ULTRAPASSA A BARREIRA CRIADA PELO PROTEGO, PROVOCA DOR SEMELHANTE A UM CHICOTE"
+    },
+    "glacius": {
+        "name": "GLACIUS",
+        "pm": "5",
+        "effect": "CONGELA O ALVO OU OBJETO"
+    },
+    "animus_novandi": {
+        "name": "ANIMUS NOVANDI",
+        "pm": "2",
+        "effect": "FAZ COM QUE OBJETOS NÃO-MAGICOS FAÇAM SUAS AÇÕES DEVIDAS SOZINHAS"
+    },
+    "erecto": {
+        "name": "ERECTO",
+        "pm": "2",
+        "effect": "USADO PARA MONTAR COISAS"
+    },
+    "ardus": {
+        "name": "ARDUS",
+        "pm": "3",
+        "effect": "TRANSFORMA PESSOAS E ANIMAIS EM ÁRVORES"
+    },
+    "bombarda": {
+        "name": "BOMBARDA",
+        "pm": "3",
+        "effect": "GERA UMA PEQUENA EXPLOSÃO ONDE ATINGR NO ALVO, CAPAZ DE ROMPER OBJETOS SOLIDOS"
+    },
+    "catulus": {
+        "name": "CATULUS",
+        "pm": "3",
+        "effect": "TRANSFORMA OBJETOS E PESSOAS EM GATOS"
+    },
+    "levicorpus": {
+        "name": "LEVICORPUS",
+        "pm": "3",
+        "effect": "LEVANTA O ALVO PELO TORNOZELO DEIXANDO DE CABEÇA PARA BAIXO"
+    },
+    "expellimellius": {
+        "name": "EXPELLIMELLIUS",
+        "pm": "3",
+        "effect": "FAZ COM QUE A MANGA DA CAMISA DO ALVO PEGUE FOGO"
+    },
+    "descendo": {
+        "name": "DESCENDO",
+        "pm": "3",
+        "effect": "AUMENTA A ATIVIDADE GRAVITACIONAL DO OBJETOS, FAZENDO-O DESPENCAR"
+    },
+    "aresto_momentum": {
+        "name": "ARESTO MOMENTUM",
+        "pm": "4",
+        "effect": "EVITA A QUEDA DE UM CORPO FAZENDO-O PARAR MEIO METRO DO SOLO"
+    },
+    "cutare": {
+        "name": "CUTARE",
+        "pm": "5",
+        "effect": "DISPARA UMA LÂMINA EM FORMA DE MEIA-LUA NA DIREÇÃO DO ALVO."
     },
     "legilimens": {
-        "name": "Legilimens",
-        "pm": 6,
-        "effect": "Permite ler memórias superficiais."
+        "name": "LEGILIMENS",
+        "pm": "5",
+        "effect": "USADO PARA LER A MENTE DA OUTRA PESSOA"
     },
-    "impervius": {
-        "name": "Impervius",
-        "pm": 5,
-        "effect": "Torna um objeto ou roupa resistente à água."
+    "felix_lembrancis": {
+        "name": "FELIX LEMBRANCIS",
+        "pm": "5",
+        "effect": "CRIA UMA BOA LEMBRANÇA NA MENTE DO ALVO"
+    },
+    "protego_nivel_5": {
+        "name": "PROTEGO NIVEL 5",
+        "pm": "6",
+        "effect": "CONJURA BARREIRA MAGICA QUE REPELE FEITIÇOS"
+    },
+    "bombarda_máxima": {
+        "name": "BOMBARDA MÁXIMA",
+        "pm": "6",
+        "effect": "GERA UMA GRANDE EXPLOSÃO"
+    },
+    "expecto_pratonum": {
+        "name": "EXPECTO PRATONUM",
+        "pm": "6",
+        "effect": "CONVOCA UM PATRONO CAPAZ DE AFUGENTAR DEMENTADORES E MORTALHAS-VIVAS"
+    },
+    "incendio_erupto": {
+        "name": "INCENDIO ERUPTO",
+        "pm": "6",
+        "effect": "VERSÃO MAIS POTENTE DO INCENDIO"
+    },
+    "kadubrus_duo": {
+        "name": "KADUBRUS DUO",
+        "pm": "6",
+        "effect": "VERSÃO MAIS FORTE DO KADABRUS"
+    },
+    "claram_lucem": {
+        "name": "CLARAM LUCEM",
+        "pm": "3",
+        "effect": "CONJURA UMA PODEROSA ESFERA LUMINOSA, CAPAZ DE ILUMINAR O GRANDE SALÃO"
+    },
+    "cicatriccio": {
+        "name": "CICATRICCIO",
+        "pm": "3",
+        "effect": "CICATRIZA UM FERIMENTO DE MODO LENTO"
+    },
+    "duro": {
+        "name": "DURO",
+        "pm": "3",
+        "effect": "SOLIDIFICA/ENDURECE O OBJETO-ALVO"
+    },
+    "episkey": {
+        "name": "EPISKEY",
+        "pm": "3",
+        "effect": "FECHA PEQUENOS CORTES, TORSÕES E ARRUMA FRATURAS"
+    },
+    "evanesco": {
+        "name": "EVANESCO",
+        "pm": "3",
+        "effect": "FAZ COM QUE OBJETOS DESAPAREÇAM POR COMPLETO"
+    },
+    "asfixo_maladum": {
+        "name": "ASFIXO MALADUM",
+        "pm": "4",
+        "effect": "FAZ COM QUE O ALVO COMECE A TER DIFICULDADE EM RESPIRAR"
+    },
+    "cegare_momento": {
+        "name": "CEGARE MOMENTO",
+        "pm": "4",
+        "effect": "FAZ COM QUE O ALVO FIQUE CEGO POR ALGUNS MINUTOS"
+    },
+    "confundus": {
+        "name": "CONFUNDUS",
+        "pm": "4",
+        "effect": "CONFUNDE O ALVO, DEIXANDO-O VULNERÁVEL"
+    },
+    "glisseo": {
+        "name": "GLISSEO",
+        "pm": "4",
+        "effect": "FAZ COM QUE UMA SUPERFICIE FIQUE ESCORREGADIA"
+    },
+    "protego_nivel_6": {
+        "name": "PROTEGO NIVEL 5",
+        "pm": "7",
+        "effect": "CONJURA BARREIRA MÁGICA QUE REPELE FEITIÇOS"
+    },
+    "eletricus_duo": {
+        "name": "ELETRICUS DUO",
+        "pm": "7",
+        "effect": "VERSÃO MAIS FORTE DE ELETRICUS"
+    },
+    "inferum_panicum": {
+        "name": "INFERUM PANICUM",
+        "pm": "7",
+        "effect": "FAZ O ALVO TER MEDO DO CONJURADOR POR 30 MINUTOS"
+    },
+    "persus_lembrancis": {
+        "name": "PERSUS LEMBRANCIS",
+        "pm": "7",
+        "effect": "VERSÃO NEGRA DO FELIX LEMBRANCIS"
+    },
+    "vulnera_sanentur": {
+        "name": "VULNERA SANENTUR",
+        "pm": "7",
+        "effect": "CONTRA-FEITIÇO SECTUSEMPRA"
+    },
+    "sectumsempra": {
+        "name": "SECTUMSEMPRA",
+        "pm": "7",
+        "effect": "PROVOCA CORTES, PERFURAÇÕES E MACHUCADOS NO ALVO"
+    },
+    "catellus": {
+        "name": "CATELLUS",
+        "pm": "5",
+        "effect": "CONJURA UMA CORRENTE CAPAZ DE AMARRAR E MANTER ALVO PRESO"
     },
     "deprimo": {
-        "name": "Deprimo",
-        "pm": 6,
-        "effect": "Cria um buraco no solo."
+        "name": "DEPRIMO",
+        "pm": "5",
+        "effect": "CAUSA UMA PRESSÃO IMENSA NO OBJETO CAUSANDO UMA RUPTURA"
     },
-    "fianto_duri": {
-        "name": "Fianto Duri",
-        "pm": 8,
-        "effect": "Fortificação mágica."
+    "enjaulius": {
+        "name": "ENJAULIUS",
+        "pm": "5",
+        "effect": "CONJURA UMA JAULA QUE PRENDE APENAS ANIMAIS MAGICOS"
     },
-    "legilimencia_avancada": {
-        "name": "Legilimência Avançada",
-        "pm": 10,
-        "effect": "Permite manipular memórias do alvo."
+    "cave_inimicum": {
+        "name": "CAVE INIMICUM",
+        "pm": "8",
+        "effect": "CRIA BARREIRA DE PROTEÇÃO EM VOLTA DO LUGAR"
     },
-    "protego_diabolica": {
-        "name": "Protego Diabolica",
-        "pm": 10,
-        "effect": "Cria um escudo de fogo negro."
+    "confringo": {
+        "name": "CONFRINGO",
+        "pm": "8",
+        "effect": "CRIA UMA EXPLOSÃO DESCONTROLADA EM GRANDES PROPORÇÕES"
     },
-    "crucio": {
-        "name": "Crucio",
-        "pm": 10,
-        "effect": "Causa dor extrema."
+    "protego_maxima": {
+        "name": "PROTEGO MAXIMA",
+        "pm": "8",
+        "effect": "CONJURA BARREIRA MAGICA QUE REPELE FEITIÇOS"
+    },
+    "fidelius": {
+        "name": "FIDELIUS",
+        "pm": "10",
+        "effect": "FEITIÇO DO SEGREDO ABSOLUTO"
     },
     "imperius": {
-        "name": "Imperius",
-        "pm": 10,
-        "effect": "Controla um alvo por 1d6 rodadas."
+        "name": "IMPERIUS",
+        "pm": "10",
+        "effect": "SE APOSSA DA MENTE DO ALVO, TENDO TOTAL CONTROLE"
+    },
+    "obliviate": {
+        "name": "OBLIVIATE",
+        "pm": "10",
+        "effect": "FAZ O ALVO PERDE UMA PARTE DE SUA MEMORIA"
+    },
+    "expecto_slave": {
+        "name": "EXPECTO SLAVE",
+        "pm": "10",
+        "effect": "CONJURA UMA CRIATURA DE LUZ OFUSCADA, IMUNE QUALQUER FEITIÇO (HOSTIL, AZARAÇÃO,TREVAS E TRANSFIGURAÇÃO)"
     },
     "avada_kedavra": {
-        "name": "Avada Kedavra",
-        "pm": "Todo o PM disponível",
-        "effect": "Mata instantaneamente."
+        "name": "AVADA KEDAVRA",
+        "pm": "TODO PM DISPONÍVEL",
+        "effect": "MATA INSTANTENEAMENTE"
+    },
+    "crucio": {
+        "name": "CRUCIO",
+        "pm": "10",
+        "effect": "PROVOCA DORES ENORMES NO ALVO."
     }
 }
