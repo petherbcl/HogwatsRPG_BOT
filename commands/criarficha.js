@@ -2,7 +2,7 @@ const { SlashCommandBuilder, AttachmentBuilder, EmbedBuilder } = require('discor
 const fs = require('fs');
 const path = require('path');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const {StringFormat, RemoveSpecialCharacters, FichaToPDF} = require('../utils/utils.js');
+const {StringFormat, RemoveSpecialCharacters, FichaToPDF, importImage} = require('../utils/utils.js');
 
 const spell_by_year = JSON.parse(fs.readFileSync(`./RPGData/spell_by_year.json`, 'utf8'))
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
@@ -13,6 +13,7 @@ const vantagem_list = JSON.parse(fs.readFileSync(`./RPGData/vantagem_list.json`,
 const questions = {
 
     name: { label: 'Nome:', type: 'string', question: true },
+    photo: { label: 'Adicione o link da foto ou a foto do seu personagem', type: 'string', question: true },
     house: { label: 'Casa de Hogwarts: (Grifinória, Sonserina, Corvinal, Lufa-Lufa)?', type: 'string', question: true },
     //year: { label: 'Ano Escolar: (1, 2, 3, 4, 5, 6, 7)?', type: 'number', question: true },
     job: { label: 'Você é Aluno ou Professor?\nResponda com *Aluno* ou *Professor*', type: 'string', question: true },
@@ -153,6 +154,7 @@ module.exports = {
 
         const ficha_personagem = {
             name: null,
+            photo: null,
             house: null,
             job: null,
             year: null,
@@ -197,7 +199,8 @@ module.exports = {
                             const spellyear = spell_by_year[ficha_personagem.year];
                             question.label = StringFormat(question.label, spellyear.map(spell => spell_list[spell].name).join(', '))
                         } else if (key === 'vantagens') {
-                            if(typeof(ficha_personagem['year'])==='number'){
+
+                            if(typeof(ficha_personagem['job'])==='ALUNO'){
                                 const vantagemyear = vantagem_desvantagem_by_year[ficha_personagem.year].vantagem
                                 question.label = StringFormat(question.label, vantagemyear.map(v => vantagem_list[v].label).join(', '))
                             }else{
@@ -205,7 +208,7 @@ module.exports = {
                             }
                             
                         } else if (key === 'desvantagens') {
-                            if(typeof(ficha_personagem['year'])==='number'){
+                            if(typeof(ficha_personagem['job'])==='ALUNO'){
                                 const desvantagemyear = vantagem_desvantagem_by_year[ficha_personagem.year].desvantagem
                                 question.label = StringFormat(question.label, desvantagemyear.map(v => desvantagem_list[v].label).join(', '))
                             }else{
@@ -230,8 +233,13 @@ module.exports = {
                             if (collected.first().attachments.size > 0) {
                                 const attachment = collected.first().attachments.first();
                                 const response = await fetch(attachment.url);
-                                answer = await response.text();
-                                console.log(attachment.url, response)
+                                const contentType = response.headers.get('content-type');
+                                if (contentType.includes('image')) {
+                                    answer = await importImage(attachment.url, member.user.username, member.user.id)
+                                }else if(contentType.includes('text')){
+                                    answer = await response.text();
+                                }
+                                
                             }
                             answer.replace(`"`, `'`)
                             answer = question.type === 'number' ? parseInt(answer) : answer;
@@ -286,6 +294,7 @@ module.exports = {
                                     PE = 24
                                 }
                             } else {
+                                console.log(key, answer);
                                 ficha_personagem[key] = answer
                             }
 
@@ -312,6 +321,8 @@ module.exports = {
                         ficha_personagem.PMMax = ficha_personagem.R * 5;
 
                         ficha_personagem.PE = 0;
+
+                        console.log(ficha_personagem);
 
                         fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`,
                                                     JSON.stringify(ficha_personagem), (err) => {

@@ -2,13 +2,10 @@ const { SlashCommandBuilder, ButtonBuilder, ActionRowBuilder, ButtonStyle, Messa
 const { RemoveSpecialCharacters, importImage } = require("../utils/utils");
 const fs = require('fs');
 
-const madeiras = ["Acácia", "Amieiro", "Macieira", "Freixo", "Álamo", "Faia", "Espinheiro-Negro", "Nogueira-negra", "Cedro", "Cerejeira", "Castanheira", "Cipestre", "Corniso", "Ébano", "Sabugueiro", "Olmo", "Carvalho Inglês", "Abeto", "Espinheiro-alvo", "Aveleira", "Azevinho", "Choupo-Branco", "Lariço", "Loureiro", "Bordo", "Pereira", "Pinho", "Choupo", "Carvalho", "Pau-Brasil", "Romeira", "Lima-prata", "Abeto Vermelho", "Figueira", "Videira", "Nogueira", "Salgueiro", "Teixo", "Sequoia"]
-const nucleo = ["Cabelo de Unicórnio", "Fibra de Coração de Dragão", "Pena de Fênix", "Pelo de Pumuruna", "Chifre de Serpente Chifruda Albina", "Pena de Thunderbird", "Fibra de Coração de Snallygaster", "Fragmento de Raiz de Mandrágura", "Pó de Presas de Basilisco", "Veneno de Acromântula", "Pelo da Cauda de Testrálios", "Pena de Hipogrifo", "Cabelo de Veela", "Escama de Sereiano", "Veneno de Basilisco", "Bigode de Trasgo Montanhês", "Essência de Cinzal"]
-
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('varinha')
-        .setDescription('Gerar varinha - TEMPORARIO'),
+        .setName('foto')
+        .setDescription('Adicionar Foto de Personagem - TEMPORARIO'),
     async execute(interaction, client) {
 
         try {
@@ -24,7 +21,7 @@ module.exports = {
             const file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, 'utf8');
             const ficha_player = JSON.parse(file)
 
-            embed.setTitle("Criação de Varinha").setDescription('Adicione o link da foto ou a foto da sua varinha.')
+            embed.setTitle("Criação de Foto de Personagem").setDescription('Adicione o link da foto ou a foto do seu personagem.')
 
             await interaction.editReply({ embeds: [embed], withResponse: true, flags: MessageFlags.Ephemeral })
             const filter = response => response.author.id === interaction.user.id;
@@ -47,16 +44,11 @@ module.exports = {
                 await channel.bulkDelete(fetchedMessages, true);
 
                 if (url) {
-                    ficha_player.varinha = {
-                        url: url,
-                        madeira: madeiras[Math.floor(Math.random() * madeiras.length)],
-                        nucleo: nucleo[Math.floor(Math.random() * nucleo.length)],
-                        comprimento: Math.floor(Math.random() * (25 - 12 + 1)) + 12
-                    }
+                    ficha_player.photo = url
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, JSON.stringify(ficha_player));
 
-                    embed.setDescription(`Parabéns. Você recebeu uma varinha de **${ficha_player.varinha.madeira}** de **${ficha_player.varinha.comprimento}cm** com núcleo de **${ficha_player.varinha.nucleo}**`);
+                    embed.setDescription(`Parabéns. Você adicionou foto na sua ficha de personagem`);
                     embed.setImage(url)
                     await interaction.editReply({ embeds: [embed], flags: MessageFlags.Ephemeral });
 

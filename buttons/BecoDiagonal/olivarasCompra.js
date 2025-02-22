@@ -3,7 +3,7 @@ const { RemoveSpecialCharacters, importImage } = require('../../utils/utils');
 const { MessageFlags, EmbedBuilder } = require('discord.js');
 const item = 'varinha';
 
-const madeiras = ["Acácia", "Amieiro", "Macieira", "Freixo", "Álamo", "Faia", "Espinheiro-Negro", "Nogueira-negra", "Cedro", "Cerejeira", "Castanheira", "Cipestre", "Corniso", "Ébano", "Sabugueiro", "Olmo", "Carvalho Inglês", "Abeto", "Espinheiro-alvo", "Aveleira", "Azevinho", "Choupo-Branco", "Lariço", "Loureiro", "Bordo", "Pereira", "Pinho", "Choupo", "Carvalho", "Pau-Brasil", "Romeira", "Lima-prata", "Abeto Vermelho", "Figueira", "Videira", "Nogueira", "Salgueiro", "Teixo"]
+const madeiras = ["Acácia", "Amieiro", "Macieira", "Freixo", "Álamo", "Faia", "Espinheiro-Negro", "Nogueira-negra", "Cedro", "Cerejeira", "Castanheira", "Cipestre", "Corniso", "Ébano", "Sabugueiro", "Olmo", "Carvalho Inglês", "Abeto", "Espinheiro-alvo", "Aveleira", "Azevinho", "Choupo-Branco", "Lariço", "Loureiro", "Bordo", "Pereira", "Pinho", "Choupo", "Carvalho", "Pau-Brasil", "Romeira", "Lima-prata", "Abeto Vermelho", "Figueira", "Videira", "Nogueira", "Salgueiro", "Teixo", "Sequoia"]
 const nucleo = ["Cabelo de Unicórnio", "Fibra de Coração de Dragão", "Pena de Fênix", "Pelo de Pumuruna", "Chifre de Serpente Chifruda Albina", "Pena de Thunderbird", "Fibra de Coração de Snallygaster", "Fragmento de Raiz de Mandrágura", "Pó de Presas de Basilisco", "Veneno de Acromântula", "Pelo da Cauda de Testrálios", "Pena de Hipogrifo", "Cabelo de Veela", "Escama de Sereiano", "Veneno de Basilisco", "Bigode de Trasgo Montanhês", "Essência de Cinzal"]
 
 module.exports = {
@@ -62,7 +62,7 @@ module.exports = {
                         url: url,
                         madeira: madeiras[Math.floor(Math.random() * madeiras.length)],
                         nucleo: nucleo[Math.floor(Math.random() * nucleo.length)],
-                        comprimento: Math.floor(Math.random() * (25 - 15 + 1)) + 15
+                        comprimento: Math.floor(Math.random() * (25 - 12 + 1)) + 12
                     }
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, JSON.stringify(ficha_player));
