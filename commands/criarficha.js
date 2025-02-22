@@ -2,7 +2,7 @@ const { SlashCommandBuilder, AttachmentBuilder, EmbedBuilder } = require('discor
 const fs = require('fs');
 const path = require('path');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const {StringFormat, RemoveSpecialCharacters, FichaToPDF, importImage} = require('../utils/utils.js');
+const {StringFormat, RemoveSpecialCharacters, FichaToPDF, importImage, createFichaEmbed} = require('../utils/utils.js');
 
 const spell_by_year = JSON.parse(fs.readFileSync(`./RPGData/spell_by_year.json`, 'utf8'))
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
@@ -341,41 +341,9 @@ module.exports = {
                         embed.setDescription(`*Ficha de personagem concluído!*`)
                         await interaction.editReply({ embeds: [embed], ephemeral: true });
 
-                        const fichaText = `**Ficha de Personagem de ${member.nickname || member.user.globalName || member.user.username}**
+                        await interaction.followUp({ embeds: createFichaEmbed(member.user.username, member.user.id) , ephemeral: false });
 
-**${fichaCampos['name']}:** ${ficha_personagem['name']}
-**${fichaCampos['age']}:** ${ficha_personagem['age']}
-**${fichaCampos['race']}:** ${ficha_personagem['race']}
-**${fichaCampos['house']}:** ${ficha_personagem['house']}
-**${fichaCampos['job']}:** ${ficha_personagem['job']}
-**${fichaCampos['year']}:** ${ficha_personagem['year']}
-**${fichaCampos['F']}:** ${ficha_personagem['F']}
-**${fichaCampos['H']}:** ${ficha_personagem['H']}
-**${fichaCampos['R']}:** ${ficha_personagem['R']}
-**${fichaCampos['A']}:** ${ficha_personagem['A']}
-**${fichaCampos['PdF']}:** ${ficha_personagem['PdF']}
-**${fichaCampos['PV']}:** ${ficha_personagem['PV']} / ${ficha_personagem['PVMax']}
-**${fichaCampos['PM']}:** ${ficha_personagem['PM']} / ${ficha_personagem['PMMax']}
-**${fichaCampos['PE']}:** ${ficha_personagem['PE']}
-**${fichaCampos['spells']}:** ${ficha_personagem['spells'].map( spell => spell_list[spell].name).join(' , ')}
-**${fichaCampos['vantagens']}:** ${ficha_personagem['vantagens'].map( vantagem => vantagem_list[vantagem].label).join(' , ')}
-**${fichaCampos['desvantagens']}:** ${ficha_personagem['desvantagens'].map( desvantagem => desvantagem_list[desvantagem].label).join(' , ')}
-**${fichaCampos['vantagem_obrigatoria']}:** ${ficha_personagem['vantagem_obrigatoria']}
-**${fichaCampos['appearance']}:**\n ${ficha_personagem['appearance']}
-**${fichaCampos['personality']}:**\n ${ficha_personagem['personality']}
-**${fichaCampos['history']}:**\n ${ficha_personagem['history']}`;
-
-                        const filePath = path.join('./tempdata/', `ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.txt`);
-                        fs.writeFileSync(filePath, fichaText);
-
-                        let attachment = new AttachmentBuilder(filePath);
-
-                        await interaction.followUp({ files: [attachment] });
-
-                        // Remover o arquivo temporário após o envio
-                        fs.unlinkSync(filePath);
-
-                        interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
+                        await interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
 
                         await FichaToPDF(member.user.username,member.user.id)
                         const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.docx`);

@@ -1,7 +1,7 @@
-const { SlashCommandBuilder, EmbedBuilder, AttachmentBuilder } = require("discord.js");
+const { SlashCommandBuilder, AttachmentBuilder } = require("discord.js");
 const fs = require('fs');
 const path = require('path');
-const { RemoveSpecialCharacters, FichaToPDF } = require('../utils/utils.js');
+const { RemoveSpecialCharacters, FichaToPDF, createFichaEmbed } = require('../utils/utils.js');
 
 
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
@@ -78,39 +78,7 @@ module.exports = {
                 player_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, 'utf8');
                 ficha_player = JSON.parse(player_file)
 
-                fichaText = `**Ficha de Personagem de ${member.nickname || member.user.globalName || member.user.username}**
-                
-**${fichaCampos['name']}:** ${ficha_player['name']}
-**${fichaCampos['age']}:** ${ficha_player['age']}
-**${fichaCampos['race']}:** ${ficha_player['race']}
-**${fichaCampos['house']}:** ${ficha_player['house']}
-**${fichaCampos['job']}:** ${ficha_player['job']}
-**${fichaCampos['year']}:** ${ficha_player['year']}
-**${fichaCampos['F']}:** ${ficha_player['F']}
-**${fichaCampos['H']}:** ${ficha_player['H']}
-**${fichaCampos['R']}:** ${ficha_player['R']}
-**${fichaCampos['A']}:** ${ficha_player['A']}
-**${fichaCampos['PdF']}:** ${ficha_player['PdF']}
-**${fichaCampos['PV']}:** ${ficha_player['PV']} / ${ficha_player['PVMax']}
-**${fichaCampos['PM']}:** ${ficha_player['PM']} / ${ficha_player['PMMax']}
-**${fichaCampos['PE']}:** ${ficha_player['PE']}
-**${fichaCampos['spells']}:** ${ficha_player['spells'].map(spell => spell_list[spell].name).join(' , ')}
-**${fichaCampos['vantagens']}:** ${ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join(' , ')}
-**${fichaCampos['desvantagens']}:** ${ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join(' , ')}
-**${fichaCampos['vantagem_obrigatoria']}:** ${ficha_player['vantagem_obrigatoria']}
-**${fichaCampos['appearance']}:**\n ${ficha_player['appearance']}
-**${fichaCampos['personality']}:**\n ${ficha_player['personality']}
-**${fichaCampos['history']}:**\n ${ficha_player['history']}`;
-
-                filePath = path.join('./tempdata/', `ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.txt`);
-                fs.writeFileSync(filePath, fichaText);
-
-                attachment = new AttachmentBuilder(filePath);
-
-                await interaction.editReply({ files: [attachment], ephemeral: true });
-
-                // Remover o arquivo temporário após o envio
-                fs.unlinkSync(filePath);
+                await interaction.editReply({ embeds: createFichaEmbed(user.username, user.id) , ephemeral: true });
 
                 interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
 
@@ -141,39 +109,7 @@ module.exports = {
                     player_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
                     ficha_player = JSON.parse(player_file)
 
-                    fichaText = `**Ficha de Personagem de ${player_user.nickname || player_user.user.globalName || player_user.user.username}**
-                
-**${fichaCampos['name']}:** ${ficha_player['name']}
-**${fichaCampos['age']}:** ${ficha_player['age']}
-**${fichaCampos['race']}:** ${ficha_player['race']}
-**${fichaCampos['house']}:** ${ficha_player['house']}
-**${fichaCampos['job']}:** ${ficha_player['job']}
-**${fichaCampos['year']}:** ${ficha_player['year']}
-**${fichaCampos['F']}:** ${ficha_player['F']}
-**${fichaCampos['H']}:** ${ficha_player['H']}
-**${fichaCampos['R']}:** ${ficha_player['R']}
-**${fichaCampos['A']}:** ${ficha_player['A']}
-**${fichaCampos['PdF']}:** ${ficha_player['PdF']}
-**${fichaCampos['PV']}:** ${ficha_player['PV']} / ${ficha_player['PVMax']}
-**${fichaCampos['PM']}:** ${ficha_player['PM']} / ${ficha_player['PMMax']}
-**${fichaCampos['PE']}:** ${ficha_player['PE']}
-**${fichaCampos['spells']}:** ${ficha_player['spells'].map(spell => spell_list[spell].name).join(' , ')}
-**${fichaCampos['vantagens']}:** ${ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join(' , ')}
-**${fichaCampos['desvantagens']}:** ${ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join(' , ')}
-**${fichaCampos['vantagem_obrigatoria']}:** ${ficha_player['vantagem_obrigatoria']}
-**${fichaCampos['appearance']}:**\n ${ficha_player['appearance']}
-**${fichaCampos['personality']}:**\n ${ficha_player['personality']}
-**${fichaCampos['history']}:**\n ${ficha_player['history']}`;
-
-                    filePath = path.join('./tempdata/', `ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.txt`);
-                    fs.writeFileSync(filePath, fichaText);
-
-                    attachment = new AttachmentBuilder(filePath);
-
-                    await interaction.editReply({ files: [attachment], ephemeral: true });
-
-                    // Remover o arquivo temporário após o envio
-                    fs.unlinkSync(filePath);
+                    await interaction.editReply({ embeds: createFichaEmbed(player_user.user.username, player_user.user.id), ephemeral: true });
 
                     interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
 
