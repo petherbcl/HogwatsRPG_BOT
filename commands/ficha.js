@@ -80,6 +80,12 @@ module.exports = {
             .setDescription('[DM] Alterar lista de Desvantagens de player')
             .addStringOption(option => option.setName('player').setDescription('Marque o player. EX: @fulano').setRequired(true))
             .addStringOption(option => option.setName('desvantagens').setDescription('Lista de desvantagens (separado por virgula)').setRequired(true))
+        )
+        .addSubcommand(command => command.setName('caracteristicas')
+            .setDescription('[DM] Alterar Caracteristicas de player')
+            .addStringOption(option => option.setName('player').setDescription('Marque o player. EX: @fulano').setRequired(true))
+            .addStringOption(option => option.setName('caracteristica').setDescription('Caracteristica a alterar (F, H, R, A, PdF)').setRequired(true))
+            .addStringOption(option => option.setName('valor').setDescription('Novo valor da caracteristica').setRequired(true))
         ),
     async execute(interaction, client) {
         await interaction.deferReply({ ephemeral: true }).catch(() => { });
@@ -305,7 +311,7 @@ module.exports = {
                     player = interaction.options.getString('player');
                     playerID = player.match(/\d+/)[0]; // Get the user ID from the mention
                     player_user = guild.members.cache.get(playerID); // Get the member object from the ID
-                    const vantagens = Number(interaction.options.getString('vantagens'));
+                    const vantagens = interaction.options.getString('vantagens');
 
                     if (!player_user) {
                         return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
@@ -341,7 +347,7 @@ module.exports = {
                     player = interaction.options.getString('player');
                     playerID = player.match(/\d+/)[0]; // Get the user ID from the mention
                     player_user = guild.members.cache.get(playerID); // Get the member object from the ID
-                    const devantagens = Number(interaction.options.getString('devantagens'));
+                    const devantagens = interaction.options.getString('devantagens');
 
                     if (!player_user) {
                         return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
@@ -369,6 +375,40 @@ module.exports = {
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
                     interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\nLista de Desvantagens atual é ${devantagens} `, ephemeral: true });
+                }
+
+                break
+            case 'caracteristicas':
+                if (isDM) {
+                    player = interaction.options.getString('player');
+                    playerID = player.match(/\d+/)[0]; // Get the user ID from the mention
+                    player_user = guild.members.cache.get(playerID); // Get the member object from the ID
+                    let caracteristica = interaction.options.getString('caracteristica').toUpperCase();
+                    const valor = Number(interaction.options.getString('valor'));
+
+                    if (!player_user) {
+                        return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
+                    }
+
+                    if (!['F', 'H', 'A', 'R', 'PDF'].includes(caracteristica)) {
+                        return interaction.editReply({ content: `Caracteristica não existe`, ephemeral: true });
+                    }
+
+                    if (isNaN(valor)) {
+                        return interaction.editReply({ content: `Valor deverá ser um numero`, ephemeral: true });
+                    }
+
+                    player_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
+                    ficha_player = JSON.parse(player_file)
+
+                    if (caracteristica === 'PDF') {
+                        caracteristica = 'PdF'
+                    }
+
+                    ficha_player[caracteristica] = valor
+
+                    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
+                    interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n${caracteristica} atual é ${valor} `, ephemeral: true });
                 }
 
                 break
