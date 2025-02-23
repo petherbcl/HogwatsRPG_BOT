@@ -50,10 +50,20 @@ module.exports = {
             .addStringOption(option => option.setName('player').setDescription('Marque o player. EX: @fulano').setRequired(true))
             .addStringOption(option => option.setName('pv').setDescription('Pontos de Vida').setRequired(true))
         )
+        .addSubcommand(command => command.setName('pvmax')
+            .setDescription('[DM] Adicionar/Remover Máximo PV a player')
+            .addStringOption(option => option.setName('player').setDescription('Marque o player. EX: @fulano').setRequired(true))
+            .addStringOption(option => option.setName('pvmax').setDescription('Pontos de Vida Máximo').setRequired(true))
+        )
         .addSubcommand(command => command.setName('pm')
             .setDescription('[DM] Adicionar/Remover PM a player')
             .addStringOption(option => option.setName('player').setDescription('Marque o player. EX: @fulano').setRequired(true))
             .addStringOption(option => option.setName('pm').setDescription('Pontos de Magia').setRequired(true))
+        )
+        .addSubcommand(command => command.setName('pmmax')
+            .setDescription('[DM] Adicionar/Remover Máximo PM a player')
+            .addStringOption(option => option.setName('player').setDescription('Marque o player. EX: @fulano').setRequired(true))
+            .addStringOption(option => option.setName('pmmax').setDescription('Pontos de Magia Máximo').setRequired(true))
         )
         .addSubcommand(command => command.setName('pe')
             .setDescription('[DM] Adicionar/Remover PE ao player')
@@ -159,6 +169,36 @@ module.exports = {
                 }
 
                 break;
+            case 'pvmax':
+                if (isDM) {
+                    player = interaction.options.getString('player');
+                    playerID = player.match(/\d+/)[0]; // Get the user ID from the mention
+                    player_user = guild.members.cache.get(playerID); // Get the member object from the ID
+                    const pvmax = interaction.options.getString('pvmax');
+
+                    if (!player_user) {
+                        return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
+                    }
+
+                    if (isNaN(pvmax)) {
+                        return interaction.editReply({ content: `PVMax deverá ser um numero`, ephemeral: true });
+                    }
+
+                    player_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
+                    ficha_player = JSON.parse(player_file)
+
+                    ficha_player.PVMax += pvmax
+                    if (ficha_player.PVMax <= 0) {
+                        ficha_player.PVMax = 0
+                    }
+
+                    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
+
+                    interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PVMax atual é ${ficha_player.PVMax} `, ephemeral: true });
+
+                }
+
+                break;
             case 'pm':
                 if (isDM) {
                     player = interaction.options.getString('player');
@@ -187,6 +227,35 @@ module.exports = {
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
 
                     interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PM atual é ${ficha_player.PM} `, ephemeral: true });
+                }
+
+                break;
+            case 'pmmax':
+                if (isDM) {
+                    player = interaction.options.getString('player');
+                    playerID = player.match(/\d+/)[0]; // Get the user ID from the mention
+                    player_user = guild.members.cache.get(playerID); // Get the member object from the ID
+                    const pmmax = Number(interaction.options.getString('pmmax'));
+
+                    if (!player_user) {
+                        return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
+                    }
+
+                    if (isNaN(pmmax)) {
+                        return interaction.editReply({ content: `PM deverá ser um numero`, ephemeral: true });
+                    }
+
+                    player_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
+                    ficha_player = JSON.parse(player_file)
+
+                    ficha_player.PMMax += pmmax
+                    if (ficha_player.PMMax <= 0) {
+                        ficha_player.PMMax = 0
+                    }
+
+                    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
+
+                    interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PMMax atual é ${ficha_player.PMMax} `, ephemeral: true });
                 }
 
                 break;
