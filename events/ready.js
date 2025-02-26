@@ -433,7 +433,7 @@ module.exports = {
             {
                 name: "╭--🔹Beco Diagonal🔹--╮",
                 channels: [
-                    { name: "beco-diagonal", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: false },
+                    { name: "beco-diagonal", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: false },
                     { name: "banco-gringotes", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel','ReadMessageHistory'], deny: [], }], hasPassage: false },
                     { name: "floreios-e-borrões", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel','ReadMessageHistory'], deny: [], }], hasPassage: false },
                     { name: "olivaras", type: 0, permissions: [{ color: "#ff0259", allow: ['ViewChannel','ReadMessageHistory','SendMessages','AttachFiles'], deny: [], }], hasPassage: false },
@@ -449,61 +449,61 @@ module.exports = {
             {
                 name: "╭--🔹Plataform 9 3/4🔹--╮",
                 channels: [
-                    { name: "expresso-de-hogwarts", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: false },
+                    { name: "expresso-de-hogwarts", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: false },
                 ]
             },
     
             {
                 name: "╭--🔹Exterior do Castelo🔹--╮",
                 channels: [
-                    { name: "jardins-de-hogwarts", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "estufas", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "torre-das-corujas", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "campo-quadribol", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-trato-criaturas-mágicas", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "aula-voo", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "lago-negro", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "floresta-proibida", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "cabana-guarda-caças", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "jardins-de-hogwarts", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "estufas", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "torre-das-corujas", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "campo-quadribol", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-trato-criaturas-mágicas", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "aula-voo", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "lago-negro", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "floresta-proibida", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "cabana-guarda-caças", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
     
             {
                 name: "╭--🔹Masmorras(Leste)🔹--╮",
                 channels: [
-                    { name: "corredor-da-masmorra-leste", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-comunal-sonserina", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-de-detenção", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "banheiro-da-murta-que-geme", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "corredor-da-masmorra-leste", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-comunal-sonserina", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-de-detenção", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "banheiro-da-murta-que-geme", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
             {
                 name: "╭--🔹Masmorras(Oeste)🔹--╮",
                 channels: [
-                    { name: "corredor-da-masmorra-oeste", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-estudos-dos-trouxas", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-alquimia", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "corredor-da-masmorra-oeste", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-estudos-dos-trouxas", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-alquimia", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
             {
                 name: "╭--🔹Piso Terreo🔹--╮",
                 channels: [
-                    { name: "hall-central", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "biblioteca", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "biblioteca-area-restrita", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-herbologia", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-transfiguração", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-historia-da-magia", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-poções", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "hall-central", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "biblioteca", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "biblioteca-area-restrita", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-herbologia", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-transfiguração", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-historia-da-magia", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-poções", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
     
             {
                 name: "╭--🔹Piso 1🔹--╮",
                 channels: [
-                    { name: "corredor-piso-1", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "cozinha", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-comunal-lufa-lufa", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "corredor-piso-1", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "cozinha", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-comunal-lufa-lufa", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
     
                 ]
             },
@@ -511,8 +511,8 @@ module.exports = {
             {
                 name: "╭--🔹Piso 2🔹--╮",
                 channels: [
-                    { name: "corredor-piso-2", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-defesa-artes-das-trevas", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "corredor-piso-2", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-defesa-artes-das-trevas", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
     
                 ]
             },
@@ -520,14 +520,14 @@ module.exports = {
             {
                 name: "╭--🔹Piso 3🔹--╮",
                 channels: [
-                    { name: "patio-do-viaduto", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "cabana-dos-barcos", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "patio-torre-norte", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "hall-de-entrada", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "grande-salão", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "grande-escadaria-3", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "torre-do-relogio", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "patio-torre-do-relogio", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "patio-do-viaduto", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "cabana-dos-barcos", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "patio-torre-norte", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "hall-de-entrada", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "grande-salão", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "grande-escadaria-3", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "torre-do-relogio", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "patio-torre-do-relogio", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
     
                 ]
             },
@@ -535,62 +535,62 @@ module.exports = {
             {
                 name: "╭--🔹Piso 4🔹--╮",
                 channels: [
-                    { name: "grande-escadaria-4", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-comunal-corvinal", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "grande-escadaria-4", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-comunal-corvinal", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
     
             {
                 name: "╭--🔹Piso 5(Leste)🔹--╮",
                 channels: [
-                    { name: "grande-escadaria-5", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "corredor-piso-5-leste", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-comunal-grifinória", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "grande-escadaria-5", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "corredor-piso-5-leste", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-comunal-grifinória", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
             {
                 name: "╭--🔹Piso 5(Oeste)🔹--╮",
                 channels: [
-                    { name: "corredor-piso-5-oeste", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-aritmancia", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-encantamentos", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-adivinhação", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "corredor-piso-5-oeste", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-aritmancia", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-encantamentos", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-adivinhação", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
     
             {
                 name: "╭--🔹Piso 7🔹--╮",
                 channels: [
-                    { name: "corredor-torre-do-relogio", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "banheiro-dos-prefeitos", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "corredor-torre-do-relogio", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "banheiro-dos-prefeitos", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
     
-                    { name: "corredor-piso-7", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-precisa", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "corredor-piso-7", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-precisa", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
     
             {
                 name: "╭--🔹Piso 8🔹--╮",
                 channels: [
-                    { name: "enfermaria", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "enfermaria", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
     
-                    { name: "corredor-piso-8", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-aula-astronomia", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "corredor-piso-8", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-aula-astronomia", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
     
             {
                 name: "╭--🔹Piso 12🔹--╮",
                 channels: [
-                    { name: "observatorio", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "observatorio", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
     
             {
                 name: "╭--🔹Piso 14🔹--╮",
                 channels: [
-                    { name: "grande-escadaria-14", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
-                    { name: "sala-do-diretor", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages'], deny: [], }], hasPassage: true },
+                    { name: "grande-escadaria-14", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
+                    { name: "sala-do-diretor", type: 2, permissions: [{ color: "#ff0259", allow: ['ViewChannel' ,'ReadMessageHistory', 'Connect','Speak', 'UseApplicationCommands','SendMessages','UseVad'], deny: [], }], hasPassage: true },
                 ]
             },
         ];
