@@ -296,13 +296,13 @@ module.exports = {
                     ficha_player = JSON.parse(player_file)
 
                     ficha_player['PE'] += pontos
-                    if (ficha_player[pe] <= 0) {
-                        ficha_player[pe] = 0
+                    if (ficha_player['PE'] <= 0) {
+                        ficha_player['PE'] = 0
                     }
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player));
 
-                    interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\nPontos de Experiência atual é ${ficha_player[pe]} `, ephemeral: true });
+                    interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\nPontos de Experiência atual é ${ficha_player['PE']} `, ephemeral: true });
                 }
 
                 break
