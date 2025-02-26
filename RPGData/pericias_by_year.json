@@ -1,0 +1,60 @@
+{
+    "1": [
+        "feiticaria_geral",
+        "pocoes",
+        "herbologia",
+        "magia_elemental",
+        "historia_da_magia",
+        "voo_e_quadribol"
+    ],
+    "2": [
+        "combate_magico",
+        "duelos_magicos",
+        "etiqueta_bruxa",
+        "truques_trouxas"
+    ],
+    "3": [
+        "defesa_contra_as_artes_das_trevas",
+        "transfiguracao",
+        "estudo_de_criaturas_magicas",
+        "adivinhacao",
+        "runas_antigas",
+        "aritmancia",
+        "labia_e_persuasao"
+    ],
+    "4": [
+        "metamorfomagia",
+        "animagia",
+        "criaturas_magicas_e_metamorfoses_avancadas",
+        "trato_das_criaturas_magicas",
+        "criptografia_e_codigos_magicos",
+        "magia_de_reflexo_e_agilidade",
+        "manipulacao_e_intimidacao"
+    ],
+    "5": [
+        "feiticaria_avancada",
+        "legilimencia_e_oclumencia",
+        "ocultismo",
+        "linguas_magicas_e_antigas",
+        "resistencia_a_magia",
+        "sobrevivencia_em_territorios_magicos"
+    ],
+    "6": [
+        "encantamento_de_artefatos",
+        "investigacao_paranormal",
+        "falsificacao_e_trapaca_magica",
+        "roubo_e_invasao_magica",
+        "culinaria_magica",
+        "encantamento_de_objetos",
+        "mecanica_magica",
+        "conhecimento_trouxa"
+    ],
+    "7": [
+        "artes_das_trevas",
+        "maldicoes_e_feiticos_proibidos",
+        "alquimia",
+        "armas_e_luta_fisica",
+        "disfarce_e_metamorfose",
+        "aparatacao_e_magia_de_transporte"
+    ]
+}

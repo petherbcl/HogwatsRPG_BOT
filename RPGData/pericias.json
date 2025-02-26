@@ -1,0 +1,266 @@
+{
+  "feiticaria_geral": {
+    "name": "Feitiçaria Geral",
+    "description": "Conjuração de feitiços não ofensivos (comuns)",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "pocoes": {
+    "name": "Poções",
+    "description": "Preparação de poções mágicas e conhecimento de ingredientes",
+    "modificadores": "Adiciona 1 na hora da elaboração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "herbologia": {
+    "name": "Herbologia",
+    "description": "Conhecimento de plantas mágicas e suas propriedades",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "magia_elemental": {
+    "name": "Magia Elemental",
+    "description": "Controle de magias baseadas em elementos (fogo, gelo, raios, etc.)",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "historia_da_magia": {
+    "name": "História da Magia",
+    "description": "Conhecimento sobre eventos, artefatos e linhagens mágicas",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "voo_e_quadribol": {
+    "name": "Voo e Quadribol",
+    "description": "Pilotagem de vassouras e habilidades esportivas",
+    "modificadores": "Adiciona 1 na hora da teste de prática (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "combate_magico": {
+    "name": "Combate Mágico",
+    "description": "Uso de feitiços ofensivos e estratégia em duelos",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "duelos_magicos": {
+    "name": "Duelos Mágicos",
+    "description": "Especialização em combate 1x1, incluindo contra-feitiços rápidos",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "etiqueta_bruxa": {
+    "name": "Etiqueta Bruxa",
+    "description": "Saber se portar em eventos formais e círculos políticos",
+    "modificadores": "Adiciona 1 na hora da teste de comportamento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "truques_trouxas": {
+    "name": "Truques Trouxas",
+    "description": "Saber imitar magia usando truques não-mágicos",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "defesa_contra_as_artes_das_trevas": {
+    "name": "Defesa Contra as Artes das Trevas",
+    "description": "Uso de contrafeitiços, proteção mágica e combate contra forças malignas",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["combate_magico"]
+  },
+  "transfiguracao": {
+    "name": "Transfiguração",
+    "description": "Alteração da forma de objetos e criaturas",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "estudo_de_criaturas_magicas": {
+    "name": "Estudo de Criaturas Mágicas",
+    "description": "Saber lidar e identificar criaturas mágicas",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "adivinhacao": {
+    "name": "Adivinhação",
+    "description": "Ler o futuro (tarot, borra de chá, astrologia)",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "runas_antigas": {
+    "name": "Runas Antigas",
+    "description": "Leitura e utilização de símbolos mágicos antigos",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "aritmancia": {
+    "name": "Aritmancia",
+    "description": "Previsão e análise de eventos através de cálculos mágicos",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "labia_e_persuasao": {
+    "name": "Lábia e Persuasão",
+    "description": "Convencer e manipular outras pessoas",
+    "modificadores": "Adiciona 1 na hora da teste de sociabilidade (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "metamorfomagia": {
+    "name": "Metamorfomagia",
+    "description": "Mudança de aparência sem necessidade de Poção Polissuco",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["transfiguracao"]
+  },
+  "animagia": {
+    "name": "Animagia",
+    "description": "Mudança para um animal",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["transfiguracao"]
+  },
+  "criaturas_magicas_e_metamorfoses_avancadas": {
+    "name": "Criaturas Mágicas e Metamorfoses Avançadas",
+    "description": "Transformações parciais e domar criaturas mágicas",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["estudo_de_criaturas_magicas"]
+  },
+  "trato_das_criaturas_magicas": {
+    "name": "Trato das Criaturas Mágicas",
+    "description": "Técnicas para domar e cuidar de animais mágicos",
+    "modificadores": "Adiciona 1 na hora da teste de prática (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["estudo_de_criaturas_magicas"]
+  },
+  "criptografia_e_codigos_magicos": {
+    "name": "Criptografia e Códigos Mágicos",
+    "description": "Resolver charadas mágicas e quebrar encantamentos secretos",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "magia_de_reflexo_e_agilidade": {
+    "name": "Magia de Reflexo e Agilidade",
+    "description": "Permite desviar de feitiços com maior facilidade",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["combate_magico"]
+  },
+  "manipulacao_e_intimidacao": {
+    "name": "Manipulação e Intimidação",
+    "description": "Especialista em ameaças, persuasão e chantagem",
+    "modificadores": "Adiciona 1 na hora da teste de sociabilidade (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "feiticaria_avancada": {
+    "name": "Feitiçaria Avançada",
+    "description": "Lançamento de feitiços não-verbais e experimentais",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["feiticaria_geral"]
+  },
+  "legilimencia_e_oclumencia": {
+    "name": "Legilimência e Oclumência",
+    "description": "Ler mentes e se proteger contra intrusões mentais",
+    "modificadores": "Adiciona 1 na hora da conjuração/resistência (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["criptografia_e_codigos_magicos"]
+  },
+  "ocultismo": {
+    "name": "Ocultismo",
+    "description": "Reconhecer maldições, objetos amaldiçoados e fenômenos sobrenaturais",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "linguas_magicas_e_antigas": {
+    "name": "Línguas Mágicas e Antigas",
+    "description": "Compreensão de Parseltongue, Runas Antigas e línguas élficas",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["runas_antigas"]
+  },
+  "resistencia_a_magia": {
+    "name": "Resistência à Magia",
+    "description": "Aumenta defesa contra feitiços e maldições",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "sobrevivencia_em_territorios_magicos": {
+    "name": "Sobrevivência em Territórios Mágicos",
+    "description": "Resistência em florestas encantadas e ruínas mágicas",
+    "modificadores": "Adiciona 1 na hora da teste de resistência (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "encantamento_de_artefatos": {
+    "name": "Encantamento de Artefatos",
+    "description": "Criar e imbuir objetos com feitiços permanentes",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "investigacao_paranormal": {
+    "name": "Investigação Paranormal",
+    "description": "Sensibilidade a fantasmas, aparições e eventos sobrenaturais",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["ocultismo"]
+  },
+  "falsificacao_e_trapaca_magica": {
+    "name": "Falsificação e Trapaça Mágica",
+    "description": "Criar documentos falsos e alterar feitiços de segurança",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "roubo_e_invasao_magica": {
+    "name": "Roubo e Invasão Mágica",
+    "description": "Abrir fechaduras encantadas e desativar feitiços de proteção",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "culinaria_magica": {
+    "name": "Culinária Mágica",
+    "description": "Preparação de pratos encantados e bebidas mágicas",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["herbologia", "pocoes"]
+  },
+  "encantamento_de_objetos": {
+    "name": "Encantamento de Objetos",
+    "description": "Criar feitiços de longo prazo em itens",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+  "mecanica_magica": {
+    "name": "Mecânica Mágica",
+    "description": "Conserto de vassouras, relógios encantados e objetos mágicos",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["feiticaria_geral"]
+  },
+  "conhecimento_trouxa": {
+    "name": "Conhecimento Trouxa",
+    "description": "Lidar com tecnologia e cultura não-bruxa",
+    "modificadores": "Adiciona 1 na hora da teste de conhecimento (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["truques_trouxas"]
+  },
+  "artes_das_trevas": {
+    "name": "Artes das Trevas",
+    "description": "Conhecimento sobre feitiços das trevas, maldições e como resistir a elas",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["ocultismo"]
+  },
+  "maldicoes_e_feiticos_proibidos": {
+    "name": "Maldições e Feitiços Proibidos",
+    "description": "Especialização em feitiços das trevas e maldições imperdoáveis",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["encantamento_de_artefatos"]
+  },
+  "alquimia": {
+    "name": "Alquimia",
+    "description": "Criar substâncias mágicas complexas (Elixires poderosos, Pedra Filosofal, etc.)",
+    "modificadores": "Adiciona 1 na hora da elaboração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["pocoes"]
+  },
+  "armas_e_luta_fisica": {
+    "name": "Armas e Luta Física",
+    "description": "Uso de armas encantadas, como espadas e adagas mágicas",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  },
+   "disfarce_e_metamorfose": {
+    "name": "Disfarce e Metamorfose",
+    "description": "Enganar os outros por meio de disfarces mágicos",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": ["metamorfomagia"]
+  },
+   "aparatação_e_magia_de_transporte": {
+    "name": "Aparatação e Magia de Transporte",
+    "description": "Viagens instantâneas com aparatação e Chaves de Portal",
+    "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
+    "requisitos": []
+  }
+}
