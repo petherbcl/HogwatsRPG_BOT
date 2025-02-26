@@ -6,7 +6,7 @@ module.exports = {
         .setName('xpstore')
         .setDescription('[ADM] Criar loja de XP'),
     async execute(interaction, client) {
-        await interaction.deferReply({ }).catch( () => {} );
+        await interaction.deferReply({ ephemeral: false }).catch( () => {} );
 
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
@@ -25,9 +25,9 @@ Se procuras um feitiço para abrir caminhos, um amuleto para afastar energias ne
 Que a tua visita seja repleta de mistério, descoberta e, acima de tudo... magia! 🔮✨`).setImage('https://imgur.com/4HUiueO.png');;
         
 
-        const buttonSpell = new ButtonBuilder().setCustomId('buySpell').setStyle(ButtonStyle.Primary).setLabel('Comprar Magia').setEmoji('🔮');
-        const buttonPericia = new ButtonBuilder().setCustomId('buyPericia').setStyle(ButtonStyle.Primary).setLabel('Comprar Perícia').setEmoji('🎓');
-        const buttonAtributo = new ButtonBuilder().setCustomId('buyAtributo').setStyle(ButtonStyle.Primary).setLabel('Comprar Atributo').setEmoji('📚');
+        const buttonSpell = new ButtonBuilder().setCustomId('buySpell').setStyle(ButtonStyle.Primary).setLabel('Comprar Magia - 5 XP').setEmoji('🔮');
+        const buttonPericia = new ButtonBuilder().setCustomId('buyPericia').setStyle(ButtonStyle.Primary).setLabel('Comprar Perícia - 10 XP').setEmoji('🎓');
+        const buttonAtributo = new ButtonBuilder().setCustomId('buyAtributo').setStyle(ButtonStyle.Primary).setLabel('Comprar Atributo - 10 XP').setEmoji('📚');
         const row = new ActionRowBuilder().addComponents(buttonSpell,buttonPericia,buttonAtributo);
     
         await interaction.editReply({ embeds: [embed], components: [row] });
