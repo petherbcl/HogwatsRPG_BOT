@@ -20,7 +20,7 @@ module.exports = {
 		const embed = new EmbedBuilder()
 			.setColor('#ffad00')
 			.setTitle(`${pericia.name} - ${yearKey}º ano`)
-			.setDescription(`${pericia.description}\n\n**Modificadores**\n${pericia.modificadores}\n\n**Código**\n${"`"+value+"`"}\n\n**Requisitos**\n${pericia.requisitos.map(r => "`"+pericias_list[r].name+"`").join(', ')}`)
+			.setDescription(`${pericia.description}\n\n**Modificadores**\n${pericia.modificadores}\n\n**Código**\n${"`"+value+"`"}\n\n**Requisitos**\n${pericia.requisitos.map(r => "`"+pericias_list[r].name+"`").join(', ')}\n\n**Custo**\n*${pericia.custo}* PE`)
 
 		await interaction.reply({embeds: [embed], ephemeral: true});
     }
