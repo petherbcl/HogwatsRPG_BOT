@@ -51,7 +51,7 @@ module.exports = {
                         url: url,
                         madeira: madeiras[Math.floor(Math.random() * madeiras.length)],
                         nucleo: nucleo[Math.floor(Math.random() * nucleo.length)],
-                        comprimento: Math.floor(Math.random() * (25 - 12 + 1)) + 12
+                        comprimento: Math.floor(Math.random() * (30 - 12 + 1)) + 12
                     }
 
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, JSON.stringify(ficha_player));
