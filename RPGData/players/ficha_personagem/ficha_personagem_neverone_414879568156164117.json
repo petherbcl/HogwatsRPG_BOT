@@ -1,1 +1,44 @@
-{"name":"Helena Ravenshire","photo":"https://r2.fivemanage.com/image/JBv12QavqhKi.jpg","house":"Grifinória","job":"ALUNO","year":1,"race":"Humano","age":11,"F":1,"H":2,"R":1,"A":1,"PdF":1,"PV":5,"PVMax":5,"PM":5,"PMMax":5,"PE":0,"spells":["lumos","nox","alohomora"],"vantagens":["mente_afiada","vassoura_pessoal","curioso"],"desvantagens":["desajeitado","trouxa_criado_por_trouxas","medroso"],"vantagem_obrigatoria":"Magia Elemental","appearance":"loira, usa oculos. é inteligente, e aprecia leitura e poções","personality":"Durona e Inteligente","history":"nascida por trouxas, tem 16 anos, e tem o habito de provar seu valor","varinha":{"url":"https://r2.fivemanage.com/image/2HbyC57qfw3A.jpg","madeira":"Loureiro","nucleo":"Essência de Cinzal","comprimento":21}}
+{
+    "name": "Helena Ravenshire",
+    "photo": "https://r2.fivemanage.com/image/JBv12QavqhKi.jpg",
+    "house": "Grifinória",
+    "job": "ALUNO",
+    "year": 1,
+    "race": "Humano",
+    "age": 11,
+    "F": 1,
+    "H": 2,
+    "R": 1,
+    "A": 1,
+    "PdF": 1,
+    "PV": 5,
+    "PVMax": 5,
+    "PM": 5,
+    "PMMax": 5,
+    "PE": 0,
+    "spells": [
+        "lumos",
+        "nox",
+        "alohomora"
+    ],
+    "vantagens": [
+        "mente_afiada",
+        "vassoura_pessoal",
+        "curioso"
+    ],
+    "desvantagens": [
+        "desajeitado",
+        "trouxa_criado_por_trouxas",
+        "medroso"
+    ],
+    "vantagem_obrigatoria": "Magia Elemental",
+    "appearance": "loira, usa oculos. é inteligente, e aprecia leitura e poções",
+    "personality": "Durona e Inteligente",
+    "history": "nascida por trouxas, tem 11 anos, e tem o habito de provar seu valor",
+    "varinha": {
+        "url": "https://r2.fivemanage.com/image/2HbyC57qfw3A.jpg",
+        "madeira": "Loureiro",
+        "nucleo": "Essência de Cinzal",
+        "comprimento": 21
+    }
+}
