@@ -159,7 +159,7 @@ module.exports = {
                     player = interaction.options.getString('player');
                     playerID = player.match(/\d+/)[0]; // Get the user ID from the mention
                     player_user = guild.members.cache.get(playerID); // Get the member object from the ID
-                    const pv = interaction.options.getString('pv');
+                    const pv = Number(interaction.options.getString('pv'))
 
                     if (!player_user) {
                         return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
@@ -191,7 +191,7 @@ module.exports = {
                     player = interaction.options.getString('player');
                     playerID = player.match(/\d+/)[0]; // Get the user ID from the mention
                     player_user = guild.members.cache.get(playerID); // Get the member object from the ID
-                    const pvmax = interaction.options.getString('pvmax');
+                    const pvmax = Number(interaction.options.getString('pvmax'));
 
                     if (!player_user) {
                         return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
