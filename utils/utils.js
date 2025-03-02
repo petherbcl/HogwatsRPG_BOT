@@ -247,11 +247,35 @@ function createFichaEmbed(username, id) {
     return embeds
 }
 
+function buySpell(username, id, value) {
+    const ficha_player = JSON.parse(fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(username)}_${id}.json`, 'utf8'))
+    const spell = spell_list[value]
+
+    if(ficha_player.PE < spell.custo){
+        return false
+    }
+
+    ficha_player.spells.push(value)
+    ficha_player.PE -= spell.custo
+    ficha_player.PE = ficha_player.PE < 0 ? 0 : ficha_player.PE
+    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(username)}_${id}.json`, JSON.stringify(ficha_player, null, 2));
+    return true
+}
+
+function increateAtributo(username, id, value){
+    const ficha_player = JSON.parse(fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(username)}_${id}.json`, 'utf8'))
+    ficha_player[value]++
+    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(username)}_${id}.json`, JSON.stringify(ficha_player, null, 2));
+    return true
+}
+
 module.exports = {
     StringFormat,
     RemoveSpecialCharacters,
     FichaToWord,
     FichaToPDF,
     importImage,
-    createFichaEmbed
+    createFichaEmbed,
+    buySpell,
+    increateAtributo
 };

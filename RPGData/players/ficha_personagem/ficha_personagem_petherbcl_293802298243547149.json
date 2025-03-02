@@ -3,19 +3,19 @@
   "photo": "https://r2.fivemanage.com/image/CGGzy5lNdIMM.jpg",
   "house": "Grifinória",
   "job": "ALUNO",
-  "year": 1,
+  "year": 2,
   "race": "lobisomem",
   "age": 36,
   "F": 4,
-  "H": 4,
-  "R": 4,
-  "A": 4,
-  "PdF": 4,
+  "H": 1,
+  "R": 1,
+  "A": 1,
+  "PdF": 2,
   "PV": 20,
   "PVMax": 20,
   "PM": 20,
   "PMMax": 20,
-  "PE": 10,
+  "PE": 0,
   "spells": [
     "lumos",
     "nox",
@@ -40,5 +40,12 @@
     "madeira": "Choupo-Branco",
     "nucleo": "Pena de Fênix",
     "comprimento": 24
-  }
+  },
+  "pericias": [
+    "feiticaria_geral",
+    "pocoes",
+    "magia_elemental",
+    "voo_e_quadribol",
+    "duelos_magicos"
+  ]
 }
