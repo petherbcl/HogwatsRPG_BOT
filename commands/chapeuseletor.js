@@ -1,7 +1,7 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('@discordjs/builders');
 const { setTimeout } = require('timers/promises');
 const fs = require('fs');
-const { RemoveSpecialCharacters } = require('../utils/utils');
+const { RemoveSpecialCharacters, log } = require('../utils/utils');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -12,6 +12,7 @@ module.exports = {
 
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
+        const user = interaction.user;
         const channel = interaction.channel;
 
         const file = fs.readFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, 'utf8');
@@ -62,7 +63,9 @@ module.exports = {
                 await interaction.editReply({ content: '', embeds: [embed], ephemeral: false });
 
                 userInv.casa = true;
-                fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
+                fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv, null, 4));
+
+                log(guild,`<@${user.id}> usou comando ${"`/chapeuseletor`"} e foi selecionado para a casa ${ficha.house}`);
             } else {
                 await interaction.editReply({ content: `⚠️ Não foi possível atribuir a casa. Role não encontrada.`, ephemeral: false });
             }

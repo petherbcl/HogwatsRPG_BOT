@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { MessageFlags, EmbedBuilder } = require('discord.js');
-const { increateAtributo, RemoveSpecialCharacters } = require('../../utils/utils');
+const { RemoveSpecialCharacters, log } = require('../../utils/utils');
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
 
 const attr_desc = {
@@ -14,7 +14,11 @@ const attr_desc = {
 module.exports = {
     customID: 'selectbuyatributo',
     async execute(interaction, client) {
+        const guild = client.guilds.cache.get(interaction.guildId);
+        const member = guild.members.cache.get(interaction.user.id);
         const user = interaction.user;
+        const channel = interaction.channel;
+        
         const atributo = interaction.values[0];
 
         const ficha_player = JSON.parse(fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, 'utf8'))
@@ -26,8 +30,9 @@ module.exports = {
         }else{
             ficha_player[atributo]++
             ficha_player.PE -= 10;
+            ficha_player.PE = ficha_player.PE < 0 ? 0 : ficha_player.PE;
             inv_player.atributobuy = inv_player.atributobuy ? inv_player.atributobuy + 1 : 1;
-            fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, JSON.stringify(ficha_player, null, 2));
+            fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, JSON.stringify(ficha_player, null, 4));
             fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, JSON.stringify(inv_player, null, 4))
     
             embed.setTitle('Compra de Atributo')
@@ -35,7 +40,9 @@ module.exports = {
                 .setImage('https://imgur.com/QI4nKvZ.png');
         }
 
-        await interaction.update({ embeds: [embed], components: [], flags: MessageFlags.Ephemeral });
+        log(guild,`<@${user.id}> usou 10 PE para comprar um atributo **${attr_desc[atributo]}**.`)
+
+        return await interaction.update({ embeds: [embed], components: [], flags: MessageFlags.Ephemeral });
 
     }
 }

@@ -2,7 +2,7 @@ const { SlashCommandBuilder, AttachmentBuilder, EmbedBuilder } = require('discor
 const fs = require('fs');
 const path = require('path');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const {StringFormat, RemoveSpecialCharacters, FichaToPDF, importImage, createFichaEmbed} = require('../utils/utils.js');
+const {StringFormat, RemoveSpecialCharacters, FichaToPDF, importImage, createFichaEmbed, log} = require('../utils/utils.js');
 
 const spell_by_year = JSON.parse(fs.readFileSync(`./RPGData/spell_by_year.json`, 'utf8'))
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
@@ -147,8 +147,9 @@ module.exports = {
         .setDescription('Inicia ficha de personagem.'),
     async execute(interaction, client) {
 
-        const guild = interaction.member.guild
+        const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
+        const user = interaction.user;
         const channel = interaction.channel;
         const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Criação de Ficha de Personagem')
 
@@ -324,15 +325,9 @@ module.exports = {
 
                         console.log(ficha_personagem);
 
-                        fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`,
-                                                    JSON.stringify(ficha_personagem), (err) => {
-                                                        if (err) {
-                                                            console.error('Erro ao criar ficha de personagem:', err);
-                                                        } else {
-                                                            console.log('Ficha de personagem criado com sucesso!');
-                                                        }
-                                                    }
-                                        );
+                        fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`,JSON.stringify(ficha_personagem, null, 4));
+
+                        log(guild,`<@${user.id}> usou comando ${"`/criarficha`"} para criar a ficha de seu personagem`);
 
                         // Alterar o nickname do usuário
                         const newNickname = ficha_personagem.name;

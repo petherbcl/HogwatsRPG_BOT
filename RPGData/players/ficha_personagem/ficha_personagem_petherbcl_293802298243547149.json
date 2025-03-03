@@ -1,51 +1,49 @@
 {
-  "name": "Pedro (Mago de Programa)",
-  "photo": "https://r2.fivemanage.com/image/CGGzy5lNdIMM.jpg",
-  "house": "Grifinória",
-  "job": "ALUNO",
-  "year": 2,
-  "race": "lobisomem",
-  "age": 36,
-  "F": 4,
-  "H": 1,
-  "R": 1,
-  "A": 1,
-  "PdF": 2,
-  "PV": 20,
-  "PVMax": 20,
-  "PM": 20,
-  "PMMax": 20,
-  "PE": 0,
-  "spells": [
-    "lumos",
-    "nox",
-    "alohomora",
-    "depulso"
-  ],
-  "vantagens": [
-    "resistencia_a_feiticos",
-    "conhecimento_proibido"
-  ],
-  "desvantagens": [
-    "vulneravel_a_magia_negra",
-    "maldição_de_sangue",
-    "cacado_por_criaturas"
-  ],
-  "vantagem_obrigatoria": "Magia Elemental",
-  "appearance": "Lindo",
-  "personality": "forte",
-  "history": "História/Antecedentes",
-  "varinha": {
-    "url": "https://r2.fivemanage.com/image/hT03sZ9e764v.jpg",
-    "madeira": "Choupo-Branco",
-    "nucleo": "Pena de Fênix",
-    "comprimento": 24
-  },
-  "pericias": [
-    "feiticaria_geral",
-    "pocoes",
-    "magia_elemental",
-    "voo_e_quadribol",
-    "duelos_magicos"
-  ]
+    "name": "Pedro (Mago de Programa)",
+    "photo": "https://r2.fivemanage.com/image/CGGzy5lNdIMM.jpg",
+    "house": "Grifinória",
+    "job": "ALUNO",
+    "year": 2,
+    "race": "lobisomem",
+    "age": 36,
+    "F": 4,
+    "H": 10,
+    "R": 1,
+    "A": 1,
+    "PdF": 2,
+    "PV": 7,
+    "PVMax": 20,
+    "PM": 20,
+    "PMMax": 20,
+    "PE": 0,
+    "spells": [
+        "lumos",
+        "nox",
+        "alohomora",
+        "depulso"
+    ],
+    "vantagens": [
+        "legilimencia_basica",
+        "vassoura_pessoal"
+    ],
+    "desvantagens": [
+        "curiosidade_perigosa"
+    ],
+    "vantagem_obrigatoria": "Magia Elemental",
+    "appearance": "Lindo",
+    "personality": "forte",
+    "history": "História/Antecedentes",
+    "varinha": {
+        "url": "https://r2.fivemanage.com/image/hT03sZ9e764v.jpg",
+        "madeira": "Choupo-Branco",
+        "nucleo": "Pena de Fênix",
+        "comprimento": 24
+    },
+    "pericias": [
+        "feiticaria_geral",
+        "pocoes",
+        "magia_elemental",
+        "voo_e_quadribol",
+        "duelos_magicos"
+    ]
 }

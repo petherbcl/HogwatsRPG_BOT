@@ -54,7 +54,7 @@ module.exports = {
                         comprimento: Math.floor(Math.random() * (30 - 12 + 1)) + 12
                     }
 
-                    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, JSON.stringify(ficha_player));
+                    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, JSON.stringify(ficha_player, null, 4));
 
                     embed.setDescription(`Parabéns. Você recebeu uma varinha de **${ficha_player.varinha.madeira}** de **${ficha_player.varinha.comprimento}cm** com núcleo de **${ficha_player.varinha.nucleo}**`);
                     embed.setImage(url)

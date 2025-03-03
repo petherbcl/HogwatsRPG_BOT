@@ -32,7 +32,7 @@ module.exports = {
                 image: item_list[item].image
             };
 
-            fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
+            fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv, null, 4));
 
             return interaction.reply({ content: `Você lançou o dado e obteve ${dice}, multiplicando por 100 você obteve ${galeoes} ${item_list[item].description}`, ephemeral: true });
         }

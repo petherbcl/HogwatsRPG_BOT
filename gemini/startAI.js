@@ -95,7 +95,7 @@ function SaveHistory(userId, prompt, response) {
         }
     )
 
-    fs.writeFileSync(`./gemini/cacheData/${userId}.json`, JSON.stringify(content));
+    fs.writeFileSync(`./gemini/cacheData/${userId}.json`, JSON.stringify(content, null, 4));
 
 }
 

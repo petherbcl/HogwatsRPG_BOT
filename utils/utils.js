@@ -191,8 +191,8 @@ function createFichaEmbed(username, id) {
     const embed4 = new EmbedBuilder()
         .setColor('#ffad00')
         .addFields(
-            { name: 'Vantagens', value: ficha_player.vantagens.map(vantagem => '`'+vantagem_list[vantagem].label+'`').join('\n'), inline: true },
-            { name: 'Desvantagens', value: ficha_player.desvantagens.map(desvantagem => '`'+desvantagem_list[desvantagem].label+'`').join('\n'), inline: true },
+            { name: 'Vantagens', value: ficha_player.vantagens.map(vantagem => '`' + vantagem_list[vantagem].label + '`').join('\n'), inline: true },
+            { name: 'Desvantagens', value: ficha_player.desvantagens.map(desvantagem => '`' + desvantagem_list[desvantagem].label + '`').join('\n'), inline: true },
         )
     embeds.push(embed4)
 
@@ -200,14 +200,14 @@ function createFichaEmbed(username, id) {
     let spellText = ""
     for (const spell of ficha_player.spells) {
         const descTextAux = spellText + "`" + spell_list[spell].name + "`\n"
-        if(descTextAux.length > 1024){
+        if (descTextAux.length > 1024) {
             embed5.addFields({ name: 'Feitiços', value: spellText, inline: true })
             spellText = "`" + spell_list[spell].name + "`\n"
-        }else{
+        } else {
             spellText = descTextAux
         }
     }
-    if(spellText.length > 0){
+    if (spellText.length > 0) {
         embed5.addFields({ name: 'Feitiços', value: spellText, inline: true })
     }
     embeds.push(embed5)
@@ -227,21 +227,21 @@ function createFichaEmbed(username, id) {
     }
 
     const embed7 = new EmbedBuilder()
-            .setColor('#ffad00')
-            .setTitle(`Aparência`)
-            .setDescription(ficha_player.appearance)
+        .setColor('#ffad00')
+        .setTitle(`Aparência`)
+        .setDescription(ficha_player.appearance)
     embeds.push(embed7)
 
     const embed8 = new EmbedBuilder()
-            .setColor('#ffad00')
-            .setTitle(`Personalidade`)
-            .setDescription(ficha_player.personality)
+        .setColor('#ffad00')
+        .setTitle(`Personalidade`)
+        .setDescription(ficha_player.personality)
     embeds.push(embed8)
 
     const embed9 = new EmbedBuilder()
-            .setColor('#ffad00')
-            .setTitle(`História/Antecedentes`)
-            .setDescription(ficha_player.history.slice(0, 4096))
+        .setColor('#ffad00')
+        .setTitle(`História/Antecedentes`)
+        .setDescription(ficha_player.history.slice(0, 4096))
     embeds.push(embed9)
 
     return embeds
@@ -251,22 +251,31 @@ function buySpell(username, id, value) {
     const ficha_player = JSON.parse(fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(username)}_${id}.json`, 'utf8'))
     const spell = spell_list[value]
 
-    if(ficha_player.PE < spell.custo){
+    if (ficha_player.PE < spell.custo) {
         return false
     }
 
     ficha_player.spells.push(value)
-    ficha_player.PE -= spell.custo
+    ficha_player.PE -= spell.custo || 5
     ficha_player.PE = ficha_player.PE < 0 ? 0 : ficha_player.PE
-    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(username)}_${id}.json`, JSON.stringify(ficha_player, null, 2));
+    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(username)}_${id}.json`, JSON.stringify(ficha_player, null, 4));
     return true
 }
 
-function increateAtributo(username, id, value){
+function increateAtributo(username, id, value) {
     const ficha_player = JSON.parse(fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(username)}_${id}.json`, 'utf8'))
     ficha_player[value]++
-    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(username)}_${id}.json`, JSON.stringify(ficha_player, null, 2));
+    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(username)}_${id}.json`, JSON.stringify(ficha_player, null, 4));
     return true
+}
+
+function log(guild, message) {
+    const logChannel = guild.channels.cache.find(channel => channel.name === 'logs-discord');
+    if (logChannel) {
+        const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Log').setDescription(message).setTimestamp()
+        logChannel.send({ embeds: [embed] });
+    }
+    return
 }
 
 module.exports = {
@@ -277,5 +286,6 @@ module.exports = {
     importImage,
     createFichaEmbed,
     buySpell,
-    increateAtributo
+    increateAtributo,
+    log
 };

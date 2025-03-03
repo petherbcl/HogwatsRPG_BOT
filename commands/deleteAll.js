@@ -10,6 +10,9 @@
 //         await interaction.deferReply({ ephemeral: true }).catch( () => {} );
 
 //         const guild = interaction.member.guild
+//         const member = guild.members.cache.get(interaction.user.id);
+//         const user = interaction.user;
+//         const channel = interaction.channel;
 
 //         if (!guild) {
 //             await interaction.followUp({ content: `⚠️ Servidor não encontrado!`, ephemeral: true })

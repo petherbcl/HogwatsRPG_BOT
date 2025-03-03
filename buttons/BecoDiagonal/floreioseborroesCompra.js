@@ -52,7 +52,7 @@ module.exports = {
                 listCompras.push(item_list[item].name)
             }
         })
-        fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
+        fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv, null, 4));
 
         if(listCompras.length > 0){
             return interaction.reply({ content: `*Você comprou os seguintes livros:*${listCompras.map( elem => '\n* '+elem)}`, flags: MessageFlags.Ephemeral });

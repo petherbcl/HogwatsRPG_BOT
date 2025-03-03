@@ -85,7 +85,7 @@ module.exports = {
                 msg = `Deu ${pontos} pontos a Corvinal`
             }
 
-            fs.writeFileSync(`./RPGData/pontos_casas.json`, JSON.stringify(pontos_file));
+            fs.writeFileSync(`./RPGData/pontos_casas.json`, JSON.stringify(pontos_file, null, 4));
 
             const fetchedMessages = await pontosChannel.messages.fetch({ limit: 1 });
             await pontosChannel.bulkDelete(fetchedMessages, true);
@@ -148,7 +148,7 @@ module.exports = {
                 msg = `Retirou ${pontos} pontos a Corvinal`
             }
 
-            fs.writeFileSync(`./RPGData/pontos_casas.json`, JSON.stringify(pontos_file));
+            fs.writeFileSync(`./RPGData/pontos_casas.json`, JSON.stringify(pontos_file, null, 4));
 
 
             const fetchedMessages = await pontosChannel.messages.fetch({ limit: 1 });

@@ -36,7 +36,7 @@ module.exports = {
 
         userInv.inventario.galeoes.amount -= item_list[item].price;
 
-        fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
+        fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv, null, 4));
         
         return interaction.reply({ content: `Você comprou 1 Fraco Vazio`, flags: MessageFlags.Ephemeral });
     }

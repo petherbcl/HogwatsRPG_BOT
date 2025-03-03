@@ -27,7 +27,7 @@ module.exports = {
         userInv.inventario.galeoes.amount -= price;
         userInv.inventario.animal= {name: name, type: 'pelucio', img: img, amount: 1}
         
-        fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv));
+        fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, JSON.stringify(userInv, null, 4));
         const embed = new EmbedBuilder().setColor('#ffad00').setImage(img).setDescription(`Você comprou 1 ${name}`);
         
         return interaction.reply({  embeds: [embed], ephemeral: true });

@@ -46,7 +46,7 @@ module.exports = {
                 if (url) {
                     ficha_player.photo = url
 
-                    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, JSON.stringify(ficha_player));
+                    fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(user.username)}_${user.id}.json`, JSON.stringify(ficha_player, null, 4));
 
                     embed.setDescription(`Parabéns. Você adicionou foto na sua ficha de personagem`);
                     embed.setImage(url)

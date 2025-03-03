@@ -88,7 +88,7 @@ module.exports = {
 
             }
 
-            fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(player_inv));
+            fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(player_inv, null, 4));
 
             return interaction.reply({ content: `${option === 'add' ? 'Adicionado' : 'Removido'} **${quantidade} x ${item_list[item].name}** ao player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**.`, ephemeral: false });
 
