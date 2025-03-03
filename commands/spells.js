@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder, EmbedBuilder,  } = require("discord.js");
+const { SlashCommandBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder, EmbedBuilder, MessageFlags,  } = require("discord.js");
 const fs = require('fs');
 const {RemoveSpecialCharacters} = require('../utils/utils.js');
 
@@ -35,23 +35,44 @@ module.exports = {
         const option = interaction.options.getSubcommand();
 
         if(option === 'list'){
-            const spells = Object.keys(spell_list)
-            let descText = ""
-            for(const spell of spells){
-                const descTextAux = descText + `**${spell}** - ${spell_list[spell].name} | *${spell_list[spell].pm}* PM | ${spell_list[spell].effect}\n`
-                if(descTextAux.length > 4096){
-                    const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Feitiços').setDescription(descText)
-                    await interaction.followUp({embeds: [embed], ephemeral: true})
-                    descText = `**${spell}** - ${spell_list[spell].name} | *${spell_list[spell].pm}* PM | ${spell_list[spell].effect}\n`
-                }else{
-                    descText = descTextAux
+            const spells = Object.keys(spell_list).sort((a,b) => spell_list[a].name.localeCompare(spell_list[b].name) )
+            const selectNeed = Math.ceil(spells.length/25)
+            let rowList = [];
+
+            for(let i = 0; i < selectNeed; i++){
+                const row = new ActionRowBuilder()
+                const selectmenu = new StringSelectMenuBuilder()
+                    .setCustomId(`selectspell_${i}`)
+                
+                const spells_slice = spells.slice(i*25, (i+1)*25)
+                selectmenu.setPlaceholder(`Selecione um feitiço - [${spell_list[spells_slice[0]].name.charAt(0)} ${spell_list[spells_slice[spells_slice.length-1]].name.charAt(0)}]`)
+
+                for(const spell of spells_slice){
+                    selectmenu.addOptions(new StringSelectMenuOptionBuilder().setLabel(spell_list[spell].name).setValue(spell))
                 }
+                row.addComponents(selectmenu)
+                rowList.push(row)
             }
 
-            if(descText.length > 0){
-                const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Feitiços').setDescription(descText)
-                await interaction.followUp({embeds: [embed], ephemeral: true})
+            const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Feitiços').setDescription('Selecione um feitiço para mais informações.')
+            await interaction.editReply({embeds: [embed], flags: MessageFlags.Ephemeral});
+            let rowaux = []
+            for(const row of rowList){
+                if(rowaux.length < 5){
+                    rowaux.push(row)
+                }else{
+                    await interaction.followUp({components: rowaux, flags: MessageFlags.Ephemeral});
+                    rowaux = []
+                    rowaux.push(row)
+                }
             }
+            if(rowaux.length > 0){
+                await interaction.followUp({components: rowaux, flags: MessageFlags.Ephemeral});
+            
+            }
+
+            log(guild,`<@${user.id}> usou comando ${"`/spells list`"}`);
+
             return
         }else if( (option === 'add' || option === 'rem') && isDM){
 
