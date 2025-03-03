@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder, EmbedBuilder,  } = require("discord.js");
 const fs = require('fs');
+const { log } = require("../utils/utils");
 
 module.exports = {
     dm: true,

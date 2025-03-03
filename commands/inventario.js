@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder,  } = require("discord.js");
 const fs = require('fs');
-const { RemoveSpecialCharacters } = require("../utils/utils");
+const { RemoveSpecialCharacters, log } = require("../utils/utils");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -10,13 +10,15 @@ module.exports = {
 
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
-        // const user = interaction.user;
-        // const channel = interaction.channel;
+        const user = interaction.user;
+        const channel = interaction.channel;
 
         const file = fs.readFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`, 'utf8');
         const user_inv = JSON.parse(file)
 
-        const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Itens do Inventário').setDescription(Object.entries(user_inv.inventario).map(([key, item]) => `* **${key}** - ${item.amount} x ${item.name} | *${item.description}*`).join('\n'));
+        const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Itens do Inventário').setDescription(Object.entries(user_inv.inventario).map(([key, item]) => `* ${item.amount} **x** ${item.name}`).join('\n'));
         await interaction.reply({ embeds: [embed], ephemeral: true });
+
+        log(guild,`<@${user.id}> usou comando ${"`/inventario`"}`);
     },
 };

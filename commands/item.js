@@ -1,6 +1,8 @@
-const { SlashCommandBuilder, EmbedBuilder, } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder, MessageFlags, ActionRowBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, } = require("discord.js");
 const fs = require('fs');
-const { RemoveSpecialCharacters } = require("../utils/utils");
+const { RemoveSpecialCharacters, log } = require("../utils/utils");
+
+const item_list = JSON.parse(fs.readFileSync(`./RPGData/item_list.json`, 'utf8'))
 
 module.exports = {
     dm: true,
@@ -28,9 +30,6 @@ module.exports = {
         const member = guild.members.cache.get(interaction.user.id);
         const user = interaction.user;
         const channel = interaction.channel;
-
-        const file = fs.readFileSync(`./RPGData/item_list.json`, 'utf8');
-        const item_list = JSON.parse(file)
 
         const option = interaction.options.getSubcommand();
 
@@ -90,13 +89,33 @@ module.exports = {
 
             fs.writeFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(player_inv, null, 4));
 
+            log(guild,`<@${user.id}> usou comando ${"`/item "+option+"`"} para ${option === 'add' ? 'adicionar' : 'remover'} ${quantidade} x ${item_list[item].name} do player <@${player_user.user.id}>.`);
+
             return interaction.reply({ content: `${option === 'add' ? 'Adicionado' : 'Removido'} **${quantidade} x ${item_list[item].name}** ao player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**.`, ephemeral: false });
 
         }else if(option === 'list'){
 
-            const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Itens').setDescription(Object.entries(item_list).map(([key, item]) => `* **${key}** - ${item.name} | *${item.description}*`).join('\n'));
-            await interaction.reply({ embeds: [embed], ephemeral: true });
+            const selectNeed = Math.ceil(Object.keys(item_list).length/25)
+            const rowList = [];
+            const item_list_sort = Object.keys(item_list).sort((a,b) => item_list[a].name.localeCompare(item_list[b].name))
 
+            for(let i = 0; i < selectNeed; i++){
+                const row = new ActionRowBuilder()
+                const selectmenu = new StringSelectMenuBuilder()
+                                    .setCustomId(`selectitensdetails_${i}`)
+                                    .setPlaceholder('Selecione um item')
+                const itens_slice = item_list_sort.slice(i*25, (i+1)*25)
+                for(const item of itens_slice){
+                    selectmenu.addOptions(new StringSelectMenuOptionBuilder().setLabel(item_list[item].name).setValue(item))
+                }
+                row.addComponents(selectmenu)
+                rowList.push(row)
+            }
+            const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Itens').setDescription('Selecione um item para consultar detalhes.')
+    
+            log(guild,`<@${user.id}> usou comando ${"`/item list`"}`);
+
+            return await interaction.reply({embeds: [embed], components: rowList, flags: MessageFlags.Ephemeral});
         }
 
 

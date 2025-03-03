@@ -31,7 +31,7 @@
             "type": "clothes"
         },
         "frasco_vazio": {
-            "amount": 1,
+            "amount": "15",
             "name": "Frasco Vazio",
             "description": "Frasco Vazio"
         },

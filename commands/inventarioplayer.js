@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder,  } = require("discord.js");
 const fs = require('fs');
-const { RemoveSpecialCharacters } = require("../utils/utils");
+const { RemoveSpecialCharacters, log } = require("../utils/utils");
 
 module.exports = {
     dm: true,
@@ -12,6 +12,8 @@ module.exports = {
 
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
+        const user = interaction.user;
+        const channel = interaction.channel;
 
         const player = interaction.options.getString('player');
         const playerID = player.match(/\d+/)[0]; // Get the user ID from the mention
@@ -24,7 +26,9 @@ module.exports = {
         const file = fs.readFileSync(`./RPGData/players/inv_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
         const user_inv = JSON.parse(file)
 
-        const embed = new EmbedBuilder().setColor('#ffad00').setTitle(`Lista de Itens do Inventário do Player - ${player_user.nickname || player_user.user.globalName || player_user.user.username}`).setDescription(Object.entries(user_inv.inventario).map(([key, item]) => `* **${key}** - ${item.amount} x ${item.name} | *${item.description}*`).join('\n'));
+        const embed = new EmbedBuilder().setColor('#ffad00').setTitle(`Lista de Itens do Inventário do Player - ${player_user.nickname || player_user.user.globalName || player_user.user.username}`).setDescription(Object.entries(user_inv.inventario).map(([key, item]) => `* **${key}** - ${item.amount} **x** ${item.name}`).join('\n'));
         await interaction.reply({ embeds: [embed], ephemeral: true });
+
+        log(guild,`<@${user.id}> usou comando ${"`/inventarioplayer`"} para ver o inventário de <@${playerID}>`);
     },
 };

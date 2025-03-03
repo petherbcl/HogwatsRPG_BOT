@@ -37,5 +37,7 @@ module.exports = {
         const result = rollMultipleDice(args);
 
         await interaction.reply(result);
+
+        log(guild,`<@${user.id}> usou comando ${"`/rolardados`"} e rolou ${diceNotation}. Resultado: ${result}`);
     },
 };

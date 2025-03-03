@@ -1,6 +1,6 @@
-const { SlashCommandBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder, EmbedBuilder } = require("discord.js");
+const { SlashCommandBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder, EmbedBuilder, MessageFlags } = require("discord.js");
 const fs = require('fs');
-const {RemoveSpecialCharacters} = require('../utils/utils.js');
+const {RemoveSpecialCharacters, log} = require('../utils/utils.js');
 
 const pericias_list = JSON.parse(fs.readFileSync(`./RPGData/pericias.json`, 'utf8'))
 const pericias_by_year = JSON.parse(fs.readFileSync(`./RPGData/pericias_by_year.json`, 'utf8'))
@@ -50,7 +50,9 @@ module.exports = {
 
             const embed = new EmbedBuilder().setColor('#ffad00').setTitle('Lista de Perícias').setDescription('Selecione uma perícia para mais informações.')
 
-            await interaction.editReply({embeds: [embed], components: rowList, ephemeral: true});
+            await interaction.editReply({embeds: [embed], components: rowList, flags: MessageFlags.Ephemeral});
+
+            log(guild,`<@${user.id}> usou comando ${"`/pericias list`"}`);
 
             return
         }else if(option === 'player' && isDM){
@@ -59,7 +61,7 @@ module.exports = {
             const player_user = guild.members.cache.get(playerID); // Get the member object from the ID
 
             if (!player_user) {
-                return interaction.editReply({ content: `Player **${player}** não existe.`, ephemeral: true });
+                return interaction.editReply({ content: `Player **${player}** não existe.`, flags: MessageFlags.Ephemeral });
             }
 
             const player_file = fs.readFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, 'utf8');
@@ -69,7 +71,11 @@ module.exports = {
 
             const embed = new EmbedBuilder().setColor('#ffad00').setTitle(`Perícias de ${player_user.nickname || player_user.user.globalName || player_user.user.username}`).setDescription(pericias_player)
 
-            await interaction.editReply({embeds: [embed], ephemeral: true});
+            await interaction.editReply({embeds: [embed], flags: MessageFlags.Ephemeral});
+
+            log(guild,`<@${user.id}> usou comando ${"`/pericias player`"} para consultar as perícias de <@${player_user.user.id}>.`);
+
+            return
         }
 
     },

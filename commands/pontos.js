@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder,  } = require("discord.js");
 const fs = require('fs');
+const { log } = require("../utils/utils");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -45,7 +46,11 @@ module.exports = {
                     { name: '<:ravenclaw:1333855083741446145> Corvinal <:ravenclaw:1333855083741446145>', value: '```'+(pontos_file.ravenclaw || 0)+' Pontos```' }
                 )
             ;
-            return interaction.reply({ embeds: [embed], ephemeral: true });
+            await interaction.reply({ embeds: [embed], ephemeral: true });
+
+            log(guild,`<@${user.id}> usou comando ${"`/pontos "+option+"`"}.`);
+
+            return
         }else if(isDM && option === 'add'){
             const house = interaction.options.getString('casa');
             const pontos = Math.abs(Number(interaction.options.getString('pontos')));
@@ -103,7 +108,11 @@ module.exports = {
             ;
             await pontosChannel.send({ embeds: [embed], ephemeral: false });
 
-            return interaction.reply({ content: msg, ephemeral: true });
+            await interaction.reply({ content: msg, ephemeral: true });
+
+            log(guild,`<@${user.id}> usou comando ${"`/pontos "+option+"`"} para ${option === 'add' ? 'adicionar' : 'remover'} **${pontos}** pontos a casa **${house}**.`);
+
+            return
 
         }else if(isDM && option === 'rem'){
             const house = interaction.options.getString('casa');
@@ -167,8 +176,11 @@ module.exports = {
             ;
             await pontosChannel.send({ embeds: [embed], ephemeral: false });
 
-            return interaction.reply({ content: msg, ephemeral: true });
+            await interaction.reply({ content: msg, ephemeral: true });
 
+            log(guild,`<@${user.id}> usou comando ${"`/pontos "+option+"`"} para ${option === 'add' ? 'adicionar' : 'remover'} **${pontos}** pontos a casa **${house}**.`);
+
+            return
         }
 
     },
