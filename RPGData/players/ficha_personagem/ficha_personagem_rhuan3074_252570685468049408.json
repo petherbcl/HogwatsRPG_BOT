@@ -14,7 +14,7 @@
     "PVMax": 20,
     "PM": 20,
     "PMMax": 20,
-    "PE": 12,
+    "PE": 22,
     "spells": [
         "lumos",
         "nox",
