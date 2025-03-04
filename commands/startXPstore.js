@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, ButtonStyle, EmbedBuilder, ButtonBuilder, ActionRowBuilder } = require("discord.js");
+const { log } = require("../utils/utils");
 
 module.exports = {
     admin: true,
@@ -29,6 +30,8 @@ Que a tua visita seja repleta de mistério, descoberta e, acima de tudo... magia
         const row = new ActionRowBuilder().addComponents(buttonSpell,buttonPericia,buttonAtributo);
     
         await interaction.reply({ embeds: [embed], components: [row] });
+
+        log(guild,`<@${user.id}> usou comando ${"`/xpstore`"} no canal **${channel.name}**`);
     
     }
 }

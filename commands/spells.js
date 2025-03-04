@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder, EmbedBuilder, MessageFlags,  } = require("discord.js");
 const fs = require('fs');
-const {RemoveSpecialCharacters} = require('../utils/utils.js');
+const {RemoveSpecialCharacters, log} = require('../utils/utils.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
