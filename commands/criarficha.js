@@ -323,8 +323,6 @@ module.exports = {
 
                         ficha_personagem.PE = 0;
 
-                        console.log(ficha_personagem);
-
                         fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.json`,JSON.stringify(ficha_personagem, null, 4));
 
                         log(guild,`<@${user.id}> usou comando ${"`/criarficha`"} para criar a ficha de seu personagem`);
