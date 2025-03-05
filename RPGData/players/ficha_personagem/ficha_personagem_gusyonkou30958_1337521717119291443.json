@@ -14,7 +14,7 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 32,
+    "PE": 52,
     "spells": [
         "alohomora",
         "lumos",

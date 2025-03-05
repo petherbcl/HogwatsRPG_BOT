@@ -15,7 +15,7 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 0,
+    "PE": 20,
     "spells": [
         "wingardium_leviosa",
         "protego_nivel_1",
