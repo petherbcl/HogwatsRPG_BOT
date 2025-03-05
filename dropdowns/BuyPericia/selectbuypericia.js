@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { MessageFlags, EmbedBuilder } = require('discord.js');
-const { RemoveSpecialCharacters } = require('../../utils/utils');
+const { RemoveSpecialCharacters, log } = require('../../utils/utils');
 const pericia_by_year = JSON.parse(fs.readFileSync(`./RPGData/pericias_by_year.json`, 'utf8'))
 const pericia_list = JSON.parse(fs.readFileSync(`./RPGData/pericias.json`, 'utf8'))
 

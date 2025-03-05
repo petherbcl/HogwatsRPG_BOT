@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { MessageFlags, EmbedBuilder } = require('discord.js');
-const { buySpell } = require('../../utils/utils');
+const { buySpell, log } = require('../../utils/utils');
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
 
 module.exports = {

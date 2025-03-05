@@ -1,5 +1,6 @@
 const { EmbedBuilder } = require("discord.js");
 const fs = require('fs');
+const { log } = require("../../utils/utils");
 
 const pericias_list = JSON.parse(fs.readFileSync(`./RPGData/pericias.json`, 'utf8'))
 const pericias_by_year = JSON.parse(fs.readFileSync(`./RPGData/pericias_by_year.json`, 'utf8'))
@@ -23,5 +24,7 @@ module.exports = {
 			.setDescription(`${pericia.description}\n\n**Modificadores**\n${pericia.modificadores}\n\n**Código**\n${"`"+value+"`"}\n\n**Requisitos**\n${pericia.requisitos.map(r => "`"+pericias_list[r].name+"`").join(', ')}\n\n**Custo**\n*${pericia.custo}* PE`)
 
 		await interaction.reply({embeds: [embed], ephemeral: true});
+
+		log(guild,`<@${user.id}> consultou detalhes da perícia **${pericia.name}** .`);
     }
 }
