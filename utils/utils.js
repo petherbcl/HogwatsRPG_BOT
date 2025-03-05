@@ -82,9 +82,9 @@ function FichaToWord(username, id) {
     ficha_player.PV = `${ficha_player['PV']} / ${ficha_player['PVMax']}`
     ficha_player.PM = `${ficha_player['PM']} / ${ficha_player['PMMax']}`
     ficha_player.spells = ficha_player['spells'].map(spell => spell_list[spell].name).join('\n')
-    ficha_player.vantagens = ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join('\n')
-    ficha_player.desvantagens = ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join('\n')
-    ficha_player.inventario = Object.values(player_inv.inventario).map(item => `${item.amount} x ${item.name}`).join('\n')
+    ficha_player.vantagens = (ficha_player['vantagens'] && ficha_player['vantagens'].length>0) ? ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join('\n') : 'Nenhuma vantagem adquirida'
+    ficha_player.desvantagens = (ficha_player['desvantagens'] && ficha_player['desvantagens'].length>0) ? ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join('\n') : 'Nenhuma desvantagem adquirida'
+    ficha_player.inventario = (Object.values(player_inv.inventario)>0) ? Object.values(player_inv.inventario).map(item => `${item.amount} x ${item.name}`).join('\n') : 'Nenhum item adquirido'
     ficha_player.pericias = (ficha_player['pericias'] && ficha_player['pericias'].length>0) ? ficha_player['pericias'].map(pericia => pericia_list[pericia].name).join(', ') : 'Nenhuma pericia adquirida'
     doc.render(ficha_player);
 
@@ -193,8 +193,8 @@ function createFichaEmbed(username, id) {
     const embed4 = new EmbedBuilder()
         .setColor('#ffad00')
         .addFields(
-            { name: 'Vantagens', value: ficha_player.vantagens.map(vantagem => '`' + vantagem_list[vantagem].label + '`').join('\n'), inline: true },
-            { name: 'Desvantagens', value: ficha_player.desvantagens.map(desvantagem => '`' + desvantagem_list[desvantagem].label + '`').join('\n'), inline: true },
+            { name: 'Vantagens', value: (ficha_player.vantagens && ficha_player.vantagens.length>0) ? ficha_player.vantagens.map(vantagem => '`' + vantagem_list[vantagem].label + '`').join('\n') : 'Nenhuma vantagem adquirida', inline: true },
+            { name: 'Desvantagens', value: (ficha_player.desvantagens && ficha_player.desvantagens.length>0) ? ficha_player.desvantagens.map(desvantagem => '`' + desvantagem_list[desvantagem].label + '`').join('\n') : 'Nenhuma desvantagem adquirida', inline: true },
         )
     embeds.push(embed4)
 
