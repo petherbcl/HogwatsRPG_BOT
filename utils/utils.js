@@ -85,6 +85,7 @@ function FichaToWord(username, id) {
     ficha_player.vantagens = ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join('\n')
     ficha_player.desvantagens = ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join('\n')
     ficha_player.inventario = Object.values(player_inv.inventario).map(item => `${item.amount} x ${item.name}`).join('\n')
+    ficha_player.pericias = ficha_player['pericias'].map(pericia => pericia_list[pericia].name).join(', ')
     doc.render(ficha_player);
 
     /*
@@ -215,7 +216,11 @@ function createFichaEmbed(username, id) {
 
     const embed6 = new EmbedBuilder().setColor('#ffad00')
         .setTitle('Pericias')
-        .setDescription(ficha_player.pericias.map(pericia => '`' + pericia_list[pericia].name + '`').join('\n'))
+    if(ficha_player.pericias && ficha_player.pericias.length > 0){
+        embed6.setDescription(ficha_player.pericias.map(pericia => '`' + pericia_list[pericia].name + '`').join('\n'))
+    }else{
+        embed6.setDescription('Nenhuma pericia adquirida')
+    }
     embeds.push(embed6)
 
     pericia_list

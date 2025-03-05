@@ -48,9 +48,9 @@
         }
     },
     "gringots": true,
-    "atributobuy": 0,
+    "atributobuy": 2,
     "pericia_buy_info": {
-        "1": 4,
-        "2": 1
+        "1": 0,
+        "2": 2
     }
 }

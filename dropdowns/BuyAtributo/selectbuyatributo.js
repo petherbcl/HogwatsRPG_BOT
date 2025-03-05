@@ -30,14 +30,15 @@ module.exports = {
         }else{
             ficha_player[atributo]++
             if(atributo == 'R'){
-                if(ficha_player.PV === ficha_player.PVMax){
-                    ficha_player.PV = ficha_player[atributo] * 5;
-                }
-                if(ficha_player.PM === ficha_player.PMMax){
-                    ficha_player.PM = ficha_player[atributo] * 5;
-                }
+                const pvpercentage = ficha_player.PV/ficha_player.PVMax
+                const pmpercentage = ficha_player.PM/ficha_player.PMMax
+
                 ficha_player.PVMax = ficha_player[atributo] * 5;
                 ficha_player.PMMax = ficha_player[atributo] * 5;
+
+                ficha_player.PV = Math.floor(ficha_player.PVMax * pvpercentage)
+                ficha_player.PM = Math.floor(ficha_player.PMMax * pmpercentage)
+                
             }
 
             ficha_player.PE -= 10;

@@ -6,16 +6,16 @@
     "year": 2,
     "race": "lobisomem",
     "age": 36,
-    "F": 4,
-    "H": 10,
-    "R": 1,
+    "F": 1,
+    "H": 1,
+    "R": 5,
     "A": 1,
-    "PdF": 2,
-    "PV": 7,
-    "PVMax": 20,
-    "PM": 20,
-    "PMMax": 20,
-    "PE": 0,
+    "PdF": 1,
+    "PV": 6,
+    "PVMax": 25,
+    "PM": 12,
+    "PMMax": 25,
+    "PE": 20,
     "spells": [
         "lumos",
         "nox",
@@ -40,10 +40,7 @@
         "comprimento": 24
     },
     "pericias": [
-        "feiticaria_geral",
-        "pocoes",
-        "magia_elemental",
-        "voo_e_quadribol",
-        "duelos_magicos"
+        "etiqueta_bruxa",
+        "combate_magico"
     ]
 }
