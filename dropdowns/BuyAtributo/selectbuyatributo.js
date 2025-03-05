@@ -29,6 +29,17 @@ module.exports = {
             embed.setTitle('Compra de Atributo').setDescription('Você não tem Pontos de Experiência suficientes para comprar um atributo.').setImage('https://imgur.com/4HUiueO.png');
         }else{
             ficha_player[atributo]++
+            if(atributo == 'R'){
+                if(ficha_player.PV === ficha_player.PVMax){
+                    ficha_player.PV = ficha_player[atributo] * 5;
+                }
+                if(ficha_player.PM === ficha_player.PMMax){
+                    ficha_player.PM = ficha_player[atributo] * 5;
+                }
+                ficha_player.PVMax = ficha_player[atributo] * 5;
+                ficha_player.PMMax = ficha_player[atributo] * 5;
+            }
+
             ficha_player.PE -= 10;
             ficha_player.PE = ficha_player.PE < 0 ? 0 : ficha_player.PE;
             inv_player.atributobuy = inv_player.atributobuy ? inv_player.atributobuy + 1 : 1;
