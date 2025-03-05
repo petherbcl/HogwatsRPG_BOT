@@ -215,7 +215,7 @@ function createFichaEmbed(username, id) {
 
     const embed6 = new EmbedBuilder().setColor('#ffad00')
         .setTitle('Pericias')
-        .setDescription(ficha_player.pericias.map(pericia => '`' + pericia_list[pericia].label + '`').join('\n'))
+        .setDescription(ficha_player.pericias.map(pericia => '`' + pericia_list[pericia].name + '`').join('\n'))
     embeds.push(embed6)
 
     pericia_list
