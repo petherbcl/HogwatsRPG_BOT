@@ -6,7 +6,7 @@
     "race": "Humano",
     "age": 11,
     "F": 1,
-    "H": 2,
+    "H": 3,
     "R": 1,
     "A": 1,
     "PdF": 1,
@@ -14,7 +14,7 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 62,
+    "PE": 52,
     "spells": [
         "lumos",
         "nox",
@@ -33,5 +33,6 @@
     "vantagem_obrigatoria": "Magia Elemental",
     "appearance": "Alta,magra,pele negra,cabelo cacheado abaixo dos ombros,olhos castanhos",
     "personality": "persistente,paciente,curiosa,observadora,bem homorada,desconfiada",
-    "history": "Filha de pai trouxa e mãe bruxa. Só manifestou magia aos 10 anos. Até lá foi criada como trouxa sem saber da existência do mundo mágico, omitida por opção de seus pais."
+    "history": "Filha de pai trouxa e mãe bruxa. Só manifestou magia aos 10 anos. Até lá foi criada como trouxa sem saber da existência do mundo mágico, omitida por opção de seus pais.",
+    "pericias": []
 }
