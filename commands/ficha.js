@@ -154,8 +154,9 @@ module.exports = {
 
                     fs.unlinkSync(filePathDoc);
                     fs.unlinkSync(filePathPdf);
+                }else{
+                    interaction.editReply({ content: `Você não tem permissão para usar esse comando`, ephemeral: true });
                 }
-
                 break;
             case 'pv':
                 if (isDM) {
@@ -187,6 +188,8 @@ module.exports = {
                     interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PV atual é ${ficha_player.PV} `, ephemeral: true });
 
                     log(guild,`<@${user.id}> usou comando ${"`/ficha pv`"} para alterar (${'`'+pv+'`'}) os PV da ficha de personagem de <@${player_user.user.id}> de **${logaux}** para **${ficha_player.PV}**.`);
+                }else{
+                    interaction.editReply({ content: `Você não tem permissão para usar esse comando`, ephemeral: true });
                 }
 
                 break;
@@ -218,6 +221,8 @@ module.exports = {
                     interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PVMax atual é ${ficha_player.PVMax} `, ephemeral: true });
 
                     log(guild,`<@${user.id}> usou comando ${"`/ficha pvmax`"} para alterar (${'`'+pvmax+'`'}) os PV Máximo da ficha de personagem de <@${player_user.user.id}> de **${logaux}** para **${ficha_player.PVMax}**.`);
+                }else{
+                    interaction.editReply({ content: `Você não tem permissão para usar esse comando`, ephemeral: true });
                 }
 
                 break;
@@ -251,6 +256,8 @@ module.exports = {
                     interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PM atual é ${ficha_player.PM} `, ephemeral: true });
 
                     log(guild,`<@${user.id}> usou comando ${"`/ficha pm`"} para alterar (${'`'+pm+'`'}) os PM da ficha de personagem de <@${player_user.user.id}> de **${logaux}** para **${ficha_player.PM}**.`);
+                }else{
+                    interaction.editReply({ content: `Você não tem permissão para usar esse comando`, ephemeral: true });
                 }
 
                 break;
@@ -282,6 +289,8 @@ module.exports = {
                     interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n PMMax atual é ${ficha_player.PMMax} `, ephemeral: true });
 
                     log(guild,`<@${user.id}> usou comando ${"`/ficha pmmax`"} para alterar (${'`'+pmmax+'`'}) os PM Máximo da ficha de personagem de <@${player_user.user.id}> de **${logaux}** para **${ficha_player.PMMax}**.`);
+                }else{
+                    interaction.editReply({ content: `Você não tem permissão para usar esse comando`, ephemeral: true });
                 }
 
                 break;
@@ -314,6 +323,8 @@ module.exports = {
                     interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\nPontos de Experiência atual é ${ficha_player.PE} `, ephemeral: true });
 
                     log(guild,`<@${user.id}> usou comando ${"`/ficha pe`"} para alterar (${'`'+pontos+'`'}) os PE da ficha de personagem de <@${player_user.user.id}> de **${logaux}** para **${ficha_player.PE}**.`);
+                }else{
+                    interaction.editReply({ content: `Você não tem permissão para usar esse comando`, ephemeral: true });
                 }
 
                 break
@@ -352,6 +363,8 @@ module.exports = {
                     interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\nLista de Vantagens atual é ${vantagens.map( v => vantagem_list[v].label).join(', ')} `, ephemeral: true });
 
                     log(guild,`<@${user.id}> usou comando ${"`/ficha vantagem`"} para alterar as Vantagens da ficha de personagem de <@${player_user.user.id}> de: **${logaux.map( v => vantagem_list[v].label).join(', ')}**\npara: **${ficha_player.vantagens.map( v => vantagem_list[v].label).join(', ')}**.`);
+                }else{
+                    interaction.editReply({ content: `Você não tem permissão para usar esse comando`, ephemeral: true });
                 }
 
                 break
@@ -390,6 +403,8 @@ module.exports = {
                     fs.writeFileSync(`./RPGData/players/ficha_personagem/ficha_personagem_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.json`, JSON.stringify(ficha_player, null, 4));
                     interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\nLista de Desvantagens atual é ${desvantagens.map( v => vantagem_list[v].label).join(', ')} `, ephemeral: true });
                     log(guild,`<@${user.id}> usou comando ${"`/ficha desvantagem`"} para alterar as Desvantagens da ficha de personagem de <@${player_user.user.id}> de:**${logaux.map( v => desvantagem_list[v].label).join(', ')}**\npara: **${ficha_player.desvantagens.map( v => desvantagem_list[v].label).join(', ')}**.`);
+                }else{
+                    interaction.editReply({ content: `Você não tem permissão para usar esse comando`, ephemeral: true });
                 }
 
                 break
@@ -426,6 +441,8 @@ module.exports = {
                     interaction.editReply({ content: `Player **${player_user.nickname || player_user.user.globalName || player_user.user.username}**\n${caracteristica} atual é ${valor} `, ephemeral: true });
 
                     log(guild,`<@${user.id}> usou comando ${"`/ficha caracteristicas`"} para alterar a caracteristiva **${caracteristica}** da ficha de personagem de <@${player_user.user.id}> de **${logaux}** para **${valor}**.`);
+                }else{
+                    interaction.editReply({ content: `Você não tem permissão para usar esse comando`, ephemeral: true });
                 }
 
                 break

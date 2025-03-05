@@ -5,16 +5,16 @@
     "year": 1,
     "race": "Mestiço",
     "age": 11,
-    "F": 1,
+    "F": 2,
     "H": 4,
     "R": 1,
     "A": 1,
-    "PdF": 1,
+    "PdF": 2,
     "PV": 5,
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 32,
+    "PE": 2,
     "spells": [
         "alohomora",
         "lumos",
@@ -39,5 +39,8 @@
         "madeira": "Cedro",
         "nucleo": "Essência de Cinzal",
         "comprimento": 15
-    }
+    },
+    "pericias": [
+        "feiticaria_geral"
+    ]
 }

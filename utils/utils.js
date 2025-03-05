@@ -85,7 +85,7 @@ function FichaToWord(username, id) {
     ficha_player.vantagens = ficha_player['vantagens'].map(vantagem => vantagem_list[vantagem].label).join('\n')
     ficha_player.desvantagens = ficha_player['desvantagens'].map(desvantagem => desvantagem_list[desvantagem].label).join('\n')
     ficha_player.inventario = Object.values(player_inv.inventario).map(item => `${item.amount} x ${item.name}`).join('\n')
-    ficha_player.pericias = ficha_player['pericias'].map(pericia => pericia_list[pericia].name).join(', ')
+    ficha_player.pericias = (ficha_player['pericias'] && ficha_player['pericias'].length>0) ? ficha_player['pericias'].map(pericia => pericia_list[pericia].name).join(', ') : 'Nenhuma pericia adquirida'
     doc.render(ficha_player);
 
     /*

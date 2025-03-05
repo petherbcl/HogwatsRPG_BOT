@@ -1,4 +1,6 @@
-const { ActivityType, PermissionsBitField, ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder } = require("discord.js");
+const fs = require('fs');
+const path = require('path');
+const { ActivityType } = require("discord.js");
 
 module.exports = {
     name: "ready",
@@ -9,7 +11,7 @@ module.exports = {
             type: ActivityType.Custom,
         });
 
-        const guild = client.guilds.cache.get('1312930894235041844'); // SERVER ID
+        const guild = client.guilds.cache.get('1311463928340938854'); // SERVER ID
         if (!guild) return console.error("Guild not found");
 
         await guild.roles.fetch(); // Força o carregamento da cache
@@ -596,5 +598,38 @@ module.exports = {
         ];
 
         console.error(`!!! BOT READY !!!`);
+
+
+        /** limpeza */
+        // Caminho para a pasta players
+        const playersDir = path.join(__dirname, '../RPGData/players');
+        // Listar todos os arquivos na pasta players
+        fs.readdir(playersDir, async (err, files) => {
+            if (err) {
+                console.error("Erro ao ler a pasta players:", err);
+                return;
+            }
+            for (const file of files) {
+                // Verificar se o arquivo corresponde ao padrão inv_[user]_[id].json
+                const match = file.match(/^inv_.*_(\d+)\.json$/);
+                if (match) {
+                    const userId = match[1];
+                    const member = await guild.members.fetch(userId).catch(() => null);
+
+                    // Se o usuário não existe na guilda, apagar o arquivo
+                    if (!member) {
+                        const filePath = path.join(playersDir, file);
+                        fs.unlink(filePath, (err) => {
+                            if (err) {
+                                console.error(`Erro ao apagar o arquivo ${file}:`, err);
+                            } else {
+                                console.log(`Arquivo ${file} apagado com sucesso.`);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+        console.error(`!!! Limpeza de ficheiro terminada !!!`);
     },
 };
