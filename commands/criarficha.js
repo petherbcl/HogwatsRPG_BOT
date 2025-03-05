@@ -9,16 +9,17 @@ const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8
 const vantagem_desvantagem_by_year = JSON.parse(fs.readFileSync(`./RPGData/vantagem_desvantagem_by_year.json`, 'utf8'))
 const desvantagem_list = JSON.parse(fs.readFileSync(`./RPGData/desvantagem_list.json`, 'utf8'))
 const vantagem_list = JSON.parse(fs.readFileSync(`./RPGData/vantagem_list.json`, 'utf8'))
+const systemconfig = JSON.parse(fs.readFileSync(`./RPGData/systemconfig.json`, 'utf8'))
 
 const questions = {
 
-    name: { label: 'Nome:', type: 'string', question: true },
-    photo: { label: 'Adicione o link da foto ou a foto do seu personagem', type: 'string', question: true },
-    house: { label: 'Casa de Hogwarts: (Grifinória, Sonserina, Corvinal, Lufa-Lufa)?', type: 'string', question: true },
-    //year: { label: 'Ano Escolar: (1, 2, 3, 4, 5, 6, 7)?', type: 'number', question: true },
+    // name: { label: 'Nome:', type: 'string', question: true },
+    // photo: { label: 'Adicione o link da foto ou a foto do seu personagem', type: 'string', question: true },
+    // house: { label: 'Casa de Hogwarts: (Grifinória, Sonserina, Corvinal, Lufa-Lufa)?', type: 'string', question: true },
+    // //year: { label: 'Ano Escolar: (1, 2, 3, 4, 5, 6, 7)?', type: 'number', question: true },
     job: { label: 'Você é Aluno ou Professor?\nResponda com *Aluno* ou *Professor*', type: 'string', question: true },
-    race: { label: 'Raça: (Humano, meio-veela, lobisomem, mestiço, etc.)', type: 'string', question: true },
-    age: { label: 'Idade:', type: 'number', question: true },
+    // race: { label: 'Raça: (Humano, meio-veela, lobisomem, mestiço, etc.)', type: 'string', question: true },
+    // age: { label: 'Idade:', type: 'number', question: true },
 
     features: { label: 'Características\n*Distribua {0} pontos entre as características:*\n* **Força(F)**\n* **Habilidade(H)**\n* **Resistência(R)**\n* **Armadura(A)**\n* **Poder de Fogo(PdF)**', type: 'string', question: false },
     F: { label: 'Força (F):', type: 'number', question: true },
@@ -66,7 +67,7 @@ const fichaCampos = {
     history: 'História/Antecedentes',
 }
 
-function answerValidator(index, answer) {
+function answerValidator(index, answer, ficha) {
     const key = Object.keys(questions)[index];
     const question = Object.values(questions)[index];
 
@@ -136,6 +137,12 @@ function answerValidator(index, answer) {
             }
         }
 
+    }
+
+    if(['F','H','R','A','PDF'.includes(key.toUpperCase())] && ficha.job==='ALUNO'){
+        if(answer > systemconfig.habilidades.max_ano[ficha.year]){
+            return 'Por favor, responda com um número entre 0 e 5.';
+        }
     }
 
     return null;
@@ -219,10 +226,10 @@ module.exports = {
                             question.label = StringFormat(question.label, PE)
                         }
 
-                        if(currentQuestion > 0 && question.question===true ){
-                            const fetchedMessages = await channel.messages.fetch({ limit: 1 });
-                            await channel.bulkDelete(fetchedMessages, true);
-                        }
+                        // if(currentQuestion > 0 && question.question===true ){
+                        //     const fetchedMessages = await channel.messages.fetch({ limit: 1 });
+                        //     await channel.bulkDelete(fetchedMessages, true);
+                        // }
 
                         embed.setDescription(question.label)
                         await interaction.editReply({ embeds: [embed], ephemeral: true });
@@ -242,10 +249,11 @@ module.exports = {
                                 }
                                 
                             }
+                            collected.first().delete()
                             answer.replace(`"`, `'`)
                             answer = question.type === 'number' ? parseInt(answer) : answer;
 
-                            const validation = answerValidator(currentQuestion, answer)
+                            const validation = answerValidator(currentQuestion, answer, ficha_personagem)
                             if (validation) {
                                 embed.setDescription(validation)
                                 await interaction.editReply({ embeds: [embed], ephemeral: true });
@@ -295,11 +303,9 @@ module.exports = {
                                     PE = 24
                                 }
                             } else {
-                                console.log(key, answer);
                                 ficha_personagem[key] = answer
                             }
 
-                            // console.log(`Pergunta: ${question.label}, Resposta: ${answer}`);
                         } else {
                             await new Promise(resolve => setTimeout(resolve, 3000));
                         }

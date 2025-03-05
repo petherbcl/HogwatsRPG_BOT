@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { MessageFlags, EmbedBuilder } = require('discord.js');
 const { RemoveSpecialCharacters, log } = require('../../utils/utils');
-const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
+const systemconfig = JSON.parse(fs.readFileSync(`./RPGData/systemconfig.json`, 'utf8'))
 
 const attr_desc = {
     'F': 'Força',
@@ -27,6 +27,8 @@ module.exports = {
         const embed = new EmbedBuilder().setColor('#ffad00')
         if(ficha_player.PE < 10){
             embed.setTitle('Compra de Atributo').setDescription('Você não tem Pontos de Experiência suficientes para comprar um atributo.').setImage('https://imgur.com/4HUiueO.png');
+        }else if(ficha_player[atributo] + 1 > systemconfig.habilidades.max_ano[ficha_player.year]){
+            embed.setTitle('Compra de Atributo').setDescription(`Você já atingiu o limite de atributos para **${attr_desc[atributo]}** do seu ano.`).setImage('https://imgur.com/4HUiueO.png');
         }else{
             ficha_player[atributo]++
             if(atributo == 'R'){
