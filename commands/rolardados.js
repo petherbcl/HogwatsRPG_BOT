@@ -31,7 +31,7 @@ module.exports = {
         .setName('rolardados')
         .setDescription('Simula a rolagem de dados.')
         .addStringOption(option => option.setName('dados').setDescription('Notação dos dados para rolar (ex: 3D20 2D6)').setRequired(true)),
-    async execute(interaction) {
+    async execute(interaction, client) {
 
         const guild = client.guilds.cache.get(interaction.guildId);
         const member = guild.members.cache.get(interaction.user.id);
