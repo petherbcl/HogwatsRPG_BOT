@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { log } = require("../utils/utils");
 
 function rollDice(diceNotation) {
     const [numDice, numSides] = diceNotation.split('D').map(Number);
