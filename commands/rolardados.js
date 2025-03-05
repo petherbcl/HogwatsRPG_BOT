@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { log } = require("../utils/utils");
+const { log } = require("../utils/utils.js");
 
 function rollDice(diceNotation) {
     const [numDice, numSides] = diceNotation.split('D').map(Number);
@@ -32,6 +32,12 @@ module.exports = {
         .setDescription('Simula a rolagem de dados.')
         .addStringOption(option => option.setName('dados').setDescription('Notação dos dados para rolar (ex: 3D20 2D6)').setRequired(true)),
     async execute(interaction) {
+
+        const guild = client.guilds.cache.get(interaction.guildId);
+        const member = guild.members.cache.get(interaction.user.id);
+        const user = interaction.user;
+        const channel = interaction.channel;
+
         const diceNotation = interaction.options.getString('dados').toUpperCase();
         const args = diceNotation.split(' ');
 
