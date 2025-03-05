@@ -300,7 +300,7 @@
     "requisitos": ["metamorfomagia"],
     "custo": 10
   },
-   "aparatação_e_magia_de_transporte": {
+   "aparatacao_e_magia_de_transporte": {
     "name": "Aparatação e Magia de Transporte",
     "description": "Viagens instantâneas com aparatação e Chaves de Portal",
     "modificadores": "Adiciona 1 na hora da conjuração (a cada 2 anos, adiciona mais 1)",
