@@ -17,6 +17,7 @@ const { EmbedBuilder } = require('discord.js');
 const spell_list = JSON.parse(fs.readFileSync(`./RPGData/spell_list.json`, 'utf8'))
 const desvantagem_list = JSON.parse(fs.readFileSync(`./RPGData/desvantagem_list.json`, 'utf8'))
 const vantagem_list = JSON.parse(fs.readFileSync(`./RPGData/vantagem_list.json`, 'utf8'))
+const pericia_list = JSON.parse(fs.readFileSync(`./RPGData/pericias.json`, 'utf8'))
 
 const template_file = {
     'Grifinória': 'template_g',
@@ -212,8 +213,15 @@ function createFichaEmbed(username, id) {
     }
     embeds.push(embed5)
 
+    const embed6 = new EmbedBuilder().setColor('#ffad00')
+        .setTitle('Pericias')
+        .setDescription(ficha_player.pericias.map(pericia => '`' + pericia_list[pericia].label + '`').join('\n'))
+    embeds.push(embed6)
+
+    pericia_list
+
     if (ficha_player.varinha) {
-        const embed6 = new EmbedBuilder()
+        const embed7 = new EmbedBuilder()
             .setColor('#ffad00')
             .setTitle(`Varinha`)
             .addFields(
@@ -223,26 +231,26 @@ function createFichaEmbed(username, id) {
             )
             .setImage(ficha_player.varinha.url)
 
-        embeds.push(embed6)
+        embeds.push(embed7)
     }
-
-    const embed7 = new EmbedBuilder()
-        .setColor('#ffad00')
-        .setTitle(`Aparência`)
-        .setDescription(ficha_player.appearance)
-    embeds.push(embed7)
 
     const embed8 = new EmbedBuilder()
         .setColor('#ffad00')
-        .setTitle(`Personalidade`)
-        .setDescription(ficha_player.personality)
+        .setTitle(`Aparência`)
+        .setDescription(ficha_player.appearance)
     embeds.push(embed8)
 
     const embed9 = new EmbedBuilder()
         .setColor('#ffad00')
+        .setTitle(`Personalidade`)
+        .setDescription(ficha_player.personality)
+    embeds.push(embed9)
+
+    const embed10 = new EmbedBuilder()
+        .setColor('#ffad00')
         .setTitle(`História/Antecedentes`)
         .setDescription(ficha_player.history.slice(0, 4096))
-    embeds.push(embed9)
+    embeds.push(embed10)
 
     return embeds
 }
