@@ -7,15 +7,15 @@
     "race": "Mestiço",
     "age": 11,
     "F": 1,
-    "H": 1,
+    "H": 4,
     "R": 1,
     "A": 1,
-    "PdF": 1,
+    "PdF": 2,
     "PV": 5,
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 72,
+    "PE": 22,
     "spells": [
         "lumos",
         "nox",
@@ -40,5 +40,8 @@
         "madeira": "Álamo",
         "nucleo": "Pena de Fênix",
         "comprimento": 30
-    }
+    },
+    "pericias": [
+        "voo_e_quadribol"
+    ]
 }

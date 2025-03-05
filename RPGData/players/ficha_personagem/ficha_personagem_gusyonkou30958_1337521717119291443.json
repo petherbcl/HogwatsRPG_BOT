@@ -6,7 +6,7 @@
     "race": "Mestiço",
     "age": 11,
     "F": 1,
-    "H": 2,
+    "H": 4,
     "R": 1,
     "A": 1,
     "PdF": 1,
@@ -14,7 +14,7 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 52,
+    "PE": 32,
     "spells": [
         "alohomora",
         "lumos",

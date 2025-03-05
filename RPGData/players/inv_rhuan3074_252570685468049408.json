@@ -88,5 +88,8 @@
     },
     "gringots": true,
     "casa": true,
-    "atributobuy": 3
+    "atributobuy": 4,
+    "pericia_buy_info": {
+        "1": 1
+    }
 }

@@ -7,14 +7,14 @@
     "age": 11,
     "F": 0,
     "H": 5,
-    "R": 4,
+    "R": 5,
     "A": 0,
     "PdF": 0,
-    "PV": 20,
-    "PVMax": 20,
-    "PM": 20,
-    "PMMax": 20,
-    "PE": 42,
+    "PV": 25,
+    "PVMax": 25,
+    "PM": 25,
+    "PMMax": 25,
+    "PE": 22,
     "spells": [
         "lumos",
         "nox",
@@ -36,5 +36,8 @@
         "nucleo": "Chifre de Serpente Chifruda Albina",
         "comprimento": 21
     },
-    "photo": "https://r2.fivemanage.com/image/VGtogbzS5v0w.jpg"
+    "photo": "https://r2.fivemanage.com/image/VGtogbzS5v0w.jpg",
+    "pericias": [
+        "feiticaria_geral"
+    ]
 }

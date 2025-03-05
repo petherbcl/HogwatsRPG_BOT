@@ -6,7 +6,7 @@
     "race": "Bruxo Puro Sangue",
     "age": 11,
     "F": 1,
-    "H": 1,
+    "H": 5,
     "R": 2,
     "A": 0,
     "PdF": 2,
@@ -14,7 +14,7 @@
     "PVMax": 10,
     "PM": 10,
     "PMMax": 10,
-    "PE": 72,
+    "PE": 22,
     "spells": [
         "alohomora",
         "lumos",
@@ -40,5 +40,8 @@
         "nucleo": "Fibra de Coração de Dragão",
         "comprimento": 12
     },
-    "photo": "https://r2.fivemanage.com/image/ux08FcYKe2zz.jpg"
+    "photo": "https://r2.fivemanage.com/image/ux08FcYKe2zz.jpg",
+    "pericias": [
+        "feiticaria_geral"
+    ]
 }
