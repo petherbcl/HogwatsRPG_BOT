@@ -630,6 +630,6 @@ module.exports = {
                 }
             }
         });
-        console.error(`!!! Limpeza de ficheiro terminada !!!`);
+        console.error(`!!! Limpeza de ficheiros terminada !!!`);
     },
 };

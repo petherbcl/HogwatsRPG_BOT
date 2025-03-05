@@ -45,7 +45,7 @@ module.exports = {
                     .setCustomId(`selectspell_${i}`)
                 
                 const spells_slice = spells.slice(i*25, (i+1)*25)
-                selectmenu.setPlaceholder(`Selecione um feitiço - [${spell_list[spells_slice[0]].name.charAt(0)} ${spell_list[spells_slice[spells_slice.length-1]].name.charAt(0)}]`)
+                selectmenu.setPlaceholder(`Selecione um feitiço [${spell_list[spells_slice[0]].name.charAt(0)} - ${spell_list[spells_slice[spells_slice.length-1]].name.charAt(0)}]`)
 
                 for(const spell of spells_slice){
                     selectmenu.addOptions(new StringSelectMenuOptionBuilder().setLabel(spell_list[spell].name).setValue(spell))
