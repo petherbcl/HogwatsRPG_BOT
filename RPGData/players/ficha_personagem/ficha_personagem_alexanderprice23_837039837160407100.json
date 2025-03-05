@@ -8,23 +8,21 @@
     "age": 11,
     "F": 0,
     "H": 5,
-    "R": 1,
+    "R": 2,
     "A": 0,
     "PdF": 1,
-    "PV": 5,
-    "PVMax": 5,
-    "PM": 5,
-    "PMMax": 5,
-    "PE": 10,
+    "PV": 10,
+    "PVMax": 10,
+    "PM": 10,
+    "PMMax": 10,
+    "PE": 0,
     "spells": [
         "lumos",
         "nox",
         "alohomora"
     ],
     "vantagens": [
-        "sentidos_agucados",
-        "bom_de_fuga",
-        "conhecimento_proibido"
+        "bom_de_fuga"
     ],
     "desvantagens": [
         "problemas_com_pocoes"
@@ -33,5 +31,11 @@
     "appearance": "Cabelos loiros natural que ela sempre mantém impecável, olhos verdes e intensos que parecem observar cada detalhe ao redor, e uma postura ereta que denota autoconfiança incomum para sua idade",
     "personality": "Astuta, calculista, manipuladora e ambiciosa. Natalie é capaz de se adaptar rapidamente às situações, mas não hesita em manipular os outros para alcançar seus objetivos. Sabe quando estão tentando usá-la e gosta de fingir ingenuidade para contornar o cenário a seu favor.",
     "history": "Natalie O'Brien é o retrato perfeito do lema de Sonserina: astúcia, ambição e determinação. Desde o primeiro dia em Hogwarts, ela deixará claro que fará de tudo para alcançar o sucesso. Inteligente e persuasiva, Natalie usa suas palavras como armas, manipulando situações e pessoas para conseguir o que quer. Seu sorriso confiante e olhar calculista escondem uma mente estrategista, sempre um passo à frente. A ambição de Natalie não é apenas por poder, mas pela liberdade de ser quem ela deseja, sem limitações impostas por outros. Ela despreza a mediocridade e acredita que o mundo é dividido entre aqueles que tomam o que desejam e aqueles que assistem passivamente. Natalie vem de uma antiga família bruxa de classe média que, apesar de não ser tradicionalmente rica, sempre valorizou o conhecimento e a excelência. Seu pai é um Auror reconhecido, mas rígido, que acredita no trabalho duro como a única maneira de obter reconhecimento. Sua mãe é uma criadora de poções renomada, cuja frieza e pragmatismo claramente influenciaram a filha. Cansada das comparações constantes e da pressão familiar, Natalie se rebelou. Decidiu provar que não precisava seguir o caminho \"honrado\" de seu pai ou a ética perfeccionista de sua mãe. Ela almeja algo maior — um legado que seja apenas dela, ainda que isso signifique quebrar as regras ou manipular aqueles ao seu redor.",
-    "pericias": []
+    "pericias": [],
+    "varinha": {
+        "url": "https://r2.fivemanage.com/image/G5v6KMrp5MWv.jpg",
+        "madeira": "Cerejeira",
+        "nucleo": "Pena de Fênix",
+        "comprimento": 17
+    }
 }

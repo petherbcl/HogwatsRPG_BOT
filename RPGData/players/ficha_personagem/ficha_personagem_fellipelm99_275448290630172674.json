@@ -15,7 +15,7 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 22,
+    "PE": 2,
     "spells": [
         "lumos",
         "nox",
@@ -42,6 +42,8 @@
         "comprimento": 30
     },
     "pericias": [
-        "voo_e_quadribol"
+        "voo_e_quadribol",
+        "feiticaria_geral",
+        "pocoes"
     ]
 }
