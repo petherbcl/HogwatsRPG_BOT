@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { ActivityType } = require("discord.js");
+const { startClock } = require('../utils/relogio');
 
 module.exports = {
     name: "ready",
@@ -631,5 +632,9 @@ module.exports = {
             }
         });
         console.error(`!!! Limpeza de ficheiros terminada !!!`);
+
+        /** START RELOGIO */
+        console.error(`!!! START RELOGIO !!!`);
+        startClock(client);
     },
 };
