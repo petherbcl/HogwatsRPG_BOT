@@ -18,7 +18,9 @@
     "spells": [
         "alohomora",
         "lumos",
-        "nox"
+        "nox",
+        "flipendo",
+        "protego_nivel_1"
     ],
     "vantagens": [
         "curioso",
@@ -42,6 +44,7 @@
     },
     "photo": "https://r2.fivemanage.com/image/V1vpb0xNWJiz.jpg",
     "pericias": [
-        "feiticaria_geral"
+        "feiticaria_geral",
+        "magia_elemental"
     ]
 }

@@ -15,11 +15,13 @@
     "PVMax": 10,
     "PM": 10,
     "PMMax": 10,
-    "PE": 32,
+    "PE": 37,
     "spells": [
         "alohomora",
         "lumos",
-        "nox"
+        "nox",
+        "flipendo",
+        "protego_nivel_1"
     ],
     "vantagens": [
         "talento_natural"
@@ -36,5 +38,8 @@
         "madeira": "Pinho",
         "nucleo": "Espinho de Manticora",
         "comprimento": 25
-    }
+    },
+    "pericias": [
+        "magia_elemental"
+    ]
 }

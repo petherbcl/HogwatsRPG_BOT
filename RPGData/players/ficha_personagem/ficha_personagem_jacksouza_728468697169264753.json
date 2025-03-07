@@ -6,7 +6,7 @@
     "race": "Humano",
     "age": 11,
     "F": 1,
-    "H": 3,
+    "H": 5,
     "R": 1,
     "A": 1,
     "PdF": 1,
@@ -14,11 +14,13 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 52,
+    "PE": 57,
     "spells": [
         "lumos",
         "nox",
-        "alohomora"
+        "alohomora",
+        "flipendo",
+        "protego_nivel_1"
     ],
     "vantagens": [
         "talento_natural",

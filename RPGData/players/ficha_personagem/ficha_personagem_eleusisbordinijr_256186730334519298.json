@@ -7,18 +7,20 @@
     "age": 11,
     "F": 0,
     "H": 5,
-    "R": 1,
+    "R": 3,
     "A": 2,
     "PdF": 0,
-    "PV": 5,
-    "PM": 5,
-    "PE": 52,
-    "PVMax": 5,
-    "PMMax": 5,
+    "PV": 15,
+    "PM": 15,
+    "PE": 37,
+    "PVMax": 15,
+    "PMMax": 15,
     "spells": [
         "nox",
         "lumos",
-        "alohomora"
+        "alohomora",
+        "protego_nivel_1",
+        "flipendo"
     ],
     "vantagens": [
         "curioso"
@@ -36,5 +38,8 @@
         "madeira": "Pau-Brasil",
         "nucleo": "Pena de Fênix",
         "comprimento": 32
-    }
+    },
+    "pericias": [
+        "feiticaria_geral"
+    ]
 }
