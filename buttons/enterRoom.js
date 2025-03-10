@@ -71,15 +71,17 @@ module.exports = async function (room, interaction, client) {
             break;
         }
     }
-
+console.log(1)
     if (allow) {
         try {
+            console.log(role)
             await interaction.member.roles.add(role);
             const currentRole = guild.roles.cache.find((role) => role.name === client.roomRoles[member.voice.channel.name]);
+            console.log(currentRole)
             if (currentRole) {
                 await interaction.member.roles.remove(currentRole);
             }
-
+            console.log(room)
             const channel = guild.channels.cache.find((c) => c.name === room);
             await interaction.member.voice.setChannel(channel);
             console.log(`Usuário ${interaction.member.user.tag} movido para ${channel.name}`);
