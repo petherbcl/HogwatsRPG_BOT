@@ -12,7 +12,7 @@
     "PdF": 0,
     "PV": 15,
     "PM": 15,
-    "PE": 37,
+    "PE": 32,
     "PVMax": 15,
     "PMMax": 15,
     "spells": [
@@ -40,6 +40,9 @@
         "comprimento": 32
     },
     "pericias": [
-        "feiticaria_geral"
+        "feiticaria_geral",
+        "voo_e_quadribol",
+        "historia_da_magia",
+        "magia_elemental"
     ]
 }

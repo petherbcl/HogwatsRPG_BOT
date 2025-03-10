@@ -15,11 +15,13 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 27,
+    "PE": 42,
     "spells": [
         "lumos",
         "nox",
-        "alohomora"
+        "alohomora",
+        "flipendo",
+        "protego_nivel_1"
     ],
     "vantagens": [
         "familiar_especial",

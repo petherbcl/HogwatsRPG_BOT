@@ -14,7 +14,7 @@
     "PVMax": 25,
     "PM": 25,
     "PMMax": 25,
-    "PE": 32,
+    "PE": 47,
     "spells": [
         "lumos",
         "nox",
@@ -40,6 +40,7 @@
     },
     "photo": "https://r2.fivemanage.com/image/VGtogbzS5v0w.jpg",
     "pericias": [
-        "feiticaria_geral"
+        "feiticaria_geral",
+        "historia_da_magia"
     ]
 }

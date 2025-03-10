@@ -14,7 +14,7 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 12,
+    "PE": 17,
     "spells": [
         "alohomora",
         "lumos",
@@ -43,6 +43,7 @@
         "comprimento": 15
     },
     "pericias": [
-        "feiticaria_geral"
+        "feiticaria_geral",
+        "pocoes"
     ]
 }
