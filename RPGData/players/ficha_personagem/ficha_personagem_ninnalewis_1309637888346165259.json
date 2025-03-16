@@ -14,7 +14,7 @@
     "PVMax": 10,
     "PM": 10,
     "PMMax": 10,
-    "PE": 47,
+    "PE": 70,
     "spells": [
         "alohomora",
         "lumos",
@@ -45,6 +45,8 @@
     "photo": "https://r2.fivemanage.com/image/V1vpb0xNWJiz.jpg",
     "pericias": [
         "feiticaria_geral",
-        "magia_elemental"
+        "magia_elemental",
+        "pocoes",
+        "herbologia"
     ]
 }
