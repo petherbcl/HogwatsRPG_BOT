@@ -15,13 +15,16 @@
     "PVMax": 10,
     "PM": 10,
     "PMMax": 10,
-    "PE": 90,
+    "PE": 105,
     "spells": [
         "alohomora",
         "lumos",
         "nox",
         "flipendo",
-        "protego_nivel_1"
+        "protego_nivel_1",
+        "reparo",
+        "commoror_virga",
+        "expelliarmus"
     ],
     "vantagens": [
         "talento_natural"
@@ -41,6 +44,7 @@
     },
     "pericias": [
         "magia_elemental",
-        "pocoes"
+        "pocoes",
+        "feiticaria_geral"
     ]
 }

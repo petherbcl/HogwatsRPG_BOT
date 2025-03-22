@@ -14,13 +14,16 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 120,
+    "PE": 145,
     "spells": [
         "lumos",
         "nox",
         "alohomora",
         "flipendo",
-        "protego_nivel_1"
+        "protego_nivel_1",
+        "commoror_virga",
+        "reparo",
+        "expelliarmus"
     ],
     "vantagens": [
         "talento_natural",
@@ -36,5 +39,7 @@
     "appearance": "Alta,magra,pele negra,cabelo cacheado abaixo dos ombros,olhos castanhos",
     "personality": "persistente,paciente,curiosa,observadora,bem homorada,desconfiada",
     "history": "Filha de pai trouxa e mãe bruxa. Só manifestou magia aos 10 anos. Até lá foi criada como trouxa sem saber da existência do mundo mágico, omitida por opção de seus pais.",
-    "pericias": []
+    "pericias": [
+        "voo_e_quadribol"
+    ]
 }

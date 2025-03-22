@@ -14,13 +14,15 @@
     "PVMax": 25,
     "PM": 25,
     "PMMax": 25,
-    "PE": 65,
+    "PE": 95,
     "spells": [
         "lumos",
         "nox",
         "alohomora",
         "flipendo",
-        "protego_nivel_1"
+        "protego_nivel_1",
+        "expelliarmus",
+        "reparo"
     ],
     "vantagens": [
         "curioso"

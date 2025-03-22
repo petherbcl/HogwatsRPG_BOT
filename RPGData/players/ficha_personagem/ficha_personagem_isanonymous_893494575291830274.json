@@ -12,7 +12,7 @@
     "PdF": 0,
     "PV": 15,
     "PM": 15,
-    "PE": 75,
+    "PE": 110,
     "PVMax": 15,
     "PMMax": 15,
     "spells": [
@@ -20,7 +20,8 @@
         "nox",
         "alohomora",
         "flipendo",
-        "protego_nivel_1"
+        "protego_nivel_1",
+        "reparo"
     ],
     "vantagens": [
         "mente_afiada",

@@ -111,6 +111,8 @@
         }
     },
     "gringots": true,
-    "pericia_buy_info": {},
+    "pericia_buy_info": {
+        "1": 1
+    },
     "atributobuy": 3
 }

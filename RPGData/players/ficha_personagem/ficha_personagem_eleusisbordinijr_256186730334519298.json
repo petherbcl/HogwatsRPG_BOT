@@ -12,7 +12,7 @@
     "PdF": 0,
     "PV": 15,
     "PM": 15,
-    "PE": 70,
+    "PE": 95,
     "PVMax": 15,
     "PMMax": 15,
     "spells": [
@@ -20,7 +20,10 @@
         "lumos",
         "alohomora",
         "protego_nivel_1",
-        "flipendo"
+        "flipendo",
+        "reparo",
+        "commoror_virga",
+        "expelliarmus"
     ],
     "vantagens": [
         "curioso"
