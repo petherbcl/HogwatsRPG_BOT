@@ -15,14 +15,19 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 135,
+    "PE": 120,
     "spells": [
         "lumos",
         "nox",
         "alohomora",
         "flipendo",
         "protego_nivel_1",
-        "reparo"
+        "reparo",
+        "expelliarmus",
+        "periculum",
+        "revelio",
+        "wingardium_leviosa",
+        "commoror_virga"
     ],
     "vantagens": [
         "familiar_especial",
