@@ -12,7 +12,7 @@
     "PdF": 0,
     "PV": 15,
     "PM": 15,
-    "PE": 130,
+    "PE": 115,
     "PVMax": 15,
     "PMMax": 15,
     "spells": [
@@ -21,7 +21,10 @@
         "alohomora",
         "flipendo",
         "protego_nivel_1",
-        "reparo"
+        "reparo",
+        "periculum",
+        "revelio",
+        "wingardium_leviosa"
     ],
     "vantagens": [
         "mente_afiada",

@@ -137,7 +137,7 @@ Que a sua passagem por Hogwarts seja repleta de aventuras e aprendizado!
 
 Com os melhores cumprimentos,
 Direção de Hogwarts
-🦉✨`).setImage('https://imgur.com/g0NU8LS.png');;
+🦉✨`).setImage('https://imgur.com/g0NU8LS.png');
 
     const button = new ButtonBuilder().setCustomId('sendNewLetter').setStyle(ButtonStyle.Primary).setLabel('Enviar Carta');
     const row = new ActionRowBuilder().addComponents(button);

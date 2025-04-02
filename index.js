@@ -135,7 +135,7 @@ client.on('interactionCreate', async function(interaction) {
 
 
 client.on('interactionCreate', async function(interaction) {
-    if (!interaction.isStringSelectMenu()) return;
+    if (!interaction.isStringSelectMenu() && !interaction.isUserSelectMenu()) return;
     await InteractionHandler(interaction, 'dropdowns');
 });
 
