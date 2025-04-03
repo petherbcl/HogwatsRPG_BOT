@@ -14,7 +14,7 @@
     "PVMax": 25,
     "PM": 25,
     "PMMax": 25,
-    "PE": 95,
+    "PE": 75,
     "spells": [
         "lumos",
         "nox",
@@ -22,7 +22,13 @@
         "flipendo",
         "protego_nivel_1",
         "expelliarmus",
-        "reparo"
+        "reparo",
+        "commoror_virga",
+        "furunculus",
+        "protego_horribillis",
+        "periculum",
+        "revelio",
+        "wingardium_leviosa"
     ],
     "vantagens": [
         "curioso"
