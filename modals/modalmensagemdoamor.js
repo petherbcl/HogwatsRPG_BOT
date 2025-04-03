@@ -29,7 +29,7 @@ ${message}
         
         await CartaAmorChannel.send({content:`Oi <@${player}>, alguem enviou uma carta de amor para você.`, embeds: [embed], ephemeral: false });
 
-log(guild,`<@${user.id}> enviou carta de amor para <@${player}>
+log(guild,`<@${player}> recebeu carta de amor.
 Mensagem: ${message}`);
 
         await interaction.reply({ content: 'Mensagem enviada com sucesso!', flags: MessageFlags.Ephemeral });
