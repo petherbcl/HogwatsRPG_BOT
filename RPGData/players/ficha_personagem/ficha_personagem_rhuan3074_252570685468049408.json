@@ -14,7 +14,7 @@
     "PVMax": 25,
     "PM": 25,
     "PMMax": 25,
-    "PE": 75,
+    "PE": 60,
     "spells": [
         "lumos",
         "nox",
@@ -28,7 +28,12 @@
         "protego_horribillis",
         "periculum",
         "revelio",
-        "wingardium_leviosa"
+        "wingardium_leviosa",
+        "colloshoo",
+        "depulso",
+        "eletricus",
+        "ranhosa",
+        "mimble_wimble"
     ],
     "vantagens": [
         "curioso"

@@ -12,7 +12,7 @@
     "PdF": 0,
     "PV": 15,
     "PM": 15,
-    "PE": 125,
+    "PE": 100,
     "PVMax": 15,
     "PMMax": 15,
     "spells": [
@@ -23,7 +23,18 @@
         "flipendo",
         "reparo",
         "commoror_virga",
-        "expelliarmus"
+        "expelliarmus",
+        "wingardium_leviosa",
+        "furunculus",
+        "periculum",
+        "protego_horribillis",
+        "revelio",
+        "depulso",
+        "eletricus",
+        "colloshoo",
+        "lumos_solem",
+        "currente_calamo",
+        "scourgify"
     ],
     "vantagens": [
         "curioso"

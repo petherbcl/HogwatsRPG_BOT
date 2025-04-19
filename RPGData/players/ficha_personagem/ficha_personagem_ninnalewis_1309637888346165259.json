@@ -14,7 +14,7 @@
     "PVMax": 10,
     "PM": 10,
     "PMMax": 10,
-    "PE": 120,
+    "PE": 140,
     "spells": [
         "alohomora",
         "lumos",
@@ -28,7 +28,13 @@
         "periculum",
         "revelio",
         "protego_horribillis",
-        "furunculus"
+        "furunculus",
+        "kadabrus",
+        "colloshoo",
+        "depulso",
+        "eletricus",
+        "mimble_wimble",
+        "ranhosa"
     ],
     "vantagens": [
         "curioso",
@@ -50,7 +56,7 @@
         "nucleo": "Fibra de Coração de Dragão",
         "comprimento": 12
     },
-    "photo": "https://r2.fivemanage.com/image/V1vpb0xNWJiz.jpg",
+    "photo": "https://r2.fivemanage.com/image/8wSIyzd5oiy9.jpg",
     "pericias": [
         "feiticaria_geral",
         "magia_elemental",

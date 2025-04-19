@@ -102,12 +102,12 @@ function FichaToWord(username, id) {
 }
 
 async function FichaToPDF(username, id) {
-    FichaToWord(username, id)
+    // FichaToWord(username, id)
 
-    const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(username)}_${id}.pdf`);
-    const docxBuf = fs.readFileSync(`./tempdata/ficha_${RemoveSpecialCharacters(username)}_${id}.docx`);
-    let pdfBuf = await libre.convertAsync(docxBuf, 'pdf', undefined);
-    fs.writeFileSync(filePathPdf, pdfBuf);
+    // const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(username)}_${id}.pdf`);
+    // const docxBuf = fs.readFileSync(`./tempdata/ficha_${RemoveSpecialCharacters(username)}_${id}.docx`);
+    // let pdfBuf = await libre.convertAsync(docxBuf, 'pdf', undefined);
+    // fs.writeFileSync(filePathPdf, pdfBuf);
     return
 }
 

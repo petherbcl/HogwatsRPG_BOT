@@ -13,13 +13,13 @@ const systemconfig = JSON.parse(fs.readFileSync(`./RPGData/systemconfig.json`, '
 
 const questions = {
 
-    // name: { label: 'Nome:', type: 'string', question: true },
-    // photo: { label: 'Adicione o link da foto ou a foto do seu personagem', type: 'string', question: true },
-    // house: { label: 'Casa de Hogwarts: (Grifinória, Sonserina, Corvinal, Lufa-Lufa)?', type: 'string', question: true },
-    // //year: { label: 'Ano Escolar: (1, 2, 3, 4, 5, 6, 7)?', type: 'number', question: true },
+    name: { label: 'Nome:', type: 'string', question: true },
+    photo: { label: 'Adicione o link da foto ou a foto do seu personagem', type: 'string', question: true },
+    house: { label: 'Casa de Hogwarts: (Grifinória, Sonserina, Corvinal, Lufa-Lufa)?', type: 'string', question: true },
+    //year: { label: 'Ano Escolar: (1, 2, 3, 4, 5, 6, 7)?', type: 'number', question: true },
     job: { label: 'Você é Aluno ou Professor?\nResponda com *Aluno* ou *Professor*', type: 'string', question: true },
-    // race: { label: 'Raça: (Humano, meio-veela, lobisomem, mestiço, etc.)', type: 'string', question: true },
-    // age: { label: 'Idade:', type: 'number', question: true },
+    race: { label: 'Raça: (Humano, meio-veela, lobisomem, mestiço, etc.)', type: 'string', question: true },
+    age: { label: 'Idade:', type: 'number', question: true },
 
     features: { label: 'Características\n*Distribua {0} pontos entre as características:*\n* **Força(F)**\n* **Habilidade(H)**\n* **Resistência(R)**\n* **Armadura(A)**\n* **Poder de Fogo(PdF)**', type: 'string', question: false },
     F: { label: 'Força (F):', type: 'number', question: true },

@@ -14,7 +14,7 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 165,
+    "PE": 200,
     "spells": [
         "lumos",
         "nox",
@@ -27,7 +27,8 @@
         "wingardium_leviosa",
         "periculum",
         "furunculus",
-        "revelio"
+        "revelio",
+        "kadabrus"
     ],
     "vantagens": [
         "talento_natural",

@@ -12,7 +12,7 @@
     "PdF": 0,
     "PV": 15,
     "PM": 15,
-    "PE": 125,
+    "PE": 110,
     "PVMax": 15,
     "PMMax": 15,
     "spells": [
@@ -24,7 +24,16 @@
         "reparo",
         "periculum",
         "revelio",
-        "wingardium_leviosa"
+        "wingardium_leviosa",
+        "expelliarmus",
+        "commoror_virga",
+        "fáisco",
+        "kadabrus",
+        "colloshoo",
+        "depulso",
+        "eletricus",
+        "mimble_wimble",
+        "ranhosa"
     ],
     "vantagens": [
         "mente_afiada",

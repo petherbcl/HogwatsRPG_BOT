@@ -15,7 +15,7 @@
     "PVMax": 10,
     "PM": 10,
     "PMMax": 10,
-    "PE": 120,
+    "PE": 115,
     "spells": [
         "alohomora",
         "lumos",
@@ -29,7 +29,10 @@
         "periculum",
         "revelio",
         "furunculus",
-        "protego_horribillis"
+        "protego_horribillis",
+        "colloshoo",
+        "depulso",
+        "eletricus"
     ],
     "vantagens": [
         "talento_natural"

@@ -15,7 +15,7 @@
     "PVMax": 5,
     "PM": 5,
     "PMMax": 5,
-    "PE": 130,
+    "PE": 135,
     "spells": [
         "lumos",
         "nox",
@@ -29,7 +29,14 @@
         "wingardium_leviosa",
         "commoror_virga",
         "furunculus",
-        "protego_horribillis"
+        "protego_horribillis",
+        "kadabrus",
+        "depulso",
+        "eletricus",
+        "colloshoo",
+        "mimble_wimble",
+        "ranhosa",
+        "fáisco"
     ],
     "vantagens": [
         "familiar_especial",
