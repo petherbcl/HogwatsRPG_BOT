@@ -11,6 +11,8 @@ const desvantagem_list = JSON.parse(fs.readFileSync(`./RPGData/desvantagem_list.
 const vantagem_list = JSON.parse(fs.readFileSync(`./RPGData/vantagem_list.json`, 'utf8'))
 const systemconfig = JSON.parse(fs.readFileSync(`./RPGData/systemconfig.json`, 'utf8'))
 
+const gerarFichaPDF = false
+
 const questions = {
 
     name: { label: 'Nome:', type: 'string', question: true },
@@ -342,19 +344,22 @@ module.exports = {
 
                         await interaction.followUp({ embeds: createFichaEmbed(member.user.username, member.user.id) , ephemeral: false });
 
-                        await interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
+                        if (gerarFichaPDF) {
+                            await interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
 
-                        await FichaToPDF(member.user.username,member.user.id)
-                        const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.docx`);
-                        const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.pdf`);
-        
-                        attachment = new AttachmentBuilder(filePathPdf);
-                        interaction.followUp({ files: [attachment], ephemeral: true });
-        
-                        await new Promise(resolve => setTimeout(resolve, 5000));
-        
-                        fs.unlinkSync(filePathDoc);
-                        fs.unlinkSync(filePathPdf);
+                            await FichaToPDF(member.user.username,member.user.id)
+                            const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.docx`);
+                            const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.pdf`);
+            
+                            attachment = new AttachmentBuilder(filePathPdf);
+                            interaction.followUp({ files: [attachment], ephemeral: true });
+            
+                            await new Promise(resolve => setTimeout(resolve, 5000));
+            
+                            fs.unlinkSync(filePathDoc);
+                            fs.unlinkSync(filePathPdf);
+                        }
+                        
                     }
                 }
             } catch (error) {
