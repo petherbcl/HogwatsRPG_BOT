@@ -9,6 +9,8 @@ const desvantagem_list = JSON.parse(fs.readFileSync(`./RPGData/desvantagem_list.
 const vantagem_list = JSON.parse(fs.readFileSync(`./RPGData/vantagem_list.json`, 'utf8'))
 const vantagem_desvantagem_by_year = JSON.parse(fs.readFileSync(`./RPGData/vantagem_desvantagem_by_year.json`, 'utf8'))
 
+const gerarFichaPDF = false
+
 const fichaCampos = {
     name: 'Nome',
     house: 'Casa de Hogwarts',
@@ -109,20 +111,23 @@ module.exports = {
 
                 log(guild,`<@${user.id}> usou comando ${"`/ficha check`"} para consultar sua ficha de personagem.`);
 
-                interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
+                if(gerarFichaPDF) {
+                    interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
 
-                await FichaToPDF(member.user.username, member.user.id)
-                const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.docx`);
-                const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.pdf`);
-
-                attachment = new AttachmentBuilder(filePathPdf);
-                interaction.followUp({ files: [attachment], ephemeral: true });
-
-                await new Promise(resolve => setTimeout(resolve, 5000));
-
-                fs.unlinkSync(filePathDoc);
-                fs.unlinkSync(filePathPdf);
-
+                    await FichaToPDF(member.user.username, member.user.id)
+                    const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.docx`);
+                    const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(member.user.username)}_${member.user.id}.pdf`);
+    
+                    attachment = new AttachmentBuilder(filePathPdf);
+                    interaction.followUp({ files: [attachment], ephemeral: true });
+    
+                    await new Promise(resolve => setTimeout(resolve, 5000));
+    
+                    fs.unlinkSync(filePathDoc);
+                    fs.unlinkSync(filePathPdf);
+    
+                }
+                
                 break;
             case 'player':
                 if (isDM) {
@@ -141,19 +146,22 @@ module.exports = {
 
                     log(guild,`<@${user.id}> usou comando ${"`/ficha player`"} para consultar ficha de personagem de <@${player_user.user.id}>.`);
 
-                    interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
+                    if(gerarFichaPDF) {
+                        interaction.followUp({ content: 'Gerando ficha em PDF. Poderá demorar alguns segundos', ephemeral: true });
 
-                    await FichaToPDF(player_user.user.username, player_user.user.id)
-                    const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.docx`);
-                    const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.pdf`);
+                        await FichaToPDF(player_user.user.username, player_user.user.id)
+                        const filePathDoc = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.docx`);
+                        const filePathPdf = path.join('./tempdata/', `ficha_${RemoveSpecialCharacters(player_user.user.username)}_${player_user.user.id}.pdf`);
 
-                    attachment = new AttachmentBuilder(filePathPdf);
-                    interaction.followUp({ files: [attachment], ephemeral: true });
+                        attachment = new AttachmentBuilder(filePathPdf);
+                        interaction.followUp({ files: [attachment], ephemeral: true });
 
-                    await new Promise(resolve => setTimeout(resolve, 5000));
+                        await new Promise(resolve => setTimeout(resolve, 5000));
 
-                    fs.unlinkSync(filePathDoc);
-                    fs.unlinkSync(filePathPdf);
+                        fs.unlinkSync(filePathDoc);
+                        fs.unlinkSync(filePathPdf);
+                    }
+                    
                 }else{
                     interaction.editReply({ content: `Você não tem permissão para usar esse comando`, ephemeral: true });
                 }
