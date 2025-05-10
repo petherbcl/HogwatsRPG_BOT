@@ -30,9 +30,11 @@ O projeto está organizado da seguinte forma:
    cd hogwarts-rpg-bot
 
 2. Instale as dependências:
+    ```bash
     npm install
 
-3. Configure o arquivo config.json com as informações
+3. Configure o arquivo config.json com as informações:
+    ```bash
     {
     "token": "SEU_TOKEN_DO_BOT",
     "clientId": "SEU_CLIENT_ID",
