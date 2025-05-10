@@ -28,10 +28,12 @@ O projeto está organizado da seguinte forma:
    ```bash
    git clone https://github.com/seu-usuario/hogwarts-rpg-bot.git
    cd hogwarts-rpg-bot
+   ```
 
 2. Instale as dependências:
     ```bash
     npm install
+    ```
 
 3. Configure o arquivo config.json com as informações:
     ```bash
@@ -40,34 +42,51 @@ O projeto está organizado da seguinte forma:
     "clientId": "SEU_CLIENT_ID",
     "guildId": "SEU_GUILD_ID"
     }
+    ```
 
 4. Inicie o bot:
-    node index.js
+   ```bash
+   node index.js
+   ```
 
 
 ## Comandos Principais
 
-/criarficha
+```/criarficha```
+
 Inicia o processo de criação de uma ficha de personagem.
 
-/ficha
+```/ficha```
+
 Gerencia as fichas de personagens. Subcomandos disponíveis:
 
-check: Visualiza sua ficha.
-player: Visualiza a ficha de outro jogador (apenas para DMs).
-pv, pm, pe: Gerencia atributos de vida, magia e experiência.
-/pontos
-Gerencia os pontos das casas de Hogwarts. Subcomandos disponíveis:
+```check```: Visualiza sua ficha.
 
-check: Mostra os pontos atuais.
-add: Adiciona pontos a uma casa.
-rem: Remove pontos de uma casa.
-/item
+```player```: Visualiza a ficha de outro jogador (apenas para DMs).
+
+```pv, pm, pe```: Gerencia atributos de vida, magia e experiência.
+
+
+```/pontos```
+Gerencia os pontos das casas de Hogwarts. 
+
+Subcomandos disponíveis:
+
+```check```: Mostra os pontos atuais.
+
+```add```: Adiciona pontos a uma casa.
+
+```rem```: Remove pontos de uma casa.
+
+
+```/item```
 Gerencia os itens dos jogadores. Subcomandos disponíveis:
 
-list: Lista os itens disponíveis.
-add: Adiciona itens ao inventário de um jogador.
-rem: Remove itens do inventário de um jogador.
+```list```: Lista os itens disponíveis.
+
+```add```: Adiciona itens ao inventário de um jogador.
+
+```rem```: Remove itens do inventário de um jogador.
 
 ## Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
